@@ -1,0 +1,397 @@
+ /* إعدادات عامة */
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Dubai', sans-serif;
+     background: linear-gradient(to bottom right, #071e27, #0d2c35, #002e33);
+     color: #e0f7f5;
+     line-height: 1.8;
+ }
+
+ strong {
+     color: #00dec8;
+     font-weight: bold;
+     padding: 2px 6px;
+     border-radius: 6px;
+     background: rgba(0, 222, 200, 0.1);
+ }
+
+ img {
+     max-width: 100%;
+     border-radius: 6px;
+     margin-top: 1rem;
+ }
+
+ .main-header {
+     background: linear-gradient(135deg, #00dec8 0%, #007c75 100%);
+     color: #000;
+     font-size: 1.9rem;
+     font-weight: bold;
+     padding: 20px 30px;
+     text-align: center;
+     border-bottom: 3px solid rgba(0, 222, 208, 0.4);
+     box-shadow: 0 6px 20px rgba(0, 222, 208, 0.2);
+     top: 0;
+     z-index: 800;
+     font-family: 'Dubai', sans-serif;
+     backdrop-filter: blur(6px);
+     letter-spacing: 1px;
+     transition: background 0.3s ease;
+ }
+
+ .main-header strong {
+     color: #003c38;
+     background: linear-gradient(to right, #00dec8, #0fd2f0, #0aafd9);
+     padding: 4px 12px;
+     border-radius: 12px;
+     font-weight: 700;
+     box-shadow: 0 0 10px rgba(0, 222, 208, 0.4);
+     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+     transition: background 0.3s ease, transform 0.3s ease;
+ }
+
+ .main-header strong:hover {
+     transform: scale(1.05);
+     box-shadow: 0 0 14px rgba(0, 255, 255, 0.6);
+ }
+
+ /* التنقل */
+ nav {
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     background-color: #0b0c10;
+     padding: 1rem;
+     flex-wrap: wrap;
+ }
+
+ nav a {
+     color: #00dec8;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ /* الأقسام العامة */
+ section {
+     padding: 3rem 2rem;
+     max-width: 900px;
+     margin: auto;
+     background: linear-gradient(135deg, #002f38, #003c47);
+     border-radius: 20px;
+     padding: 40px 30px;
+     margin: 50px auto;
+     color: #e0f7fa;
+     box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+     max-width: 1000px;
+     transition: all 0.3s ease;
+     backdrop-filter: blur(4px);
+     border: 1px solid rgba(0, 255, 255, 0.08);
+ }
+
+ section:hover {
+     box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+ }
+
+ h1,
+ h2 {
+     color: #00dec8;
+ }
+
+ /* زر العودة للأعلى */
+ #scrollTopBtn {
+     position: fixed;
+     bottom: 30px;
+     left: 30px;
+     z-index: 99;
+     font-size: 24px;
+     border: none;
+     outline: none;
+     background-color: #00dec8;
+     color: #000;
+     cursor: pointer;
+     padding: 12px 16px;
+     border-radius: 50%;
+     box-shadow: 0 0 15px #00dec8a0;
+     transition: background-color 0.3s ease;
+ }
+
+ #scrollTopBtn:hover {
+     background-color: #00c2b5;
+ }
+
+ /* قسم الميزات */
+ #features {
+     background-color: #0d1b2a;
+     padding: 60px 20px;
+ }
+
+ #features h2 {
+     text-align: center;
+     font-size: 2.5em;
+     margin-bottom: 40px;
+     color: #00ded0;
+ }
+
+ .feature {
+     background-color: #1b263b;
+     border: 1px solid rgba(0, 222, 208, 0.3);
+     border-left: 5px solid #00ded0;
+     border-radius: 12px;
+     margin: 20px auto;
+     padding: 20px 30px;
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .feature:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 10px 25px rgba(0, 222, 208, 0.4);
+ }
+
+ .feature h3 {
+     font-size: 1.6em;
+     color: #ffffff;
+     margin-bottom: 12px;
+ }
+
+ .feature p {
+     font-size: 1.1em;
+     color: #cfd8dc;
+ }
+
+ /* قسم الرسائل */
+ #messages {
+     background-color: #132537;
+     padding: 60px 20px;
+     color: #e0f7fa;
+ }
+
+ #messages h2 {
+     text-align: center;
+     font-size: 2.5em;
+     color: #00ded0;
+     margin-bottom: 30px;
+ }
+
+ #messages p,
+ #messages ul {
+     font-size: 1.1em;
+     line-height: 1.8;
+     color: #cfd8dc;
+ }
+
+ #messages ul {
+     padding-left: 20px;
+     list-style: disc;
+     margin-bottom: 30px;
+ }
+
+ #messages code {
+     background-color: rgba(255, 255, 255, 0.1);
+     padding: 4px 8px;
+     border-radius: 6px;
+     color: #00ded0;
+     font-weight: bold;
+ }
+
+ /* قسم تقارير واتساب */
+ #whatsapp-reports,
+ #excel-export,
+ .fancy-section {
+     background: linear-gradient(135deg, #002f38, #003c47);
+     border-radius: 20px;
+     padding: 40px 30px;
+     margin: 50px auto;
+     box-shadow: 0 0 25px rgba(0, 255, 255, 0.08);
+     transition: all 0.3s ease;
+     color: #e0f7fa;
+ }
+
+ #whatsapp-reports:hover,
+ #excel-export:hover,
+ .fancy-section:hover {
+     box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+ }
+
+ #whatsapp-reports h2,
+ #excel-export h2,
+ .fancy-section h2 {
+     font-size: 28px;
+     margin-bottom: 20px;
+     color: #00e0d0;
+     border-bottom: 2px solid #00e0d0;
+     padding-bottom: 10px;
+ }
+
+ #whatsapp-reports p,
+ #excel-export p,
+ .fancy-section p {
+     font-size: 17px;
+     line-height: 1.9;
+ }
+
+ #whatsapp-reports ul,
+ #excel-export ul,
+ .fancy-section ul {
+     list-style: none;
+     padding-left: 0;
+ }
+
+ #whatsapp-reports ul li,
+ #excel-export ul li,
+ .fancy-section ul li {
+     position: relative;
+     padding-left: 25px;
+     margin-bottom: 10px;
+     font-size: 16px;
+ }
+
+ #whatsapp-reports ul li::before {
+     content: "✅";
+     position: absolute;
+     left: 0;
+     color: #00e0d0;
+ }
+
+ #excel-export ul li::before,
+ .fancy-section ul li::before {
+     content: "🟢";
+     position: absolute;
+     left: 0;
+     color: #00e0d0;
+ }
+
+ /* تذييل */
+ footer {
+     background-color: #0b0c10;
+     text-align: center;
+     padding: 1rem;
+     font-size: 0.9rem;
+     color: #aaa;
+ }
+
+ /* الصور */
+ section img,
+ #messages img,
+ #excel-export img,
+ .fancy-section img {
+     display: block;
+     width: 100%;
+     max-width: 100%;
+     margin: 25px auto 0;
+     border-radius: 14px;
+     border: 1px solid rgba(0, 222, 200, 0.3);
+     box-shadow: 0 6px 20px rgba(0, 222, 200, 0.08);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ section img:hover,
+ #messages img:hover,
+ #excel-export img:hover,
+ .fancy-section img:hover {
+     transform: scale(1.03);
+     box-shadow: 0 8px 25px rgba(0, 222, 200, 0.2);
+ }
+
+ .section-images {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+     margin-top: 30px;
+ }
+
+ /* قسم البطل */
+ .hero-section {
+     background: linear-gradient(145deg, #001c1f, #013033);
+     border-radius: 20px;
+     padding: 60px 40px;
+     margin: 50px auto;
+     color: #e0ffff;
+     box-shadow: 0 0 30px rgba(0, 255, 255, 0.08);
+     max-width: 1100px;
+     backdrop-filter: blur(6px);
+     border: 1px solid rgba(0, 222, 208, 0.1);
+     transition: all 0.3s ease;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .hero-section::before {
+     content: '';
+     position: absolute;
+     top: -80px;
+     left: -80px;
+     width: 200px;
+     height: 200px;
+     background: radial-gradient(circle, rgba(0, 222, 200, 0.2) 0%, transparent 70%);
+     z-index: 0;
+ }
+
+ .hero-section h1 {
+     font-size: 2.5em;
+     margin-bottom: 20px;
+     color: #00dec8;
+     position: relative;
+     z-index: 1;
+     line-height: 1.4;
+     text-shadow: 0 2px 4px rgba(0, 222, 208, 0.2);
+ }
+
+ .hero-section p {
+     font-size: 1.2em;
+     line-height: 1.9;
+     margin-bottom: 20px;
+     position: relative;
+     z-index: 1;
+     color: #cfeef0;
+ }
+
+ .hero-section strong {
+     color: #00e0d0;
+ }
+
+ .hero-section .section-images {
+     margin-top: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     z-index: 1;
+ }
+
+ .hero-section .section-images img {
+     max-width: 700px;
+     width: 100%;
+     border-radius: 20px;
+     border: 2px solid #00e0d0;
+     box-shadow: 0 10px 30px rgba(0, 222, 208, 0.1);
+     transition: transform 0.3s ease;
+ }
+
+ .hero-section .section-images img:hover {
+     transform: scale(1.02);
+ }
+
+ /* استجابة الهواتف */
+ @media (max-width: 768px) {
+     section {
+         padding: 2rem 1rem;
+     }
+
+     h1,
+     h2 {
+         font-size: 1.8em;
+     }
+
+     .feature h3 {
+         font-size: 1.3em;
+     }
+
+     .feature p,
+     #messages p,
+     #whatsapp-reports p,
+     #excel-export p,
+     .fancy-section p {
+         font-size: 1em;
+     }
+ }
