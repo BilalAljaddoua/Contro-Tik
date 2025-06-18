@@ -67,6 +67,33 @@
      transition: background 0.3s ease;
  }
 
+ a:hover {
+     transform: scale(1.05);
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+ }
+
+ .cta-button {
+     display: inline-block;
+     background: linear-gradient(135deg, #00dec8, #00b0a5);
+     color: #003c38;
+     padding: 16px 36px;
+     font-size: 1.3em;
+     font-weight: bold;
+     border-radius: 12px;
+     text-decoration: none;
+     box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+     transition: all 0.3s ease;
+     letter-spacing: 0.5px;
+     text-align: center;
+ }
+
+ .cta-button:hover {
+     transform: scale(1.05);
+     background: linear-gradient(135deg, #00f0e0, #00c6b6);
+     box-shadow: 0 12px 30px rgba(0, 255, 255, 0.4);
+     color: #002c29;
+ }
+
  .main-header strong {
      color: #003c38;
      background: linear-gradient(to right, #00dec8, #0fd2f0, #0aafd9);
