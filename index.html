@@ -3,24 +3,98 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="img/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ControTik | إدارة شبكات الإنترنت مع MikroTik وRADIUS (هوتسبوت، PPPoE)</title>
+  <meta name="description"
+    content="نظام ControTik لإدارة شبكات الإنترنت: تكامل عميق مع MikroTik وRADIUS/Radius Manager، إدارة الهوتسبوت وPPPoE والبرودباند، فواتير ورسائل تلقائية.">
+  <link rel="canonical" href="https://controtik.com/">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/img/icon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/img/icon.png">
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- Open Graph Meta Tags (للمعاينة في واتساب وغيرها) -->
+  <!-- Open Graph -->
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="ControTik | تحكّم بشبكتك باحتراف">
   <meta property="og:description"
-    content="نظام متكامل لإدارة شبكات الإنترنت بسهولة وكفاءة، كما لو كنت شركة اتصالات كبرى. جرب ControTik الآن!">
-  <meta property="og:image" content="https://bilalaljaddoua.github.io/Contro-Tik/img/meta.jpg">
-  <meta property="og:url" content="www.ControTik.com">
-  <meta property="og:type" content="website">
+    content="إدارة شبكات الإنترنت مع تكامل MikroTik: هوتسبوت، برودباند، فوترة، تقارير، رسائل تلقائية.">
+  <meta property="og:url" content="https://controtik.com/">
+  <meta property="og:site_name" content="ControTik">
+  <meta property="og:image" content="https://controtik.com/img/meta.jpg">
 
-  <!-- Twitter Cards (اختياري إضافي) -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ControTik | تحكّم بشبكتك باحتراف">
-  <meta name="twitter:description" content="نظام ذكي لإدارة شبكات الإنترنت وتقديم تجربة احترافية للمشتركين.">
-  <meta name="twitter:image" content="https://bilalaljaddoua.github.io/Contro-Tik/img/meta.jpg">
+  <meta name="twitter:description" content="نظام متكامل لإدارة شبكات الإنترنت مع تكامل MikroTik.">
+  <meta name="twitter:image" content="https://controtik.com/img/meta.jpg">
+
+  <!-- Robots + Sitemap -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://controtik.com/sitemap.xml">
+
+  <!-- Hreflang (فعّل الإنجليزية لاحقاً) -->
+  <link rel="alternate" href="https://controtik.com/" hreflang="ar">
+  <link rel="alternate" href="https://controtik.com/en/" hreflang="en">
+  <link rel="alternate" href="https://controtik.com/" hreflang="x-default">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#00dec8">
+
+  <!-- Structured Data: Software + Organization + Website + Site Search -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "هل يدعم ControTik ميكروتك (MikroTik) مع RADIUS؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "نعم، يدعم RADIUS وRadius Manager لإدارة الهوتسبوت وPPPoE والبرودباند."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل أستطيع إدارة الهوتسبوت على MikroTik؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يمكنك إنشاء بطاقات هوتسبوت، الطباعة مع باركود، وتتبع المستودع والإحصائيات."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "هل يدعم PPPoE والبرودباند؟",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "يدعم إنشاء البروفايلات، ضبط السرعات، وتعطيل الاشتراكات المنتهية تلقائيًا."
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"ControTik",
+  "url":"https://controtik.com/",
+  "logo":"https://controtik.com/img/meta.jpg",
+  "knowsAbout": [
+    "MikroTik","ميكروتك","RADIUS","Radius Manager",
+    "Hotspot","الهوتسبوت","PPPoE","Broadband",
+    "إدارة الشبكات","شبكات إنترنت"
+  ]
+}
+</script>
+
 </head>
 
 <body style="font-family: 'Dubai', sans-serif;">
@@ -308,6 +382,61 @@
         </a>
       </div>
 
+      <div class="feature">
+        <h3 style="color:#00dec8; font-size:1.6em;">🌐 <strong>التكامل مع MikroTik — إدارة البرودباند باحتراف</strong>
+        </h3>
+        <p style="line-height:1.8; font-size:1.1em; color:#e0f7f5;">
+          يوفّر <strong>ControTik</strong> نظام برودباند متكامل يعمل مباشرة على <strong>سيرفر MikroTik</strong> دون أي
+          تدخل يدوي:
+          - عند انتهاء الاشتراك يتم <strong>تعطيل الحساب</strong> تلقائيًا أو نقله إلى <strong>بروفايل ضعيف</strong> حسب
+          اختيارك. <br>
+          - إرسال <strong>رسائل تنبيه تلقائية</strong> للمشتركين قبل انتهاء اشتراكهم. <br>
+          - نظام <strong>مطالبات ذكي</strong> يذكّر المشتركين بالديون المستحقة حتى يتم السداد. <br>
+          - كل العمليات تُسجّل بشكل آمن في السيرفر مع ربطها مباشرة بالمشترك والباقة. <br>
+        </p>
+        <p style="margin-top:12px; font-size:1.05em; color:#80f7e6;">
+          هذا التكامل يحوّل البرودباند من مجرد اتصال إنترنت إلى <strong>منظومة احترافية</strong> لإدارة الاشتراكات،
+          الديون، والتنبيهات بشكل آلي ودقيق.
+        </p>
+
+      </div>
+      <div class="feature">
+        <h3 style="color:#00dec8; font-size:1.6em;">🔥 <strong>إدارة الهوتسبوت مع MikroTik</strong></h3>
+        <p style="line-height:1.8; font-size:1.1em; color:#e0f7f5;">
+          مع <strong>ControTik</strong> لم تعد بطاقات الهوتسبوت عملية يدوية أو عشوائية، بل نظام متكامل يعمل مباشرة على
+          <strong>سيرفر MikroTik</strong>:
+          - إنشاء بطاقات هوتسبوت بسهولة مع تحديد <strong>عدد المحارف</strong>، <strong>البادئة</strong>،
+          <strong>الحجم</strong>، و<strong>مدة الصلاحية</strong>. <br>
+          - تفعيل البطاقة يبدأ مع أول تسجيل دخول، وبعد انتهاء المدة يتم تعطيلها تلقائيًا. <br>
+          - <strong>مستودع بطاقات</strong> ذكي يوضح الرصيد المتبقي، البطاقات المباعة، والإحصائيات التفصيلية. <br>
+          - لوحة تحكم احترافية لعرض كل العمليات والفلترة حسب الحالة أو الشخص. <br>
+          - أدوات <strong>حذف، تعديل، وطباعة</strong> مرنة للبطاقات. <br>
+        </p>
+        <p style="margin-top:12px; font-size:1.05em; color:#80f7e6;">
+          الطباعة تتم بطريقة احترافية مع إمكانية التصدير إلى <strong>PDF</strong>، حيث تختار عدد الصفوف، القالب، ومكان
+          اسم المستخدم وكلمة المرور.
+          كما يمكن إضافة <strong>باركود</strong> لكل بطاقة لتسجيل دخول سريع عبر المسح.
+        </p>
+
+      </div>
+      <div class="feature">
+        <h3 style="color:#00dec8; font-size:1.6em;">🏪 <strong>نظام بيع الإنترنت بالجملة</strong></h3>
+        <p style="line-height:1.8; font-size:1.1em; color:#e0f7f5;">
+          تم تصميم هذا النظام خصيصًا لمزودي خدمة الإنترنت الذين يبيعون <strong>حزم وباقات كبيرة</strong> لأصحاب الشبكات:
+          - إضافة أصحاب الشبكات كمشتركين رئيسيين مع إدارة حساباتهم بشكل مستقل. <br>
+          - تحديد <strong>سعر خاص للميجابت</strong> لكل زبون، بما يتناسب مع حجم التعاقد أو الاتفاق. <br>
+          - إنشاء <strong>حزمة مخصصة</strong> لكل شبكة يتم متابعتها بدقة (السرعة، الكمية، مدة الاشتراك). <br>
+          - متابعة الاستهلاك وإصدار <strong>الفواتير التلقائية</strong> بناءً على الأسعار المخصصة لكل شبكة. <br>
+          - نظام <strong>مطالبة ذكي</strong> يرسل إشعارات للمشتركين عند اقتراب نهاية الحزمة أو تأخر السداد. <br>
+          - إحصائيات ولوحة تحكم شاملة تعرض: إجمالي المبيعات، الاستهلاك الشهري، الاشتراكات النشطة والمنتهية. <br>
+        </p>
+        <p style="margin-top:12px; font-size:1.05em; color:#80f7e6;">
+          بفضل هذا النظام، يصبح بيع الإنترنت بالجملة عملية <strong>منظمة، آمنة، واحترافية</strong>،
+          مما يساعد مزود الخدمة على متابعة أرباحه وتوزيع الحزم دون أي فوضى.
+        </p>
+
+      </div>
+
 
       <div class="feature">
         <h3>⚙️ <strong>تخصيص النظام حسب طلبك</strong></h3>
@@ -321,6 +450,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
           ⚙️ اطلب تخصيصًا </a>
       </div>
+
       <div class="feature">
         <h3>🚀 <strong>ميزات مستقبلية قادمة بقوة</strong></h3>
         <p>
@@ -328,12 +458,16 @@
           حاليًا:
         </p>
         <ul style="list-style: none; padding: 0; text-align: right; line-height: 2; font-size: 1.05em;">
-          <li>🔗 <strong>التكامل المباشر مع أجهزة MikroTik</strong> لإدارة الباقات والمستخدمين من داخل ControTik دون
-            الحاجة لـ Winbox</li>
-          <li>🛡️ <strong>بناء سيرفر RADIUS احترافي مدمج</strong> للتحكم الكامل في حسابات PPP وHotspot</li>
+
           <li>🏪 <strong>نظام لإدارة بيع القطع والإكسسوارات</strong> الخاصة بالشبكات مع مستودع وربط مباشر بقاعدة
-            البيانات
-          </li>
+            البيانات</li>
+
+          <li>🛒 <strong>المتجر المحلي</strong> لبيع وإدارة جميع القطع الإلكترونية (راوترات، كابلات، تجهيزات...) مع نظام
+            كامل
+            لتتبع <strong>الأرباح، الديون، والفواتير</strong> الخاصة بالمعدات، ليجعل ControTik النظام المتكامل لإدارة
+            شبكات
+            الإنترنت بكافة نواحيها.</li>
+
           <li>🌐 <strong>منصة إلكترونية سحابية</strong> تتيح لك الدخول إلى شبكتك من أي جهاز أو مكان في العالم عبر واجهة
             آمنة وسهلة الاستخدام</li>
           <li>📱 <strong>تطبيق إلكتروني للمشتركين</strong> يمكّنهم من تتبع اشتراكاتهم، مراقبة الاستهلاك، واستبدال نقاطهم
@@ -345,6 +479,7 @@
           واقتراحاتكم.
         </p>
       </div>
+
 
 
     </section>
