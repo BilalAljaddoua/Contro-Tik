@@ -4,552 +4,846 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>ControTik | إدارة شبكات الإنترنت مع MikroTik وRADIUS (هوتسبوت، PPPoE)</title>
+  <title>ControTik | نظام احترافي لإدارة شبكات الإنترنت</title>
   <meta name="description"
-    content="نظام ControTik لإدارة شبكات الإنترنت: تكامل عميق مع MikroTik وRADIUS/Radius Manager، إدارة الهوتسبوت وPPPoE والبرودباند، فواتير ورسائل تلقائية.">
+    content="ControTik — منصة SaaS لإدارة شبكات الإنترنت: هوتسبوت، PPPoE/برودباند، فوترة، تقارير، رسائل واتساب تلقائية، وصلاحيات.">
   <link rel="canonical" href="https://controtik.com/">
-
-  <!-- Icons -->
-  <link rel="icon" type="image/png" href="/img/icon.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/img/icon.png">
-
-  <!-- Styles -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta name="theme-color" content="#00cfd5">
+  <meta name="robots" content="index,follow">
 
   <!-- Open Graph -->
-  <meta property="og:locale" content="ar_AR">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ControTik | تحكّم بشبكتك باحتراف">
-  <meta property="og:description"
-    content="إدارة شبكات الإنترنت مع تكامل MikroTik: هوتسبوت، برودباند، فوترة، تقارير، رسائل تلقائية.">
+  <meta property="og:title" content="ControTik | إدارة شبكات الإنترنت">
+  <meta property="og:description" content="لوحات تحكم عصرية وفوترة ذكية وتنبيهات حيّة.">
   <meta property="og:url" content="https://controtik.com/">
-  <meta property="og:site_name" content="ControTik">
-  <meta property="og:image" content="https://controtik.com/img/meta.jpg">
+  <meta property="og:image" content="https://controtik.com/img/cover.jpg">
+  <meta property="og:image:alt" content="لوحة تحكم ControTik">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ControTik | تحكّم بشبكتك باحتراف">
-  <meta name="twitter:description" content="نظام متكامل لإدارة شبكات الإنترنت مع تكامل MikroTik.">
-  <meta name="twitter:image" content="https://controtik.com/img/meta.jpg">
+  <!-- Fonts (Cairo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Robots + Sitemap -->
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://controtik.com/sitemap.xml">
+  <style>
+    :root {
+      --bg: #f9fafa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #00cfd5;
+      --primary-2: #00aab0;
+      --line: #e5e7eb;
+      --ring: rgba(0, 207, 213, .25);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .06);
+      --radius: 16px
+    }
 
-  <!-- Hreflang (فعّل الإنجليزية لاحقاً) -->
-  <link rel="alternate" href="https://controtik.com/" hreflang="ar">
-  <link rel="alternate" href="https://controtik.com/en/" hreflang="en">
-  <link rel="alternate" href="https://controtik.com/" hreflang="x-default">
+    * {
+      box-sizing: border-box
+    }
 
-  <!-- Theme color -->
-  <meta name="theme-color" content="#00dec8">
+    html,
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cairo', 'Dubai', system-ui, -apple-system, Segoe UI, Roboto, sans-serif
+    }
 
-  <!-- Structured Data: Software + Organization + Website + Site Search -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "هل يدعم ControTik ميكروتك (MikroTik) مع RADIUS؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "نعم، يدعم RADIUS وRadius Manager لإدارة الهوتسبوت وPPPoE والبرودباند."
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin-inline: auto
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, .8);
+      backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 18px
+    }
+
+    .menu a {
+      color: #374151;
+      font-weight: 600
+    }
+
+    .menu a:hover {
+      color: #111
+    }
+
+    .cta {
+      background: var(--primary);
+      color: #000;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: var(--shadow)
+    }
+
+    .cta:hover {
+      background: var(--primary-2)
+    }
+
+    .burger {
+      display: none;
+      background: transparent;
+      border: 0;
+      font-size: 26px
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 36px;
+      align-items: center;
+      padding: 64px 0
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 44px);
+      margin: 0 0 12px;
+      font-weight: 800;
+      line-height: 1.25
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 8px 0 20px
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: var(--shadow)
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #000
+    }
+
+    .btn.primary:hover {
+      background: var(--primary-2)
+    }
+
+    .btn.ghost {
+      background: #fff;
+      border: 1px solid var(--line);
+      color: #111
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, #fff, #f5ffff);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow)
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center
+    }
+
+    .stat b {
+      font-size: 22px
+    }
+
+    /* Sections & cards */
+    section {
+      padding: 56px 0
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px
+    }
+
+    .sec-head h2 {
+      margin: 0;
+      font-size: clamp(22px, 3vw, 32px)
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transition: .2s transform
+    }
+
+    .card:hover {
+      transform: translateY(-4px)
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 20px
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e6fbfc;
+      color: #03686b;
+      border: 1px dashed #a6eff2;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 10px
+    }
+
+    /* Video */
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow)
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    /* Pricing preview (optional on home) */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .plan {
+      padding: 22px
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 800;
+      margin: 6px 0
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0
+    }
+
+    .plan li {
+      display: flex;
+      gap: 8px;
+      margin: 8px 0
+    }
+
+    .most {
+      border: 2px solid var(--primary)
+    }
+
+    .tag {
+      background: var(--primary);
+      color: #000;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: inline-block
+    }
+
+    /* Testimonials / FAQ */
+    .testi {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .quote {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .quote p {
+      margin: 0
+    }
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .avatar img {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700
+    }
+
+    .cta-band {
+      background: linear-gradient(135deg, #e8feff, #ffffff);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      text-align: center
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+      color: var(--muted)
+    }
+
+    .foot {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 18px
+    }
+
+    .foot a {
+      color: var(--muted)
+    }
+
+    .foot h4 {
+      margin: 0 0 8px
+    }
+
+    /* Responsive */
+    @media (max-width:1024px) {
+      .hero {
+        grid-template-columns: 1fr
       }
-    },
-    {
-      "@type": "Question",
-      "name": "هل أستطيع إدارة الهوتسبوت على MikroTik؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "يمكنك إنشاء بطاقات هوتسبوت، الطباعة مع باركود، وتتبع المستودع والإحصائيات."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "هل يدعم PPPoE والبرودباند؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "يدعم إنشاء البروفايلات، ضبط السرعات، وتعطيل الاشتراكات المنتهية تلقائيًا."
+
+      .grid-3,
+      .pricing,
+      .testi,
+      .faq,
+      .foot {
+        grid-template-columns: 1fr 1fr
       }
     }
-  ]
-}
-</script>
-  <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"ControTik",
-  "url":"https://controtik.com/",
-  "logo":"https://controtik.com/img/meta.jpg",
-  "knowsAbout": [
-    "MikroTik","ميكروتك","RADIUS","Radius Manager",
-    "Hotspot","الهوتسبوت","PPPoE","Broadband",
-    "إدارة الشبكات","شبكات إنترنت"
-  ]
-}
-</script>
 
+    @media (max-width:640px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fff;
+        position: absolute;
+        inset-inline: 0;
+        top: 60px;
+        border-bottom: 1px solid var(--line);
+        padding: 12px
+      }
+
+      .burger {
+        display: block
+      }
+
+      .grid-3,
+      .pricing,
+      .testi,
+      .faq,
+      .foot {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* Reveal on scroll */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: .6s ease
+    }
+
+    [data-reveal].show {
+      opacity: 1;
+      transform: none
+    }
+
+    .ring:focus-visible {
+      outline: 2px solid var(--ring);
+      outline-offset: 2px;
+      border-radius: 12px
+    }
+  </style>
 </head>
 
-<body style="font-family: 'Dubai', sans-serif;">
-  <header class="main-header">تحكّم بشبكتك باحتراف مع <strong>ControTik</strong>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand ring" href="#">
+        <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" loading="lazy"
+          decoding="async">
+        <span>ControTik</span>
+      </a>
+
+      <button class="burger ring" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+
+      <nav class="menu" id="menu">
+        <a href="#features" class="ring">الميزات</a>
+        <!-- ربط الصفحة الأساسية بصفحة الباقات plans.html -->
+        <a href="plans.html" class="ring">الباقات</a>
+        <a href="#faq" class="ring">الأسئلة</a>
+        <a href="plans.html" class="cta ring">✨ اختر باقتك</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#intro">الرئيسية</a>
-    <a href="#video">🎥 مشاهدة فيديو توضيحي</a>
-    <a href="#features">الميزات</a>
-    <a href="#cta">اطلب نسختك </a>
-  </nav>
+  <!-- Hero -->
+  <section class="hero container">
+    <div data-reveal>
+      <h1>منصة واحدة تُدير شبكتك… وتبيع الإنترنت باحتراف</h1>
+      <p>مع <b>ControTik</b> تحصل على بيع جملة ومفرّق منظم، رسائل واتساب ذكية، إدارة دين وفوترة دقيقة، وتقارير محمية —
+        كل ذلك ضمن واجهة عصرية خفيفة.</p>
+      <div class="actions">
+        <a href="plans.html" class="btn primary ring">ابدأ الآن</a>
+        <a href="#video" class="btn ghost ring">شاهد الديمو</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>+120</b>
+          <div class="muted">شبكة مُدارة</div>
+        </div>
+        <div class="stat"><b>99.9%</b>
+          <div class="muted">استقرار</div>
+        </div>
+        <div class="stat"><b>24/7</b>
+          <div class="muted">دعم أساسي</div>
+        </div>
+      </div>
+    </div>
 
-  <section id="intro" class="hero-section">
-    <h1>ControTik — سيطر على شبكتك كما لم تفعل من قبل</h1>
-    <p>
-      ✨ ControTik هو أكثر من مجرد برنامج... إنه <strong>نظام إدارة ذكي</strong> صُمم ليمنحك رؤية شاملة وتحكمًا دقيقًا في
-      كل جانب من جوانب شبكتك:
-      من إدارة المشتركين، وتتبع الديون، وتحليل الأرباح، إلى إرسال رسائل احترافية تلقائية تشبه <strong>أنظمة شركات
-        الاتصالات
-        الكبرى.</strong>
-    </p>
-    <p>
-      💡 بفضل واجهته الحديثة المصممة خصيصًا للمستخدم العربي، وأداءه الخارق حتى في الشبكات الضخمة، يصبح ControTik شريكك
-      الأمثل للنجاح والتطور.
-      كل أداة فيه تعمل بانسجام لتوفر عليك الوقت، وتمنحك قرارات سريعة ومدروسة.
-    </p>
-    <p>
-      🚀 انطلق بشبكتك إلى المستوى التالي، وودّع الفوضى والعشوائية... <strong>ControTik</strong> هو القفزة الذكية التي
-      كنت تنتظرها.
-    </p>
-    <div class="section-images">
-      <img src="img/main.png" alt="لوحة تحكم ControTik">
+    <div class="hero-card" data-reveal>
+      <svg viewBox="0 0 600 360" width="100%" height="auto" role="img" aria-label="لوحة تحكم ControTik">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e8feff" />
+            <stop offset="1" stop-color="#ffffff" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="600" height="360" fill="url(#g)" stroke="#e5e7eb" />
+        <rect x="20" y="20" width="560" height="60" rx="12" fill="#fff" stroke="#e5e7eb" />
+        <rect x="20" y="100" width="180" height="220" rx="12" fill="#fff" stroke="#e5e7eb" />
+        <rect x="220" y="100" width="360" height="100" rx="12" fill="#fff" stroke="#e5e7eb" />
+        <rect x="220" y="220" width="360" height="100" rx="12" fill="#fff" stroke="#e5e7eb" />
+        <circle cx="60" cy="50" r="10" fill="#00cfd5" />
+        <circle cx="90" cy="50" r="10" fill="#00cfd5" />
+        <circle cx="120" cy="50" r="10" fill="#00cfd5" />
+      </svg>
     </div>
   </section>
 
-  <section id="video" class="video-container" style="text-align: center; padding: 40px 0;">
-    <h2 style="color: white;">📹 شاهد ControTik يعمل على أرض الواقع</h2>
-    <iframe width="360" height="640" src="https://www.youtube.com/embed/XXjpvuDMlC4" title="ControTik Demo"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
+  <!-- Features (Cards only – الكروت محفوظة) -->
+  <section id="features">
+    <div class="container">
+      <div class="sec-head">
+        <h2 data-reveal>أهم ما يميّز ControTik</h2>
+        <p class="muted" data-reveal>ميزات تشغيل ونمو مُرتّبة بعناية—كلها ضمن كروت واضحة وسهلة الاستعراض.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- بيع الجملة -->
+        <div class="card" data-reveal>
+          <span class="badge">Wholesale • Top</span>
+          <h3>بيع الإنترنت بالجملة</h3>
+          <p class="muted">سعر ميجابت مخصص لكل زبون، متابعة الاستهلاك، فواتير تلقائية، ومطالبات عند النفاد أو التأخر.
+          </p>
+          <a href="Detailes/wholesale.html" class="btn ghost">🏪 تفاصيل الجملة</a>
+        </div>
+
+        <!-- PPPoE / Broadband -->
+        <div class="card" data-reveal>
+          <span class="badge">PPPoE • Broadband</span>
+          <h3>البرودباند وPPPoE</h3>
+          <p class="muted">تجديد ذكي، تخفيض/تعطيل تلقائي عند الانتهاء، وتنبيهات مسبقة—إدارة بلا مجهود.</p>
+          <a href="Detailes/plans-subscribs.html" class="btn ghost">⚙️ إدارة الباقات</a>
+        </div>
+
+        <!-- Hotspot -->
+        <div class="card" data-reveal>
+          <span class="badge">Hotspot</span>
+          <h3>هوتسبوت احترافي</h3>
+          <p class="muted">قوالب بطاقات، تفعيل عند أول دخول، مستودع وإحصائيات، وطباعة PDF مع باركود.</p>
+          <a href="Detailes/hotspot.html" class="btn ghost">🧾 القوالب والطباعة</a>
+        </div>
+
+        <!-- الرسائل -->
+        <div class="card" data-reveal>
+          <span class="badge">Messaging • Growth</span>
+          <h3>نظام رسائل ذكي</h3>
+          <p class="muted">واتساب تلقائي للاشتراك/التجديد/الانتهاء/الديون وسحوبات الشركاء—مع فلترة مركّبة ومتغيرات ذكية.
+          </p>
+          <a href="Detailes/messages.html" class="btn ghost">💬 إدارة الرسائل</a>
+        </div>
+
+        <!-- المطالبة بالديون -->
+        <div class="card" data-reveal>
+          <span class="badge">Dunning</span>
+          <h3>مطالبة تلقائية بالديون</h3>
+          <p class="muted">رسائل يومية بالمبلغ وأيام التأخير وتاريخ الاستحقاق حتى السداد—بدون متابعة يدوية.</p>
+          <a href="Detailes/debt-reminder.html" class="btn ghost">📬 آلية المطالبة</a>
+        </div>
+
+        <!-- الديون والدفعات -->
+        <div class="card" data-reveal>
+          <span class="badge">Finance</span>
+          <h3>ديون ودُفعات بلا ضياع</h3>
+          <p class="muted">تسجيل جزئي/كلي، إشعارات فورية، فلترة دقيقة حسب الحالة، وتصدير آمن.</p>
+          <a href="Detailes/debts.html" class="btn ghost">💰 سجل الديون</a>
+        </div>
+
+        <!-- المبيعات -->
+        <div class="card" data-reveal>
+          <span class="badge">Sales</span>
+          <h3>مبيعات كاش ودين</h3>
+          <p class="muted">تحليلات سريعة، إجمالي بحسب العملة، وفلاتر زمنية/حسب المشترك—وتقارير Excel محمية.</p>
+          <a href="Detailes/sales.html" class="btn ghost">📊 آلية البيع</a>
+        </div>
+
+        <!-- الباقات -->
+        <div class="card" data-reveal>
+          <span class="badge">Plans</span>
+          <h3>باقات واشتراكات مرنة</h3>
+          <p class="muted">سرعة/حجم/مدة/عملة، تجديد تلقائي مع تسجيل دين وإشعار للمشترك.</p>
+          <a href="Detailes/plans-subscribs.html" class="btn ghost">🗂 إدارة الباقات</a>
+        </div>
+
+        <!-- الأرباح والشركاء -->
+        <div class="card" data-reveal>
+          <span class="badge">Partners</span>
+          <h3>أرباح وشركاء بشفافية</h3>
+          <p class="muted">توزيع حصص تلقائي حسب النسب والعملة، منع التجاوز، سجل سحب شبيه بالأنظمة المصرفية.</p>
+          <a href="Detailes/profits.html" class="btn ghost">🤝 إدارة الأرباح</a>
+        </div>
+
+        <!-- التقارير -->
+        <div class="card" data-reveal>
+          <span class="badge">Reports</span>
+          <h3>تقارير Excel/PDF محمية</h3>
+          <p class="muted">توثيق الفلاتر ونطاق التاريخ داخل التقرير—جاهزة للطباعة والأرشفة.</p>
+          <a href="Detailes/excel-export.html" class="btn ghost">📂 أمثلة التقارير</a>
+        </div>
+
+        <!-- المستخدمون -->
+        <div class="card" data-reveal>
+          <span class="badge">RBAC</span>
+          <h3>مستخدمون وصلاحيات Bitwise</h3>
+          <p class="muted">أدوار دقيقة، سجل لكل عملية، وتقرير يومي بنشاط الفريق عبر واتساب.</p>
+          <a href="Detailes/users.html" class="btn ghost">🛡️ صلاحيات الفريق</a>
+        </div>
+
+        <!-- العملات -->
+        <div class="card" data-reveal>
+          <span class="badge">Currencies</span>
+          <h3>تعدد عملات دون فوضى</h3>
+          <p class="muted">سوري/تركي/دولار وأي عملة إضافية—حسابات دقيقة عبر الأنظمة والتقارير.</p>
+          <a href="Detailes/currencies.html" class="btn ghost">💱 إدارة العملات</a>
+        </div>
+
+        <!-- المصاريف -->
+        <div class="card" data-reveal>
+          <span class="badge">Expenses</span>
+          <h3>مصاريف مُنظمة</h3>
+          <p class="muted">تصنيفات مرنة (حتى مراعاة زبائن)، فلترة زمنية/قِيَمية، وارتباط مباشر بحساب الربح.</p>
+          <a href="Detailes/expenses.html" class="btn ghost">🧾 أنواع المصاريف</a>
+        </div>
+
+        <!-- النسخ الاحتياطي -->
+        <div class="card" data-reveal>
+          <span class="badge">Backup</span>
+          <h3>نسخ احتياطي تلقائي</h3>
+          <p class="muted">جدولة يومية/ساعية، حفظ على Google Drive أو محليًا، واسترجاع بنقرة.</p>
+          <a href="Detailes/backup.html" class="btn ghost">☁️ خطة النسخ</a>
+        </div>
+
+        <!-- الأبراج -->
+        <div class="card" data-reveal>
+          <span class="badge">Towers</span>
+          <h3>إدارة الأبراج والتنبيهات</h3>
+          <p class="muted">مدير وفريق لكل برج، تحديد الأعطال تلقائيًا، وإشعارات دقيقة للمعنيين فقط.</p>
+          <a href="Detailes/towers.html" class="btn ghost">🏢 تفاصيل الأبراج</a>
+        </div>
+
+        <!-- الممتلكات -->
+        <div class="card" data-reveal>
+          <span class="badge">Assets</span>
+          <h3>ممتلكات الشبكة</h3>
+          <p class="muted">تتبّع الأجهزة والموقع والحالة والمستخدم الحالي وسجل الحركة—تحليل رأس المال المادي.</p>
+          <a href="Detailes/properties.html" class="btn ghost">🧰 إدارة الممتلكات</a>
+        </div>
+
+        <!-- الولاء -->
+        <div class="card" data-reveal>
+          <span class="badge">Loyalty</span>
+          <h3>نظام ولاء يحرّك التجديد</h3>
+          <p class="muted">نقاط تلقائية للدفع/التجديد/الدعوات، عروض استبدال، ورسائل تهنئة سنوية.</p>
+          <a href="Detailes/loyalty.html" class="btn ghost">🎁 برنامج النقاط</a>
+        </div>
+      </div>
+
+      <!-- مستقبل -->
+      <div class="card" style="margin-top:18px" data-reveal>
+        <h3>🚀 ميزات مستقبلية قادمة</h3>
+        <ul style="margin:0; padding:0 18px; color:#374151; line-height:2">
+          <li>🏪 إدارة بيع القطع والإكسسوارات مع مستودع</li>
+          <li>🛒 متجر محلي للقطع الإلكترونية مع تتبع أرباح/ديون/فواتير</li>
+          <li>🌐 منصة سحابية للوصول من أي مكان</li>
+          <li>📱 تطبيق للمشتركين لمتابعة الاستهلاك والنقاط</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-
-    <section id="features">
-      <h2>الميزات الرئيسية في <strong>ControTik</strong></h2>
-      <div class="feature">
-        <h3>🛠️ <strong>إدارة الاشتراكات والباقات</strong></h3>
-        <p>
-          نظام <strong>مرن</strong> لإنشاء وتعديل الباقات حسب <strong>السرعة</strong> أو <strong>الحجم</strong> أو
-          <strong>السعر</strong>.
-          يدعم <strong>التجديد التلقائي</strong> بعد انتهاء الاشتراك مع <strong>تسجيل دين</strong> وإرسال رسالة للمشترك.
-          كما يمكن <strong>تفعيل أو إلغاء أي باقة</strong> بضغطة زر، مع <strong>سجل كامل</strong> لكل باقة.
-        </p>
-
-        <a href="Detailes/plans-subscribs.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🔍 عرض المزيد
-        </a>
+  <!-- Video -->
+  <section id="video">
+    <div class="container">
+      <div class="video-wrap" data-reveal>
+        <iframe src="https://www.youtube.com/embed/XXjpvuDMlC4" title="ControTik Demo" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
       </div>
+    </div>
+  </section>
 
-
-      <div class="feature">
-        <h3>📦 <strong>نظام المصاريف الذكي</strong></h3>
-        <p>
-          تتبع <strong>جميع أنواع المصاريف</strong>، من الكبيرة إلى الصغيرة، مع <strong>تصنيف مرن</strong> مثل "إيجار،
-          كهرباء، معدات"
-          أو حتى "مراعاة زبائن" لتوثيق أي مبالغ مجاملة وتقديم <strong>تقارير حقيقية</strong> تُظهر كم أنفقت شهريًا.
-        </p>
-        <a href="Detailes/expenses.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🧾 شاهد أنواع المصاريف </a>
+  <!-- CTA -->
+  <section id="contact">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <h2>جاهز للانطلاق؟</h2>
+        <p class="muted">اطّلع على تفاصيل الأسعار واختر الخطة الأنسب لمرحلتك.</p>
+        <div class="actions" style="justify-content:center">
+          <a href="plans.html" class="btn primary ring">✨ اطلع على الباقات</a>
+          <a href="https://wa.me/963900000000" class="btn ghost ring" target="_blank" rel="noopener">تواصل واتساب</a>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="feature">
-        <h3>📈 <strong>نظام المبيعات</strong></h3>
-        <p>
-          عرض وتحليل شامل لـ<strong>المبيعات النقدية</strong> و<strong>المبيعات بالدين</strong>، مع إمكانية
-          <strong>التصفية الدقيقة</strong>،
-          واحتساب <strong>الإجمالي بحسب الفلترة والعملة</strong>. <strong>التقارير قابلة للتصدير</strong> بصيغة Excel
-          محمية.
-        </p>
-        <a href="Detailes/sales.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          📊 اكتشف آلية المبيعات </a>
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="sec-head">
+        <h2 data-reveal>قالوا عن ControTik</h2>
       </div>
-
-      <div class="feature">
-        <h3>💳 <strong>نظام الديون والدفعات</strong></h3>
-        <p>
-          تسجيل الديون <strong>بشكل جزئي أو كلي</strong> لكل مشترك، مع إمكانية تتبع <strong>الدفعات ضمن سجل
-            مفصل</strong>.
-          يتم إرسال <strong>إشعار تلقائي</strong> عند كل دفعة جديدة، مع دعم <strong>الفلترة الدقيقة</strong> ومراقبة
-          <strong>حالة الديون اليومية</strong>.
-        </p>
-        <a href="Detailes/debts.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          💰 تفصيل نظام الديون </a>
+      <div class="testi">
+        <div class="card quote" data-reveal>
+          <p>“اختصر علينا متابعة الديون والهوتسبوت. لوحة نظيفة وسريعة.”</p>
+          <div class="avatar"><img src="https://dummyimage.com/80x80/ddd/aaa.png&text=A" alt="صورة عميل" loading="lazy">
+            <div><b>شبكة الأفق</b>
+              <div class="muted">دمشق</div>
+            </div>
+          </div>
+        </div>
+        <div class="card quote" data-reveal>
+          <p>“التجديد الذكي والتنبيهات قبل الانتهاء أنقذتنا من الفوضى.”</p>
+          <div class="avatar"><img src="https://dummyimage.com/80x80/ddd/aaa.png&text=B" alt="صورة عميل" loading="lazy">
+            <div><b>FastLink ISP</b>
+              <div class="muted">حلب</div>
+            </div>
+          </div>
+        </div>
+        <div class="card quote" data-reveal>
+          <p>“تقارير جاهزة للطباعة وPDF للهوتسبوت—موضوع البطاقات صار سهل.”</p>
+          <div class="avatar"><img src="https://dummyimage.com/80x80/ddd/aaa.png&text=C" alt="صورة عميل" loading="lazy">
+            <div><b>Sky Tower Net</b>
+              <div class="muted">أنطاكية</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="feature">
-        <h3>📊 <strong>تقرير واتساب يومي لصاحب الشبكة</strong></h3>
-        <p>
-          يعمل النظام كـ<strong>موظف افتراضي</strong> يرسل إليك كل صباح <strong>تقريرًا مفصلًا عبر واتساب</strong> يشمل:
-          الاشتراكات المنتهية، الديون المستحقة، المصاريف الأخيرة، نشاط المستخدمين، وسحب الأرباح.
-          <strong>لا حاجة لتسجيل الدخول</strong> لمتابعة الشبكة.
-        </p>
-        <a href="Detailes/whatsapp-reports.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          📱 كيف يصلك التقرير؟ </a>
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="sec-head">
+        <h2 data-reveal>الأسئلة المتكررة</h2>
       </div>
-
-      <div class="feature">
-        <h3>📩 <strong>المطالبة التلقائية بالديون</strong></h3>
-        <p>
-          نظام ذكي يرسل <strong>رسائل يومية تلقائية</strong> للمشتركين المتأخرين عن السداد، حتى يتم تسديد الدين.
-          تشمل الرسالة <strong>التفاصيل الدقيقة</strong> مثل <strong>المبلغ، عدد أيام التأخير، وتاريخ
-            الاستحقاق</strong>.
-        </p>
-        <a href="Detailes/debt-reminder.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          📬 عرض آلية المطالبة الذكية </a>
+      <div class="faq">
+        <details data-reveal>
+          <summary>هل يوجد إصدار تجريبي؟</summary>
+          <p class="muted">نعم، يمكنك التجربة قبل الالتزام بالشراء.</p>
+        </details>
+        <details data-reveal>
+          <summary>هل يدعم الهوتسبوت مع طباعة PDF وباركود؟</summary>
+          <p class="muted">نعم، إنشاء قوالب مخصّصة وتصدير PDF مع باركود للنسخ السريع.</p>
+        </details>
+        <details data-reveal>
+          <summary>هل توجد تقارير مالية للشركاء؟</summary>
+          <p class="muted">نعم، مع توزيع أرباح ونظام سحب لا يسمح بتجاوز الحصة.</p>
+        </details>
+        <details data-reveal>
+          <summary>كيف يتم الدفع؟</summary>
+          <p class="muted">الدفع نصف سنوي. زر <a href="plans.html">الباقات</a> يوضح التفاصيل.</p>
+        </details>
       </div>
+    </div>
+  </section>
 
-      <div class="feature">
-        <h3>👥 <strong>نظام الشركاء وسحب الأرباح</strong></h3>
-        <p>
-          <strong>توزيع أرباح تلقائي</strong> لكل شريك حسب نسبته والعملة المختارة.
-          لا يمكن لأي شريك <strong>سحب أكثر من حصته</strong>، ويتم إشعاره <strong>تلقائيًا عبر واتساب</strong> مع
-          <strong>سجل تفصيلي</strong> مثل أنظمة البنوك.
-        </p>
-        <a href="Detailes/profits.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🤝 كيف تُدار الأرباح؟ </a>
+  <!-- Footer -->
+  <footer>
+    <div class="container foot">
+      <div>
+        <h4>ControTik</h4>
+        <p class="muted">منصة لإدارة شبكات الإنترنت — هوتسبوت، برودباند، وPPPoE — بتصميم SaaS فاتح مع سيان.</p>
       </div>
-
-      <div class="feature">
-        <h3>🧾 <strong>تقارير Excel محمية</strong></h3>
-        <p>
-          جميع البيانات يمكن تصديرها إلى <strong>ملفات Excel محمية</strong> لا يمكن تعديلها.
-          تشمل التقارير <strong>بيانات مفلترة بدقة</strong>، مع <strong>تواريخ وحدود واضحة</strong>، وصالحة
-          <strong>للعرض
-            الرسمي أو الأرشفة</strong>.
-        </p>
-        <a href="Detailes/excel-export.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          📂 شاهد مثال تقارير</a>
+      <div>
+        <h4>المنتج</h4>
+        <a href="#features">الميزات</a><br>
+        <a href="plans.html">الباقات</a><br>
+        <a href="#faq">الأسئلة</a>
       </div>
-
-      <div class="feature">
-        <h3>🎯 <strong>نظام ولاء مرن</strong></h3>
-        <p>
-          يُمنح المشترك <strong>نقاطًا عند الدفع، التجديد، أو دعوة أصدقاء</strong>.
-          يمكن <strong>استبدال النقاط بعروض مخصصة</strong>. النظام يدعم <strong>إضافة نقاط عند مناسبات خاصة</strong> مثل
-          ذكرى الانضمام.
-        </p>
-        <a href="Detailes/loyalty.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🎁 كيف يتم الحصول على نقاط؟ </a>
+      <div>
+        <h4>الدعم</h4>
+        <a href="#faq">الأسئلة</a><br>
+        <a href="mailto:support@controtik.com">support@controtik.com</a><br>
+        <a href="tel:+963900000000">+963 900 000 000</a>
       </div>
-
-      <div class="feature">
-        <h3>🧠 <strong>رسائل مخصصة بفلترة مركبة</strong></h3>
-        <p>
-          أرسل <strong>رسائل موجهة لفئات محددة</strong> عبر نظام فلترة قوي يشمل <strong>أكثر من 7 معايير دقيقة</strong>
-          مثل:
-          نوع الاشتراك، قيمة الدين، العملة، عدد أيام التأخير، المنطقة، إلخ.
-          ويمكن <strong>تخصيص محتوى كل رسالة تلقائيًا</strong> وفق بيانات المتلقي.
-        </p>
-        <a href="Detailes/messages.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🧠 اطلع على الفلاتر </a>
+      <div>
+        <h4>روابط</h4>
+        <a href="#">سياسة الخصوصية</a><br>
+        <a href="#">الشروط</a>
       </div>
+    </div>
+    <div class="container" style="margin-top:18px;color:#9ca3af">© 2025 ControTik</div>
+  </footer>
 
-      <div class="feature">
-        <h3>🌍 <strong>دعم متعدد للعملات</strong></h3>
-        <p>
-          <strong>ControTik</strong> يدعم العملات الثلاث الأكثر استخدامًا: <strong>الليرة السورية، الدولار، والليرة
-            التركية</strong>،
-          بالإضافة إلى إمكانية <strong>إضافة أي عملة جديدة</strong>. كل نظام يتعامل مع العملة <strong>بدقة
-            تامة</strong>.
-        </p>
-        <a href="Detailes/currencies.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          💱 كيف نحل مشكلة التنوع؟ </a>
-      </div>
+  <!-- JS -->
+  <script>
+    function toggleMenu() {
+      const m = document.getElementById('menu');
+      const isOpen = getComputedStyle(m).display !== 'none';
+      m.style.display = isOpen ? 'none' : 'flex';
+    }
+    const reveal = () => {
+      const els = document.querySelectorAll('[data-reveal]');
+      const h = window.innerHeight || document.documentElement.clientHeight;
+      els.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < h - 60) el.classList.add('show') });
+    };
+    document.addEventListener('scroll', reveal, { passive: true });
+    document.addEventListener('DOMContentLoaded', reveal);
+  </script>
 
-      <div class="feature">
-        <h3>🧑‍💼 <strong>نظام المستخدمين والصلاحيات</strong></h3>
-        <p>
-          أنشئ حسابات لـ<strong>موظفين، مدراء، وشركاء</strong> مع <strong>تحديد دقيق للصلاحيات</strong> باستخدام
-          <strong>Bitwise</strong>.
-          يتم تسجيل <strong>كل عملية</strong> يقوم بها أي مستخدم، مع <strong>إرسال تقرير يومي</strong> بالنشاطات.
-        </p>
-        <a href="Detailes/users.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🛡️كيفية مراقبة صلاحيات الفريق؟ </a>
-      </div>
+  <!-- Structured Data (FAQ + Organization) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"هل يوجد إصدار تجريبي؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يمكنك التجربة قبل الالتزام بالشراء."}},
+    {"@type":"Question","name":"هل يدعم الهوتسبوت مع طباعة PDF وباركود؟","acceptedAnswer":{"@type":"Answer","text":"نعم، إنشاء قوالب مخصّصة وتصدير PDF مع باركود للنسخ السريع."}},
+    {"@type":"Question","name":"هل توجد تقارير مالية للشركاء؟","acceptedAnswer":{"@type":"Answer","text":"نعم، مع توزيع أرباح ونظام سحب لا يسمح بتجاوز الحصة."}},
+    {"@type":"Question","name":"كيف يتم الدفع؟","acceptedAnswer":{"@type":"Answer","text":"الدفع نصف سنوي. صفحة الباقات توضح التفاصيل."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"ControTik","url":"https://controtik.com/","logo":"https://controtik.com/img/meta.jpg","knowsAbout":["Hotspot","الهوتسبوت","PPPoE","Broadband","إدارة الشبكات","شبكات إنترنت"]}
+  </script>
 
-      <div class="feature">
-        <h3>🔐 <strong>نظام التراخيص المشفر</strong></h3>
-        <p>
-          كل نسخة مرخصة باستخدام <strong>HWID مشفر</strong>. النظام لا يعمل على <strong>جهاز غير مصرح به</strong>، ويقوم
-          بـ<strong>تسجيل كل محاولة تشغيل أو تعديل</strong> لضمان <strong>الحماية المطلقة</strong>.
-        </p>
-        <a href="Detailes/license.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🔐 عرض آلية حماية تراخيصك </a>
-      </div>
+  <!-- AOS (اختياري) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
-      <div class="feature">
-        <h3>☁️ <strong>النسخ الاحتياطي التلقائي</strong></h3>
-        <p>
-          <strong>جدولة نسخ احتياطية</strong> تلقائية يوميًا أو كل ساعة، مع إمكانية <strong>تخزين النسخة على
-            Google Drive</strong> أو محليًا.
-          يتم <strong>استرجاع النسخة الأحدث بنقرة واحدة</strong>.
-        </p>
-        <a href="Detailes/backup.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          ☁️عرض آلية جدولة النسخ </a>
-      </div>
-
-
-      <div class="feature">
-        <h3>🏢 <strong>نظام إدارة الأبراج</strong></h3>
-        <p>
-          خصص لكل برج <strong>مدير وموظفين</strong>، وراقب ما يجري بدقة. عند <strong>انتهاء اشتراك مشترك</strong> أو
-          حدوث <strong>عطل في جهاز</strong>، يتم <strong>إرسال تنبيه تلقائي</strong> للفريق المسؤول عن البرج مع
-          التفاصيل.
-        </p>
-        <a href="Detailes/towers.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-      background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🏢 عرض تفاصيل إدارة الأبراج
-        </a>
-      </div>
-
-
-      <div class="feature">
-        <h3 style="font-size: 1.7em; margin-bottom: 12px;">🧰 <strong>نظام إدارة ممتلكات الشبكة</strong></h3>
-
-        <p style="font-size: 1.15em; line-height: 1.7;">
-          نظام احترافي يتيح لك <strong>تسجيل وتتبع كل قطعة</strong> ضمن الشبكة: أجهزة بث، روترات، كاميرات، سويتشات، أو
-          أي معدات أخرى.
-          كل ممتلكة تسجل بمواصفات دقيقة، من لحظة شرائها حتى انتقالها أو توقفها.
-        </p>
-
-        <p style="margin-top: 10px; font-size: 1.1em;">
-          يتضمن النظام <strong>سجل حركة ذكي</strong> لكل جهاز، يظهر لك:
-        <ul style="margin-left: 20px; list-style-type: circle; font-size: 1em; margin-top: 6px;">
-          <li>تاريخ الشراء والقيمة</li>
-          <li>الموقع الحالي (البرج أو المكتب)</li>
-          <li>حالة الاستخدام (فعال، معطل...)</li>
-          <li>من يستخدمه حاليًا ورقم هاتفه</li>
-          <li>سجل التنقلات والتحديثات على مدى عمره</li>
-        </ul>
-        </p>
-
-        <p style="margin-top: 10px; font-size: 1.05em;">
-          🧾 تم تصميم هذا النظام لمساعدتك في <strong>تحليل رأس المال المادي</strong> للشبكة، منع الضياع أو السرقات،
-          وتنظيم
-          عمليات الصيانة والاستبدال بشكل احترافي.
-        </p>
-
-        <a href="Detailes/properties.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-      background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          🧰عرض تفاصيل إدارة الممتلكات
-        </a>
-      </div>
-
-      <div class="feature">
-        <h3 style="color:#00dec8; font-size:1.6em;">🌐 <strong>التكامل مع MikroTik — إدارة البرودباند باحتراف</strong>
-        </h3>
-        <p style="line-height:1.8; font-size:1.1em; color:#e0f7f5;">
-          يوفّر <strong>ControTik</strong> نظام برودباند متكامل يعمل مباشرة على <strong>سيرفر MikroTik</strong> دون أي
-          تدخل يدوي:
-          - عند انتهاء الاشتراك يتم <strong>تعطيل الحساب</strong> تلقائيًا أو نقله إلى <strong>بروفايل ضعيف</strong> حسب
-          اختيارك. <br>
-          - إرسال <strong>رسائل تنبيه تلقائية</strong> للمشتركين قبل انتهاء اشتراكهم. <br>
-          - نظام <strong>مطالبات ذكي</strong> يذكّر المشتركين بالديون المستحقة حتى يتم السداد. <br>
-          - كل العمليات تُسجّل بشكل آمن في السيرفر مع ربطها مباشرة بالمشترك والباقة. <br>
-        </p>
-        <p style="margin-top:12px; font-size:1.05em; color:#80f7e6;">
-          هذا التكامل يحوّل البرودباند من مجرد اتصال إنترنت إلى <strong>منظومة احترافية</strong> لإدارة الاشتراكات،
-          الديون، والتنبيهات بشكل آلي ودقيق.
-        </p>
-
-      </div>
-      <div class="feature">
-        <h3 style="color:#00dec8; font-size:1.6em;">🔥 <strong>إدارة الهوتسبوت مع MikroTik</strong></h3>
-        <p style="line-height:1.8; font-size:1.1em; color:#e0f7f5;">
-          مع <strong>ControTik</strong> لم تعد بطاقات الهوتسبوت عملية يدوية أو عشوائية، بل نظام متكامل يعمل مباشرة على
-          <strong>سيرفر MikroTik</strong>:
-          - إنشاء بطاقات هوتسبوت بسهولة مع تحديد <strong>عدد المحارف</strong>، <strong>البادئة</strong>،
-          <strong>الحجم</strong>، و<strong>مدة الصلاحية</strong>. <br>
-          - تفعيل البطاقة يبدأ مع أول تسجيل دخول، وبعد انتهاء المدة يتم تعطيلها تلقائيًا. <br>
-          - <strong>مستودع بطاقات</strong> ذكي يوضح الرصيد المتبقي، البطاقات المباعة، والإحصائيات التفصيلية. <br>
-          - لوحة تحكم احترافية لعرض كل العمليات والفلترة حسب الحالة أو الشخص. <br>
-          - أدوات <strong>حذف، تعديل، وطباعة</strong> مرنة للبطاقات. <br>
-        </p>
-        <p style="margin-top:12px; font-size:1.05em; color:#80f7e6;">
-          الطباعة تتم بطريقة احترافية مع إمكانية التصدير إلى <strong>PDF</strong>، حيث تختار عدد الصفوف، القالب، ومكان
-          اسم المستخدم وكلمة المرور.
-          كما يمكن إضافة <strong>باركود</strong> لكل بطاقة لتسجيل دخول سريع عبر المسح.
-        </p>
-
-      </div>
-      <div class="feature">
-        <h3 style="color:#00dec8; font-size:1.6em;">🏪 <strong>نظام بيع الإنترنت بالجملة</strong></h3>
-        <p style="line-height:1.8; font-size:1.1em; color:#e0f7f5;">
-          تم تصميم هذا النظام خصيصًا لمزودي خدمة الإنترنت الذين يبيعون <strong>حزم وباقات كبيرة</strong> لأصحاب الشبكات:
-          - إضافة أصحاب الشبكات كمشتركين رئيسيين مع إدارة حساباتهم بشكل مستقل. <br>
-          - تحديد <strong>سعر خاص للميجابت</strong> لكل زبون، بما يتناسب مع حجم التعاقد أو الاتفاق. <br>
-          - إنشاء <strong>حزمة مخصصة</strong> لكل شبكة يتم متابعتها بدقة (السرعة، الكمية، مدة الاشتراك). <br>
-          - متابعة الاستهلاك وإصدار <strong>الفواتير التلقائية</strong> بناءً على الأسعار المخصصة لكل شبكة. <br>
-          - نظام <strong>مطالبة ذكي</strong> يرسل إشعارات للمشتركين عند اقتراب نهاية الحزمة أو تأخر السداد. <br>
-          - إحصائيات ولوحة تحكم شاملة تعرض: إجمالي المبيعات، الاستهلاك الشهري، الاشتراكات النشطة والمنتهية. <br>
-        </p>
-        <p style="margin-top:12px; font-size:1.05em; color:#80f7e6;">
-          بفضل هذا النظام، يصبح بيع الإنترنت بالجملة عملية <strong>منظمة، آمنة، واحترافية</strong>،
-          مما يساعد مزود الخدمة على متابعة أرباحه وتوزيع الحزم دون أي فوضى.
-        </p>
-
-      </div>
-
-
-      <div class="feature">
-        <h3>⚙️ <strong>تخصيص النظام حسب طلبك</strong></h3>
-        <p>
-          <strong>ControTik</strong> نظام <strong>حي وقابل للتطور</strong>، ويمكنك <strong>طلب أي ميزة إضافية</strong>،
-          تعديل أي تقرير،
-          أو <strong>تخصيص التنبيهات والرسائل</strong> بحسب طبيعة عملك. نحن <strong>نبني النظام كما يناسبك</strong>.
-        </p>
-        <a href="Detailes/custom.html" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 24px; font-weight: bold; border-radius: 8px;
-            background-color: #00dec8; color: #000; text-decoration: none; font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.3s ease;">
-          ⚙️ اطلب تخصيصًا </a>
-      </div>
-
-      <div class="feature">
-        <h3>🚀 <strong>ميزات مستقبلية قادمة بقوة</strong></h3>
-        <p>
-          نعمل باستمرار على تطوير <strong>ControTik</strong> ليصبح أكثر تكاملًا ومرونة. من الميزات التي يجري العمل عليها
-          حاليًا:
-        </p>
-        <ul style="list-style: none; padding: 0; text-align: right; line-height: 2; font-size: 1.05em;">
-
-          <li>🏪 <strong>نظام لإدارة بيع القطع والإكسسوارات</strong> الخاصة بالشبكات مع مستودع وربط مباشر بقاعدة
-            البيانات</li>
-
-          <li>🛒 <strong>المتجر المحلي</strong> لبيع وإدارة جميع القطع الإلكترونية (راوترات، كابلات، تجهيزات...) مع نظام
-            كامل
-            لتتبع <strong>الأرباح، الديون، والفواتير</strong> الخاصة بالمعدات، ليجعل ControTik النظام المتكامل لإدارة
-            شبكات
-            الإنترنت بكافة نواحيها.</li>
-
-          <li>🌐 <strong>منصة إلكترونية سحابية</strong> تتيح لك الدخول إلى شبكتك من أي جهاز أو مكان في العالم عبر واجهة
-            آمنة وسهلة الاستخدام</li>
-          <li>📱 <strong>تطبيق إلكتروني للمشتركين</strong> يمكّنهم من تتبع اشتراكاتهم، مراقبة الاستهلاك، واستبدال نقاطهم
-            بعروض حقيقية بكل سهولة</li>
-          <li>🎯 المزيد من <strong>المفاجآت القادمة</strong> والتحسينات الدائمة التي تطلبونها أنتم أصحاب الشبكات</li>
-        </ul>
-        <p>
-          💡 رؤيتنا هي أن يصبح <strong>ControTik</strong> مركزًا شاملًا لإدارة الشبكات الحديثة، مبنيًا على احتياجاتكم
-          واقتراحاتكم.
-        </p>
-      </div>
-
-
-
-    </section>
-
-
-
-    <section id="cta" class="fancy-section" style="background: linear-gradient(135deg, #001f25, #01383f);
-     padding: 60px 30px; text-align: center; border-radius: 20px; 
-     margin: 80px auto 0; max-width: 1000px; 
-     box-shadow: 0 0 30px rgba(0, 255, 255, 0.08); color: #e0f7f5; font-family: 'Dubai', sans-serif;">
-      <h2 style="font-size: 2.4em; color: #00dec8; margin-bottom: 20px;">💡 جاهز لتكون شبكة احترافية؟</h2>
-
-      <p style="font-size: 1.2em; line-height: 2; margin-bottom: 30px;">
-        توقف عن إدارة شبكتك بالعشوائية، وابدأ اليوم باستخدام <strong>ControTik</strong> — النظام الذي صُمم خصيصًا لك
-        كصاحب
-        شبكة لتعيش تجربة إدارة لا مثيل لها:
-      </p>
-
-      <ul style="list-style: none; padding: 0; text-align: right; max-width: 800px; margin: auto;">
-        <li style="margin-bottom: 12px;">✅ <strong>رؤية شاملة</strong> لكل مشترك، اشتراك، دفعة، ودين</li>
-        <li style="margin-bottom: 12px;">✅ <strong>رسائل تلقائية</strong> احترافية كتلك التي تستخدمها شركات الاتصالات
-        </li>
-        <li style="margin-bottom: 12px;">✅ <strong>تقارير مالية دقيقة</strong> ومحمية بصيغة Excel لإدارة الأرباح
-          والشركاء
-        </li>
-        <li style="margin-bottom: 12px;">✅ <strong>نظام تراخيص آمن</strong> يحمي استثمارك ويمنع التلاعب</li>
-        <li style="margin-bottom: 12px;">✅ <strong>لوحات تحكم فاخرة</strong> ومريحة للعين لتقودك بسرعة نحو القرار الصائب
-        </li>
-      </ul>
-
-      <p style="font-size: 1.15em; margin-top: 30px;">
-        لا مزيد من الفوضى، لا حاجة للورقيات أو الحساب اليدوي...
-        <strong style="color: #00e0d0;">ControTik</strong> هو شريكك الذكي الذي يعمل معك 24/7 لتجعل شبكتك تنمو بثقة
-        واستقرار.
-      </p>
-
-      <p style="font-size: 1.15em; margin-top: 25px; color: #80f7e6;">
-        💎 جرب <strong>النسخة التجريبية</strong> أولاً، واكتشف بنفسك الفرق الذي يصنعه ControTik.
-      </p>
-
-      <a href="plans.html" target="_blank" style="
-     display: inline-block;
-     background-color: #00dec8;
-     color: #000;
-     padding: 16px 32px;
-     border-radius: 12px;
-     font-weight: bold;
-     text-decoration: none;
-     font-size: 1.3em;
-     box-shadow: 0 4px 14px rgba(0, 222, 200, 0.3);
-     transition: all 0.3s ease;
-   " onmouseover="this.style.boxShadow='0 6px 20px rgba(0, 222, 200, 0.5)'; this.style.transform='scale(1.03)'"
-        onmouseout="this.style.boxShadow='0 4px 14px rgba(0, 222, 200, 0.3)'; this.style.transform='scale(1)'">
-        ✨ اطلب نسختك الآن وابدأ ثورة شبكتك
-      </a>
-    </section>
-
-    <footer>
-      © 2025 ControTik. جميع الحقوق محفوظة.
-    </footer>
-
-    <button onclick="scrollToTop()" id="scrollTopBtn" title="العودة للأعلى">↑</button>
-    <script>
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    </script>
-    <!-- قبل نهاية body -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
 </body>
 
 </html>

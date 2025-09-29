@@ -2,67 +2,208 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <title>نظام إدارة الأبراج</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ControTik | نظام إدارة الأبراج والتواصل الذكي (تنبيهات، فرق، أجهزة)</title>
+    <meta name="description"
+        content="إدارة أبراج الشبكة باحتراف: ربط كل برج بمدير وفريق، خرائط وموقع، مراقبة أجهزة، تنبيهات فورية عبر واتساب، وسجل أحداث متكامل مع SLA." />
+    <link rel="canonical" href="https://controtik.com/Detailes/towers.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ControTik | نظام إدارة الأبراج والتواصل الذكي" />
+    <meta property="og:description"
+        content="ربط الأبراج بمدير وفريق، مراقبة أجهزة، تنبيهات تلقائية، وتذاكر/SLA—كل ذلك بواجهة سيان فاتحة." />
+    <meta property="og:url" content="https://controtik.com/Detailes/towers.html" />
+    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
+
+    <!-- Fonts (نفس الخط) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-    <section id="towers" class="fancy-section">
-        <h2>🏢 نظام إدارة الأبراج والتواصل الذكي</h2>
-        <img src="../img/towersSystem.png" alt="نظام الأبراج">
 
-        <p>
-            تم تصميم هذا النظام خصيصًا لتنظيم الأبراج في شبكتك بشكل احترافي، مع ربط كل برج بـ<strong>مدير مسؤول</strong>
-            وفريق من <strong>الموظفين الفنيين</strong> المرتبطين به مباشرة.
-        </p>
-
-        <p>
-            كل برج يحتوي على:
-        </p>
-        <ul>
-            <li>📌 اسم البرج وموقعه الجغرافي</li>
-            <li>🧑‍💼 مدير مسؤول عن البرج</li>
-            <li>👷‍♂️ فريق موظفين فنيين يتابعون شؤونه</li>
-            <li>📶 عدد المشتركين المتصلين به</li>
-            <li>🔧 قائمة الأجهزة المرتبطة به (نواشر، راوترات، كاميرات...)</li>
-        </ul>
-
-        <p>
-            🎯 عند حدوث أي حالة طارئة مرتبطة بالبرج، مثل:
-        </p>
-        <ul>
-            <li>انقطاع اشتراك أحد المشتركين ◀️ يتم تنبيه موظف البرج مباشرة.</li>
-            <li>عطل مفاجئ في أحد الأجهزة المرتبطة ◀️ يُرسل تنبيه تلقائي للمدير والطاقم.</li>
-            <li>توقف مفاجئ في تغذية البرج ◀️ يتم إخطار المعنيين تلقائيًا مع تحديد البرج والجهاز وموقعه.</li>
-        </ul>
-
-        <p>
-            📡 <strong>يتم تحديد البرج المرتبط تلقائيًا</strong> عبر تحليل موقع المشترك أو الجهاز، مما يُمكّن النظام من:
-        </p>
-        <ul>
-            <li>📍 تحديد موقع العطل بدقة</li>
-            <li>📬 إرسال إشعارات دقيقة للجهات المختصة فقط</li>
-            <li>🕓 تسجيل وقت الانقطاع أو العطل</li>
-        </ul>
-
-        <p>
-            ✅ تم بناء هذا النظام لتقليل الفوضى ورفع كفاءة الدعم الفني، بحيث يصبح لكل فريق مسؤوليات محددة، ويعرف الجميع
-            متى وأين يتصرفون فورًا، مما يُقلل من الأعطال ويُعزز احترافية الشبكة.
-        </p>
-
-        <p>
-            🧠 باختصار، هذا النظام يجعل شبكتك <strong>مُنظمة، قابلة للإدارة، وسريعة في الاستجابة</strong> لأي مشكلة دون
-            الحاجة لأي متابعة يدوية!
-        </p>
-
-        <div class="section-images">
-            <img src="../img/towersDetails.png" alt="تفاصيل الأبراج">
-            <img src="../img/tower.png" alt="تفاصيل الأبراج">
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html" aria-label="العودة للرئيسية">
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
-    </section>
+    </header>
+
+    <main class="container">
+
+        <!-- مسار تنقّل -->
+        <nav class="crumbs" aria-label="مسار الصفحة" style="margin-top:12px">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>نظام إدارة الأبراج</span>
+        </nav>
+
+        <section id="towers" class="fancy-section" data-aos="fade-up">
+            <h2>🏢 نظام إدارة الأبراج والتواصل الذكي</h2>
+
+
+            <p>
+                صُمّم نظام الأبراج ليحوّل البنية الميدانية لشبكتك إلى <strong>لوحة عمليات</strong> دقيقة: كل برج له
+                <b>مدير</b> واضح، <b>فريق فني</b> محدّد، <b>قائمة أجهزة</b> مع الحالة، و<b>خريطة</b> توضح مكانه.
+                عند أي حدث—ينطلق <b>تنبيه فوري</b> للمعنيين فقط، مع سجلّ أحداث وقياس <b>SLA</b> تلقائي.
+            </p>
+
+            <!-- بطاقات مؤشرات -->
+            <div class="grid-3" style="margin-top:14px">
+                <div class="card">
+                    <span class="badge">Overview</span>
+                    <h3>تعريف البرج</h3>
+                    <ul class="list muted">
+                        <li>📌 الاسم وموقع GPS/الحي</li>
+                        <li>🧑‍💼 مدير مسؤول + تواصل سريع</li>
+                        <li>👷‍♂️ فريق فني مرتبط</li>
+                        <li>📶 عدد المشتركين المتصلين</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="badge">Devices</span>
+                    <h3>الأجهزة المرتبطة</h3>
+                    <p class="muted">نواشر، راوترات، سويتشات، كاميرات… مع الحالة (فعال/منقطع/قيد الصيانة) وسجل آخر ظهور.
+                    </p>
+                </div>
+                <div class="card">
+                    <span class="badge">Telemetry</span>
+                    <h3>مراقبة وتنبيهات</h3>
+                    <p class="muted">انقطاع جهاز؟ زيادة تأخير؟ يرسل تنبيهًا للمدير والفريق مع الزمن، IP/MAC، والموقع.
+                    </p>
+                </div>
+            </div>
+
+            <!-- حالات ذكية -->
+            <h3 style="margin-top:18px">حالات ذكية يحدثها النظام تلقائيًا</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>اشتراك منقطع</h3>
+                    <p class="muted">يتعرّف على المشترك المرتبط بالبرج ويرسل تنبيه موجه لموظف البرج مع بيانات العنوان.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>عطل جهاز</h3>
+                    <p class="muted">عند توقف ناشر/سويتش: إشعار للمدير والطاقم، وتذكرة صيانة تُنشأ تلقائيًا مع أولوية.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>تغذية البرج</h3>
+                    <p class="muted">هبوط/انقطاع تغذية؟ يحدّد البرج المتأثر ويُخطر الفني الأقرب زمنيًا/مكانيًا.</p>
+                </div>
+            </div>
+
+
+            <!-- تكامل واتساب + سجلات -->
+            <div class="callout" style="margin-top:14px">
+                <div>🔔</div>
+                <div class="muted">
+                    <strong>تنبيهات انتقائية:</strong> النظام لا يزعج الجميع؛ يرسل الإشعار
+                    <b>للمعني الصحيح</b> فقط (مدير البرج/الفني المتناوب)، مع <b>سجل أحداث</b> قابل للتصفية والتصدير.
+                </div>
+            </div>
+
+            <!-- SLA & التذاكر -->
+            <h3 style="margin-top:18px">SLA وزمن الاستجابة</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="badge">Tickets</span>
+                    <h3>تذاكر صيانة تلقائية</h3>
+                    <p class="muted">لكل حادثة تُفتح تذكرة مرتبطة بالبرج/الجهاز، تُسند تلقائيًا لفني متاح وفق المناوبة.
+                    </p>
+                </div>
+                <div class="card">
+                    <span class="badge">SLA</span>
+                    <h3>قياس الأداء</h3>
+                    <p class="muted">حساب زمن الاستجابة والإغلاق، ومؤشرات الالتزام بالـSLA شهريًا لكل برج وفريق.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Exports</span>
+                    <h3>تقارير جاهزة</h3>
+                    <p class="muted">تصدير Excel/PDF للانقطاعات، أوقات الإصلاح، وفرق العمل—قابلة للأرشفة والطباعة.</p>
+                </div>
+            </div>
+
+            <!-- لائحة تحقق سريعة -->
+            <h3 style="margin-top:18px">قائمة تحقق سريعة لكل برج</h3>
+            <ul class="list">
+                <li>✅ بيانات البرج مكتملة (اسم/موقع/اتصال)</li>
+                <li>✅ مدير وفريق محددان مع وسائل التواصل</li>
+                <li>✅ الأجهزة مضافة مع IP/MAC وتسمية واضحة</li>
+                <li>✅ سياسة تنبيه وتذكرة مُعرّفة (أولوية/قناة الإشعار)</li>
+                <li>✅ مراجعة شهرية لـSLA وإغلاق التذاكر القديمة</li>
+            </ul>
+
+            <!-- CTA صغير -->
+            <div class="callout" style="margin-top:14px; justify-content:space-between; gap:12px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">من خريطة إلى قرار</div>
+                    <div class="muted">موقع، أجهزة، فريق، تنبيه، وتذكرة—سلسلة واحدة تُغلق العطل بأقل احتكاك ممكن.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ فعّل إدارة الأبراج</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- Structured Data (سكيما الأبراج ككيانات معدات/مواقع) -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"نظام إدارة الأبراج والتواصل الذكي",
+    "about":["Towers Management","Network Monitoring","SLA","Tickets","MikroTik"],
+    "articleSection":["Devices","Alarms","SLA","Teams"],
+    "keywords":["أبراج","مراقبة","تنبيهات","MikroTik","SLA","تذاكر صيانة"],
+    "publisher":{"@type":"Organization","name":"ControTik","url":"https://controtik.com/"},
+    "mainEntityOfPage":"https://controtik.com/Detailes/towers.html"
+  }
+  </script>
 </body>
 
 </html>

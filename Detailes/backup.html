@@ -3,61 +3,440 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ControTik | النسخ الاحتياطي التلقائي على Google Drive</title>
+    <meta name="description"
+        content="نظام النسخ الاحتياطي في ControTik: جدولة يومية/ساعية، تشفير قبل الرفع، ربط مباشر مع Google Drive، واسترجاع بنقرة واحدة.">
+    <link rel="canonical" href="https://controtik.com/Detailes/backup.html">
+    <meta name="theme-color" content="#00cfd5">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ControTik | النسخ الاحتياطي التلقائي">
+    <meta property="og:description" content="جدولة ذكية، تشفير محكم، وGoogle Drive — استرجاع بنقرة واحدة.">
+    <meta property="og:url" content="https://controtik.com/Detailes/backup.html">
+    <meta property="og:image" content="https://controtik.com/img/backup-og.jpg">
+    <meta property="og:image:alt" content="نظام النسخ الاحتياطي في ControTik">
+
+    <!-- Fonts (نفس خط التصميم) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <title>النسخ الاحتياطي</title>
+    <!-- Page Scoped Tweaks (خفيفة لتنسيق هذه الصفحة فقط) -->
+    <style>
+        :root {
+            --primary: #00cfd5;
+            --primary-2: #00aab0;
+            --line: #e5e7eb;
+            --muted: #6b7280;
+            --text: #1f2937;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .06);
+            --radius: 16px;
+        }
+
+        body {
+            font-family: 'Cairo', 'Dubai', system-ui, -apple-system, Segoe UI, Roboto, sans-serif
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin-inline: auto
+        }
+
+        .crumbs {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin: 18px 0
+        }
+
+        .crumbs a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .crumbs span {
+            opacity: .6
+        }
+
+        .hero-slim {
+            background: linear-gradient(180deg, #ffffff, #f5ffff);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 20px;
+            align-items: center;
+            margin: 18px 0 8px;
+        }
+
+        .hero-slim h1 {
+            margin: 0 0 8px;
+            font-size: clamp(24px, 3.4vw, 36px)
+        }
+
+        .hero-slim p {
+            color: var(--muted);
+            margin: 0
+        }
+
+        .hero-ill {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: var(--shadow);
+            padding: 10px
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 18px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: var(--shadow);
+            transition: .2s transform;
+        }
+
+        .card:hover {
+            transform: translateY(-4px)
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 20px
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e6fbfc;
+            color: #03686b;
+            border: 1px dashed #a6eff2;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            margin-bottom: 10px
+        }
+
+        .list {
+            margin: 8px 0 0;
+            padding: 0 18px;
+            color: #374151;
+            line-height: 1.9
+        }
+
+        .callout {
+            background: #f7fffe;
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--primary);
+            padding: 14px;
+            border-radius: 12px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none
+        }
+
+        .btn.primary {
+            background: var(--primary);
+            color: #000
+        }
+
+        .btn.primary:hover {
+            background: var(--primary-2)
+        }
+
+        .btn.ghost {
+            background: #fff;
+            border: 1px solid var(--line);
+            color: #111
+        }
+
+        .two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px
+        }
+
+        .howto li {
+            margin: 8px 0
+        }
+
+        .faq {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px
+        }
+
+        details {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 700
+        }
+
+        @media (max-width: 900px) {
+            .hero-slim {
+                grid-template-columns: 1fr
+            }
+
+            .faq,
+            .two,
+            .grid-3 {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
 </head>
 
+<body>
 
-<section id="backup" class="fancy-section">
-    <h2>نظام النسخ الاحتياطي التلقائي على Google Drive</h2>
+    <!-- Header مختصر (اختياري: يمكنك استبداله بالهيدر العام) -->
+    <header>
+        <div class="container nav" style="padding:14px 0">
+            <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:10px">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px">
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" style="display:flex;gap:16px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+        </div>
+    </header>
 
-    <img src="../img/backup.png" alt="نظام النسخ الاحتياطي على Google Drive">
-    <p>
-        يوفّر ControTik نظام نسخ احتياطي ذكي ومرن، مصمم لحماية بيانات شبكتك وتأمينها ضد الفقدان أو الأعطال، وذلك من
-        خلال
-        التكامل المباشر مع Google Drive.
-    </p>
+    <main class="container">
 
-    <p>
-        🔹 <strong>نسخ تلقائي بالكامل:</strong> يمكنك جدولة النسخ الاحتياطي ليتم تلقائيًا حسب الخيار الذي يناسبك:
-    </p>
-    <ul>
-        <li>نسخ يومي (كل صباح مثلاً)</li>
-        <li>نسخ كل ساعة</li>
-        <li>نسخ عند الطلب فقط</li>
-    </ul>
+        <!-- Breadcrumbs -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>النسخ الاحتياطي</span>
+        </nav>
 
-    <p>
-        🔹 <strong>رفع النسخة مباشرة إلى Google Drive:</strong> يتم حفظ نسخة مشفّرة من قاعدة البيانات بشكل تلقائي
-        إلى حساب
-        Google Drive المرتبط، في مجلد مخصص يمكن الوصول إليه لاحقًا بسهولة.
-    </p>
+        <!-- Hero -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>نظام النسخ الاحتياطي التلقائي على Google Drive</h1>
+                <p>جدولة مرنة (يومي/ساعي/عند الطلب)، تشفير قبل الرفع، ومسار مخصّص—مع استرجاع فوري بنقرة واحدة من داخل
+                    ControTik.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#howto" class="btn primary">ابدأ الإعداد الآن</a>
+                    <a href="#faq" class="btn ghost">الأسئلة الشائعة</a>
+                </div>
+            </div>
+            <div class="hero-ill">
+                <img src="../img/backup.png" alt="نظام النسخ الاحتياطي على Google Drive" loading="lazy">
+            </div>
+        </section>
 
-    <p>
-        🔹 <strong>مرونة في المسار والاسم:</strong> يمكنك تخصيص اسم الملف، ومجلد الحفظ، مما يسمح لك بإدارة نسخك
-        الاحتياطية
-        باحتراف.
-    </p>
+        <!-- Highlights -->
+        <section class="grid-3">
+            <div class="card" data-aos="fade-up" data-aos-delay="50">
+                <span class="badge">Scheduling</span>
+                <h3>نسخ تلقائي بالكامل</h3>
+                <ul class="list">
+                    <li>نسخ يومي (مثلًا صباحًا 08:00)</li>
+                    <li>نسخ كل ساعة</li>
+                    <li>نسخ عند الطلب فقط</li>
+                </ul>
+            </div>
 
-    <p>
-        🔹 <strong>استرجاع بنقرة واحدة:</strong> في حال حدوث أي مشكلة في الجهاز أو النظام، يمكنك من داخل ControTik
-        استرجاع
-        أحدث نسخة احتياطية محفوظة على Google Drive بضغطة زر واحدة، دون الحاجة لأي إعدادات معقدة.
-    </p>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <span class="badge">Cloud</span>
+                <h3>رفع مباشر إلى Drive</h3>
+                <p class="muted">رفع نسخة مشفّرة إلى مجلد مخصص في Google Drive مرتبط بحسابك، مع تنظيم تلقائي حسب
+                    التاريخ.</p>
+            </div>
 
-    <p>
-        🔹 <strong>أمان عالي:</strong> يتم تشفير النسخة قبل رفعها، لضمان أن بياناتك محفوظة بشكل آمن على السحابة، ولا
-        يمكن
-        الوصول إليها إلا من خلالك.
-    </p>
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Security</span>
+                <h3>تشفير واسترجاع فوري</h3>
+                <p class="muted">تشفير قبل الرفع واسترجاع آخر نسخة بنقرة واحدة—بدون خطوات معقدة أو سكربتات خارجية.</p>
+            </div>
+        </section>
 
-    <p>
-        هذا النظام يمنحك راحة بال حقيقية، ويجعل إدارة المخاطر في شبكتك احترافية تمامًا كما في كبرى المؤسسات.
-    </p>
+        <!-- How-to -->
+        <section id="howto" class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>خطوات الربط مع Google Drive</h3>
+                <ol class="howto list">
+                    <li>من الإعدادات ⇢ <b>النسخ الاحتياطي</b> ⇢ اختر <b>Google Drive</b>.</li>
+                    <li>اضغط <b>ربط الحساب</b> ثم سجّل دخولك إلى Google ومنح الصلاحيات.</li>
+                    <li>اختر <b>المجلد</b> الذي تريد الحفظ فيه (يمكن إنشاء مجلد جديد).</li>
+                    <li>فعّل <b>التشفير</b> وحدّد مفتاحك (احتفظ به آمنًا).</li>
+                    <li>اختر الجدولة: يومي/كل ساعة/عند الطلب وحدّد الاسم النمطي للملف (مثل:
+                        <code>ct-backup-{YYYY-MM-DD}.zip</code>).
+                    </li>
+                    <li>احفظ الإعدادات ثم جرّب <b>نسخة الآن</b> للتأكد من الاتصال.</li>
+                </ol>
+                <div class="callout" style="margin-top:10px">
+                    <div>🔐</div>
+                    <div class="muted"><b>مهم:</b> بدون المفتاح لن يمكن استرجاع النسخة المشفّرة. خزّنه في مكان آمن خارج
+                        الجهاز.</div>
+                </div>
+            </div>
 
-</section>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>الاسترجاع بنقرة واحدة</h3>
+                <ol class="howto list">
+                    <li>افتح <b>النسخ الاحتياطي</b> ⇢ تبويب <b>الاسترجاع</b>.</li>
+                    <li>اختر آخر نسخة من القائمة (محلي/Drive).</li>
+                    <li>أدخل المفتاح (إن وجِد التشفير) واضغط <b>استرجاع</b>.</li>
+                    <li>أعد تشغيل الخدمة للتأكّد من تطبيق البيانات بنجاح.</li>
+                </ol>
+                <div class="callout" style="margin-top:10px">
+                    <div>🧪</div>
+                    <div class="muted">اختبر الاسترجاع دوريًا على جهاز تجريبي لتتأكد من سلامة النسخ ومفتاح التشفير.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extra: Local backups + Tips -->
+        <section class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>بدائل التخزين</h3>
+                <ul class="list">
+                    <li><b>محليًا</b>: على قرص خارجي/NAS داخل المكتب.</li>
+                    <li><b>هجين</b>: نسخة محلية + نسخة سحابية لمرونة أعلى.</li>
+                    <li><b>تدوير النسخ</b>: الاحتفاظ بآخر <b>7</b> نسخ أسبوعية و<b>3</b> نسخ شهرية.</li>
+                </ul>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>أفضل الممارسات</h3>
+                <ul class="list">
+                    <li>تفعيل إشعارات النجاح/الفشل على واتساب/بريد.</li>
+                    <li>قفل الوصول إلى مجلد النسخ وتمكين 2FA في Google.</li>
+                    <li>تحديد حجم أقصى للنسخة وتنظيف دوري للنسخ القديمة.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="margin-top:18px">
+            <div class="two faq">
+                <details data-aos="fade-up">
+                    <summary>هل أستطيع النسخ كل ساعة؟</summary>
+                    <p class="muted">نعم، يدعم الجدولة الساعية مع إمكانية تحديد الساعة/الدقيقة بدقة.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل النسخة مشفّرة على Drive؟</summary>
+                    <p class="muted">نعم، يتم تشفير الملف محليًا قبل الرفع. يلزم المفتاح للاسترجاع.</p>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>ماذا لو امتلأت مساحة Google Drive؟</summary>
+                    <p class="muted">سيتم إعلامك بالفشل، ويمكن تفعيل الحذف الذكي للنسخ الأقدم تلقائيًا.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل يوجد سجل بالعمليات؟</summary>
+                    <p class="muted">نعم، كل عملية نسخ/استرجاع تُسجّل بالتاريخ والحجم والمدة والحالة.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">امنح بياناتك شبكة أمان حقيقية</div>
+                    <div class="muted">فعّل النسخ التلقائي اليوم وجرب استرجاعًا تجريبيًا لتنام مرتاح البال.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ فعّل النسخ الآن</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer مختصر -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- Structured Data: HowTo + FAQ -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"إعداد النسخ الاحتياطي على Google Drive في ControTik",
+    "description":"ربط الحساب، تمكين التشفير، اختيار المجلد، وتحديد الجدولة.",
+    "step":[
+      {"@type":"HowToStep","name":"فتح إعدادات النسخ الاحتياطي","text":"من لوحة التحكم ⇢ الإعدادات ⇢ النسخ الاحتياطي ⇢ اختيار Google Drive."},
+      {"@type":"HowToStep","name":"ربط حساب Google","text":"اضغط ربط الحساب وسجّل دخولك ومنح الصلاحيات."},
+      {"@type":"HowToStep","name":"اختيار المجلد والاسم","text":"حدد مجلد النسخ واسم الملف النمطي مثل ct-backup-{YYYY-MM-DD}.zip"},
+      {"@type":"HowToStep","name":"تمكين التشفير","text":"فعّل التشفير وحدد المفتاح واحتفظ به في مكان آمن."},
+      {"@type":"HowToStep","name":"ضبط الجدولة","text":"اختر يومي/ساعي/عند الطلب واحفظ الإعدادات ثم جرّب نسخة الآن."}
+    ],
+    "tool":[{"@type":"HowToTool","name":"ControTik Backup"}, {"@type":"HowToTool","name":"Google Drive"}]
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"هل أستطيع النسخ كل ساعة؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، يدعم النظام النسخ الساعي مع تحديد الوقت بدقة."}},
+      {"@type":"Question","name":"هل النسخة مشفّرة على Drive؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يتم التشفير محليًا قبل الرفع ويلزم المفتاح للاسترجاع."}},
+      {"@type":"Question","name":"ماذا لو امتلأت مساحة Google Drive؟",
+       "acceptedAnswer":{"@type":"Answer","text":"سيتم إرسال إشعار ويمكن تفعيل حذف النسخ الأقدم تلقائيًا."}},
+      {"@type":"Question","name":"هل يوجد سجل بالعمليات؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، يتضمن السجل وقت التنفيذ، الحجم، والنتيجة."}}
+    ]
+  }
+  </script>
+</body>
 
 </html>

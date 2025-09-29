@@ -3,71 +3,187 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ControTik | نظام المراقبة الذكية (MikroTik، أجهزة Real IP، تنبيهات فورية)</title>
+    <meta name="description"
+        content="نظام مراقبة ذكي من ControTik: رصد فوري لأجهزة MikroTik وReal IP، تنبيهات واتساب/إشعارات داخلية، سجل أعطال، وإعداد فترات صيانة بدون إزعاج." />
+    <link rel="canonical" href="https://controtik.com/Detailes/monitoring.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ControTik | نظام المراقبة الذكية" />
+    <meta property="og:description" content="رصد لحظي، تنبيهات فورية، وسجلات دقيقة للأعطال لأجهزتك في الشبكة." />
+    <meta property="og:url" content="https://controtik.com/Detailes/monitoring.html" />
+    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
+
+    <!-- Fonts (نفس الخط) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <title>نظام المراقبة الذكية</title>
 </head>
 
 <body>
-    <section id="monitoring" class="fancy-section">
-        <h2>🛰️ نظام المراقبة الذكية في ControTik</h2>
-        <img src="../img/devicesStatus.png" alt="مراقبة الأجهزة">
 
-        <p>
-            تم تصميم نظام المراقبة في ControTik ليكون <strong>العين الساهرة</strong> على أجهزتك في الشبكة، من خلال تقنية
-            رصد فوري تنبهك تلقائيًا عند أي توقف أو عطل.
-        </p>
-
-        <p>
-            🔹 <strong>ما يقوم به النظام:</strong>
-        </p>
-        <ul>
-            <li>يراقب جميع الأجهزة المرتبطة بسيرفر MikroTik.</li>
-            <li>يراقب أي جهاز يمتلك <strong>Real IP</strong> مثل الكاميرات، النواشر، أجهزة البث، نقاط الاتصال وغيرها.
-            </li>
-            <li>يفحص حالة الاتصال بشكل دوري دون التأثير على أداء الشبكة.</li>
-        </ul>
-
-        <p>
-            🔔 <strong>عند حدوث أي انقطاع:</strong>
-        </p>
-        <ul>
-            <li>يتم تحديد الجهاز المتوقف بدقة.</li>
-            <li>يُرسل <strong>تنبيه فوري</strong> للمسؤول الفني أو مدير البرج المرتبط بالجهاز.</li>
-            <li>يتضمن التنبيه: اسم الجهاز، عنوان الـIP والـMAC، الموقع الجغرافي (أو اسم البرج)، ووقت التوقف بالضبط.</li>
-        </ul>
-
-        <p>
-            🧠 <strong>مزايا ذكية إضافية:</strong>
-        </p>
-        <ul>
-            <li>النظام لا يكتفي بالتنبيه، بل يُسجل كل حدث توقف في سجل خاص، يمكنك الرجوع إليه لاحقًا.</li>
-            <li>يدعم إرسال التنبيهات برسائل واتساب أو إشعارات داخلية.</li>
-            <li>واجهة رسومية تسهّل مراقبة الحالة اللحظية لجميع الأجهزة.</li>
-        </ul>
-
-        <p>
-            💡 <strong>مثالي لمن؟</strong>
-            <br>
-            هذا النظام مثالي لـ:
-        </p>
-        <ul>
-            <li>أصحاب شبكات الإنترنت الذين يديرون أبراجًا متعددة أو نقاط توزيع منتشرة.</li>
-            <li>موزعي كاميرات المراقبة الذين يحتاجون إلى رصد مستمر لأي انقطاع.</li>
-            <li>الشركات التي تعتمد على أجهزة اتصال حساسة في التشغيل.</li>
-        </ul>
-
-        <p>
-            🛡️ <strong>هدفنا:</strong> أن تكون دائمًا في قلب الحدث، <strong>قبل أن يتصل الزبون للشكوى!</strong>
-        </p>
-
-        <div class="section-images">
-            <img src="../img/devicesLog.png" alt="سجل توقف الأجهزة">
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px" />
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
+    </header>
+
+    <main class="container">
+
+        <!-- مسار تنقّل -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>نظام المراقبة الذكية</span>
+        </nav>
+
+        <section id="monitoring" class="fancy-section" data-aos="fade-up">
+            <h2>🛰️ نظام المراقبة الذكية في <strong>ControTik</strong></h2>
 
 
-    </section>
+            <p>
+                تم تصميم نظام المراقبة في <strong>ControTik</strong> ليكون <strong>العين الساهرة</strong> على أجهزتك في
+                الشبكة،
+                عبر رصد لحظي ينبهك تلقائيًا عند أي توقف أو عطل مع سجل أحداث دقيق وقابل للتتبع.
+            </p>
+
+            <div class="grid-3" style="margin-top:12px">
+                <div class="card">
+                    <span class="badge">Realtime</span>
+                    <h3>رصد حي وخفيف</h3>
+                    <p class="muted">فحص دوري ذكي لجميع أجهزة <b>MikroTik</b>، والنقاط والأجهزة ذات <b>Real IP</b> مثل
+                        الكاميرات والنواشر دون التأثير على الأداء.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Alerts</span>
+                    <h3>تنبيهات فورية</h3>
+                    <p class="muted">عند الانقطاع يُحدَّد الجهاز بدقة وتُرسل تنبيهات فورية للمسؤول الفني أو مدير البرج
+                        عبر واتساب أو إشعار داخلي.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Auditing</span>
+                    <h3>سجل أعطال شامل</h3>
+                    <p class="muted">تسجيل كل حدث (الوقت، الجهاز، IP/MAC، الموقع/البرج) مع مدة الانقطاع والعودة، لتقارير
+                        SLA موثوقة.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top:18px">ماذا يراقب النظام؟</h3>
+            <ul class="list">
+                <li>جميع الأجهزة المرتبطة بسيرفر <strong>MikroTik</strong>.</li>
+                <li>كل جهاز يملك <strong>Real IP</strong> (كاميرات، نواشر، أجهزة بث، نقاط اتصال...).</li>
+                <li>الاتصال الدوري بزمن فحص قابل للتخصيص (Heartbeat Interval).</li>
+            </ul>
+
+            <h3 style="margin-top:18px">عند حدوث أي انقطاع</h3>
+            <ul class="list">
+                <li>تحديد الجهاز المتوقف بدقة مع <strong>IP</strong> و<strong>MAC</strong>.</li>
+                <li>إرسال <strong>تنبيه فوري</strong> للمسؤول أو مدير البرج المرتبط.</li>
+                <li>تضمين الموقع الجغرافي/اسم البرج ووقت التوقف بالثواني.</li>
+            </ul>
+
+            <div class="callout" style="margin-top:12px">
+                <div>⚙️</div>
+                <div class="muted">
+                    <strong>إعدادات مرنة:</strong> حد الوقت قبل التنبيه (Timeout)، عدد المحاولات (Retries)،
+                    <em>نافذة صيانة</em> لإسكات التنبيهات (Maintenance Window)، وإمكانية إسكات جهاز معيّن مؤقتًا.
+                </div>
+            </div>
+
+            <div class="section-images" style="margin-top:14px">
+                <img src="../img/devicesLog.png" alt="سجل توقف الأجهزة والزمن بين الانقطاعات" />
+            </div>
+
+            <h3 style="margin-top:18px">مزايا ذكية إضافية</h3>
+            <ul class="list">
+                <li>لوحة حالة لحظية مع مؤشرات <b>Up/Down</b> وإحصاءات تعافي.</li>
+                <li>تقارير جاهزة للطباعة: ملخص الانقطاعات اليومي/الشهري، متوسط زمن الإصلاح <b>MTTR</b>، ونسبة توافرية
+                    <b>Uptime</b>.
+                </li>
+                <li>ربط تنبيهات الأعطال مع <strong>نظام الأبراج</strong> لتوجيه المسؤول المناسب فورًا.</li>
+            </ul>
+
+            <p class="muted" style="margin-top:8px">
+                الهدف: أن تكون دائمًا في قلب الحدث، <strong>قبل أن يتصل الزبون للشكوى!</strong>
+            </p>
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">راقب، استجب، وحسّن التوافرية</div>
+                    <div class="muted">تنبيهات فورية، سجل أعطال، وتقارير SLA—كلها في نظام واحد.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ ابدأ الآن</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- FAQ Structured Data (SEO) -->
+    <script type="application/ld+json">
+  {
+   "@context":"https://schema.org",
+   "@type":"FAQPage",
+   "mainEntity":[
+     {"@type":"Question","name":"هل يؤثر الرصد على أداء الشبكة؟",
+      "acceptedAnswer":{"@type":"Answer","text":"لا، يستخدم النظام فحصًا دوريًا خفيفًا قابلًا للتخصيص زمنياً وعددياً."}},
+     {"@type":"Question","name":"كيف تصلني التنبيهات؟",
+      "acceptedAnswer":{"@type":"Answer","text":"يمكن إرسال التنبيهات عبر واتساب أو إشعار داخلي إلى المسؤولين المحددين لكل برج أو جهاز."}},
+     {"@type":"Question","name":"هل يمكن إسكات التنبيهات وقت الصيانة؟",
+      "acceptedAnswer":{"@type":"Answer","text":"نعم، عبر نافذة صيانة (Maintenance Window) أو إسكات جهاز محدد لفترة زمنية."}}
+   ]
+  }
+  </script>
+
 </body>
 
 </html>

@@ -2,81 +2,170 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>الأرباح</title>
+    <title>ControTik | نظام الأرباح وتوزيع الحصص (متعدد العملات، سجل سحب، تقارير)</title>
+    <meta name="description"
+        content="حساب صافي الأرباح تلقائيًا حسب العملة، توزيع حصص الشركاء، سجل سحب يشبه الأنظمة المصرفية، ولوحات تحليلية مع فلاتر وتقارير." />
+    <link rel="canonical" href="https://controtik.com/Detailes/profits.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ControTik | نظام الأرباح وتوزيع الحصص" />
+    <meta property="og:description" content="أرباح دقيقة، سحوبات موثقة، وإشعارات فورية—شفافية كاملة مع ControTik." />
+    <meta property="og:url" content="https://controtik.com/Detailes/profits.html" />
+    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
+
+    <!-- Fonts (نفس الخط) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px" />
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- مسار تنقّل -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>نظام الأرباح وتوزيع الحصص</span>
+        </nav>
+
+        <section id="profits" class="fancy-section" data-aos="fade-up">
+            <h2>نظام الأرباح وتوزيع الحصص في <strong>ControTik</strong></h2>
 
 
-<section id="profits" class="fancy-section">
-    <h2>نظام الأرباح وتوزيع الحصص في ControTik</h2>
-    <img src="../img/ProfiteDashbord.png" alt="لوحة التحكم بالأرباح">
-    <p>
-        تم تصميم نظام الأرباح في ControTik ليمنح أصحاب الشبكات وشركاءهم تجربة مالية منظمة ومحكمة، تشبه ما تقدمه
-        أنظمة
-        البنوك والشركات المحترفة.
-    </p>
+            <p>
+                تم تصميم نظام الأرباح في <strong>ControTik</strong> ليمنح أصحاب الشبكات وشركاءهم تجربة مالية منظمة
+                ومحكمة،
+                تشبه ما تقدمه أنظمة البنوك والشركات المحترفة.
+            </p>
 
-    <p>
-        🔹 <strong>حساب الأرباح بدقة:</strong> يتم احتساب صافي الأرباح تلقائيًا وفق العملة، وذلك بعد خصم المصاريف من
-        إجمالي المبيعات (نقدًا). يُعرض الربح مفصلًا حسب العملة: ليرة، دولار، تركي أو أي عملة مخصصة.
-    </p>
+            <div class="grid-3" style="margin-top:12px">
+                <div class="card">
+                    <span class="badge">Net Profit</span>
+                    <h3>حساب الأرباح بدقة</h3>
+                    <p class="muted">احتساب <b>صافي الأرباح تلقائيًا</b> وفق العملة بعد خصم المصاريف من إجمالي المبيعات
+                        النقدية، مع عرض مفصّل لكل من: SYP, USD, TRY أو أي عملة مخصّصة.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Partners</span>
+                    <h3>توزيع حصص الشركاء</h3>
+                    <p class="muted">توزيع تلقائي حسب نسبة كل شريك <b>لكل عملة على حدة</b>، مع منع السحب الزائد. يظهر
+                        لكل شريك: حصته الحالية، المسحوب سابقًا، والرصيد المتاح.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Withdrawals</span>
+                    <h3>سجل سحب مشابه للمصرف</h3>
+                    <p class="muted">تسجيل اسم منفّذ السحب، التاريخ، العملة، المبلغ والملاحظات، مع <b>إشعار واتساب
+                            فوري</b> للشريك.</p>
+                </div>
+            </div>
 
-    <p>
-        🔹 <strong>توزيع تلقائي لحصص الشركاء:</strong> لكل شريك نسبة محددة يتم تعيينها مسبقًا، ويتم توزيع الأرباح
-        بناءً
-        عليها بشكل تلقائي لكل عملة على حدة. لا يمكن لأي شريك سحب أكثر من حصته، ويظهر له دائمًا:
-    </p>
+            <h3 style="margin-top:18px">لوحة تحكم وتحليلات</h3>
+            <ul class="list">
+                <li>مخطط زمني يُظهر تطوّر الأرباح والمصاريف شهريًا.</li>
+                <li>مخطط دائري يوضّح نسبة كل شريك من الأرباح.</li>
+                <li>جدول تفصيلي بعمليات السحب الأخيرة مع فلاتر حسب الشريك/العملة/الفترة.</li>
+            </ul>
 
-    <ul>
-        <li>إجمالي حصته الحالية</li>
-        <li>المبلغ الذي سُحب سابقًا</li>
-        <li>الرصيد المتبقي المتاح للسحب</li>
-    </ul>
+            <div class="callout" style="margin-top:12px">
+                <div>🔔</div>
+                <div class="muted">
+                    <strong>إشعارات ذكية:</strong> إشعار فوري للشركاء عند كل سحب أو تعديل نسبة، وتوثيق الحدث في سجلات
+                    دقيقة تمنع أي التباس.
+                </div>
+            </div>
 
-    <p>
-        🔹 <strong>سجل سحب دقيق، يشبه الأنظمة المصرفية:</strong> كل عملية سحب أرباح يقوم بها شريك يتم:
-    </p>
-    <ul>
-        <li>تسجيلها تلقائيًا باسم الشخص الذي نفذ السحب</li>
-        <li>تحديد التاريخ، العملة، المبلغ، والملاحظات</li>
-        <li>إرسال إشعار فوري على واتساب للشريك يحتوي على تفاصيل العملية</li>
-    </ul>
 
-    <p>
-        وكأنك تدير <strong>محفظة بنكية داخل النظام</strong>، يُسجل فيها كل سحب ويتم إخطار صاحبه فورًا، مما يمنع
-        الخلافات
-        ويعزز الشفافية الكاملة بين الأطراف.
-    </p>
+            <p style="margin-top:14px">
+                <strong>ControTik لا يحسب فقط… بل يوثّق، يحلّل، ويُبلّغ.</strong> لتكون أنت وشركاؤك دائمًا على دراية،
+                بكل شفافية،
+                دون الحاجة لأي جداول خارجية أو حسابات يدوية.
+            </p>
+        </section>
 
-    <p>
-        🔹 <strong>لوحة تحكم احترافية:</strong> يعرض النظام لوحة رسومية متكاملة تشمل:
-    </p>
-    <ul>
-        <li>مخطط زمني يُظهر تطور الأرباح والمصاريف شهريًا</li>
-        <li>مخطط دائري يوضّح نسبة كل شريك من الأرباح</li>
-        <li>جدول تفصيلي بعمليات السحب الأخيرة</li>
-    </ul>
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">شفافية مالية بلا صداع</div>
+                    <div class="muted">توزيع حصص تلقائي، سحب مضبوط، وتقارير قابلة للطباعة.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ جرّب الآن</a>
+            </div>
+        </section>
 
-    <p>
-        يمكن أيضًا فلترة التقرير حسب الشريك أو العملة أو الفترة الزمنية، مما يمنحك رؤية تحليلية دقيقة لكيفية تطور
-        الأداء
-        المالي للشبكة.
-    </p>
+    </main>
 
-    <p>
-        <strong>ControTik لا يحسب فقط… بل يوثق، يحلل، ويُبلغ.</strong>
-        لتكون أنت وشركاؤك دائمًا على دراية، بكل شفافية، دون الحاجة لأي جداول خارجية أو حسابات يدوية.
-    </p>
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
 
-    <div class="profits-images">
-        <img src="../img/withdrow.png" alt="سحب الأرباح">
-        <img src="../img/withdrowLogs.png" alt="سجل السحب">
-    </div>
-</section>
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- Structured Data (Software Module) -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"ControTik Profits",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Windows",
+    "description":"نظام أرباح متعدد العملات مع توزيع حصص الشركاء وسجل سحب موثق وإشعارات فورية.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"نسخة تجريبية"},
+    "brand":{"@type":"Brand","name":"ControTik"},
+    "url":"https://controtik.com/Detailes/profits.html"
+  }
+  </script>
+
+</body>
 
 </html>

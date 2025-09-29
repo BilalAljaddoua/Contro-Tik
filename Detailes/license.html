@@ -2,60 +2,295 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>نظام التراخيص</title>
+    <title>ControTik | الأمان ونظام التراخيص المشفّر (HWID)</title>
+    <meta name="description"
+        content="نظام تراخيص ControTik المشفّر بهوية جهاز HWID: تفعيل سريع وآمن، مراقبة محاولات التشغيل، إيقاف تلقائي عند الانتهاء، دعم نسخ تجريبية، وسجل تدقيق كامل." />
+    <link rel="canonical" href="https://controtik.com/Detailes/license.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Fonts (نفس الخط) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ControTik | الأمان ونظام التراخيص المشفّر (HWID)" />
+    <meta property="og:description"
+        content="تراخيص رقمية مشفّرة مرتبطة بهوية الجهاز HWID، تفعيل سريع، تدقيق مستمر، وإنفاذ تلقائي." />
+    <meta property="og:url" content="https://controtik.com/Detailes/license.html" />
+    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
 </head>
 
-<section id="license" class="fancy-section">
-    <h2>الأمان والتراخيص</h2>
-    <img src="../img/Securty.png" alt="واجهة الترخيص">
-    <p>
-        حرصًا على حماية استثمارك وضمان خصوصية بيانات شبكتك، يأتي ControTik مزودًا بنظام تراخيص ذكي ومشفّر بالكامل،
-        يجعل
-        تشغيل البرنامج محصورًا بالأجهزة المصرّح بها فقط.
-    </p>
+<body>
 
-    <p>
-        🔐 <strong>ترخيص مشفّر بهوية جهاز (HWID):</strong> يتم ربط كل نسخة من البرنامج بجهاز معيّن باستخدام معرف
-        فريد
-        (HWID)، ما يمنع تشغيلها على أي جهاز آخر دون إذن مسبق.
-    </p>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px" />
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
 
-    <p>
-        🔄 <strong>تفعيل سريع وآمن:</strong> يتم إرسال طلب تفعيل الترخيص عبر الإنترنت إلى سيرفر التراخيص الآمن، ويتم
-        إصدار
-        الترخيص الرقمي خلال ثوانٍ، دون الحاجة لأي تدخل يدوي أو ملفات حساسة.
-    </p>
+    <main class="container">
 
-    <p>
-        🛡️ <strong>مراقبة مستمرة:</strong> يسجّل النظام كل محاولة تشغيل، تفعيل، أو نقل غير مصرح به، ويرسل تنبيه
-        فوري
-        للمطوّر أو للمالك إن وُجدت محاولة خرق أو نسخ غير مشروع.
-    </p>
+        <!-- مسار -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>الأمان والتراخيص</span>
+        </nav>
 
-    <p>
-        📉 <strong>إيقاف تلقائي عند انتهاء الترخيص:</strong> في حال انتهاء فترة الترخيص أو حدوث خرق أمني، يتوقف
-        البرنامج
-        عن العمل ويظهر إشعار للمستخدم يوضح السبب، مع إمكانية تجديد الترخيص بسهولة.
-    </p>
+        <!-- البطل -->
+        <section id="license" class="fancy-section" data-aos="fade-up">
+            <h2>الأمان ونظام التراخيص في <strong>ControTik</strong></h2>
+            <p>
+                يطبّق <strong>ControTik</strong> طبقة تراخيص رقمية مشفّرة مرتبطة بـ<strong>هوية الجهاز (HWID)</strong>،
+                لضمان
+                أن البرنامج يعمل فقط على الأجهزة المصرّح بها، مع <strong>تفعيل سريع</strong>، <strong>تتبّع
+                    دقيق</strong>،
+                و<strong>إيقاف تلقائي</strong> عند انتهاء الصلاحية أو رصد محاولة خرق.
+            </p>
 
-    <p>
-        🧪 <strong>دعم النسخ التجريبية:</strong> يمكن إنشاء تراخيص مؤقتة (تجريبية) بمدة محددة أو بعدد مشتركين معين،
-        لتوزيع
-        نسخ تجريبية للمهتمين بطريقة آمنة وخاضعة للرقابة.
-    </p>
+            <div class="grid-3" style="margin-top:12px">
+                <div class="card">
+                    <span class="badge">HWID</span>
+                    <h3>ربط مُحكم بالجهاز</h3>
+                    <p class="muted">كل ترخيص يرتبط بمعرّف جهاز فريد. لا تشغيل خارج الجهاز المرخّص بدون نقل مُعتمد.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Realtime</span>
+                    <h3>تفعيل لحظي</h3>
+                    <p class="muted">طلب آمن لسيرفر التراخيص وإصدار المفتاح خلال ثوانٍ دون ملفات حساسة.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Audit</span>
+                    <h3>سجل تدقيق</h3>
+                    <p class="muted">تسجيل كل محاولة تشغيل/تفعيل/نقل وإشعارات فورية عند السلوك المريب.</p>
+                </div>
+            </div>
+        </section>
 
-    <p>
-        هذا النظام يجعل من ControTik منصة آمنة لا يمكن قرصنتها أو تشغيلها خارج نطاق الأجهزة المرخصة، مما يمنحك راحة
-        البال
-        وثقة تامة بأن بياناتك وتطبيقك في مأمن من التلاعب.
-    </p>
+        <!-- جدول أنواع التراخيص -->
+        <section class="fancy-section" data-aos="fade-up">
+            <h2>أنواع التراخيص والخصائص</h2>
 
-</section>
+            <div class="table-wrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>النوع</th>
+                            <th>المدة/الحدود</th>
+                            <th>النقل بين الأجهزة</th>
+                            <th>الاتصال بالإنترنت</th>
+                            <th>الاستخدام الأنسب</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>تجريبي</b></td>
+                            <td>أيام محدودة أو حد مشتركين</td>
+                            <td>غير متاح</td>
+                            <td>عند التفعيل فقط</td>
+                            <td>التجربة قبل الشراء</td>
+                        </tr>
+                        <tr>
+                            <td><b>احترافي (Pro)</b></td>
+                            <td>شهري/سنوي</td>
+                            <td>مسموح بنقل مُراقَب</td>
+                            <td>تحقق دوري مرن</td>
+                            <td>شبكات نشطة ومتوسطة/كبيرة</td>
+                        </tr>
+                        <tr>
+                            <td><b>مؤسسي (Enterprise)</b></td>
+                            <td>مخصص مع قيود خاصة</td>
+                            <td>بسياسة شركات</td>
+                            <td>خادم ترخيص خاص/On-Prem</td>
+                            <td>مزودو خدمة وشركات كبيرة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
+            <div class="callout" style="margin-top:10px">
+                <div>🔐</div>
+                <div class="muted">كل المفاتيح تُخزَّن مُشفّرة ويُتحقق منها على جانب الخادم والعميل مع حماية ضد العبث.
+                </div>
+            </div>
+        </section>
+
+        <!-- خطوات التفعيل -->
+        <section class="fancy-section" data-aos="fade-up">
+            <h2>خطوات التفعيل والنقل</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="badge">1</span>
+                    <h3>جمع HWID</h3>
+                    <p class="muted">يقوم التطبيق بإنشاء بصمة جهاز (CPU/Board/OS) ويوقّع الطلب محليًا.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">2</span>
+                    <h3>طلب آمن</h3>
+                    <p class="muted">إرسال الطلب عبر قناة مشفّرة إلى خادم التراخيص مع التحقق من النزاهة.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">3</span>
+                    <h3>إصدار المفتاح</h3>
+                    <p class="muted">يتلقى العميل مفتاحًا مشفّرًا موقّعًا زمنيًا ومرتبطًا بالجهاز.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+                <h3 style="margin:0 0 8px">نقل الترخيص</h3>
+                <ul class="list">
+                    <li>طلب نقل من الجهاز القديم مع سبب النقل.</li>
+                    <li>إبطال المفتاح السابق وإصدار مفتاح جديد لـHWID الجديد.</li>
+                    <li>سجل تدقيق يوضح التواريخ والمستخدم المُصرّح.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- سياسات الإنفاذ -->
+        <section class="fancy-section" data-aos="fade-up">
+            <h2>إنفاذ ذكي مع فترات سماح</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="badge">Grace</span>
+                    <h3>سماح قصير</h3>
+                    <p class="muted">فترة سماح محدودة دون اتصال، مع تذكير داخل التطبيق ووسائل التواصل.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Suspend</span>
+                    <h3>إيقاف تدريجي</h3>
+                    <p class="muted">تقليص وظائف غير حرجة قبل الإيقاف الكامل للحفاظ على البيانات.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Renew</span>
+                    <h3>تجديد سلس</h3>
+                    <p class="muted">زر تجديد مباشر، أو دفع تلقائي مع تفعيل فوري وإشعار نجاح.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قائمة فحص الأمان -->
+        <section class="fancy-section" data-aos="fade-up">
+            <h2>قائمة فحص الأمان</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>مفاتيح مُعمّاة</h3>
+                    <p class="muted">AES/GCM لتخزين المفتاح محليًا + توقيعات رقمية للتحقق.</p>
+                </div>
+                <div class="card">
+                    <h3>مقاومة العبث</h3>
+                    <p class="muted">تحقق سلامة الملفات الثنائية ورفض التلاعب بالذاكرة.</p>
+                </div>
+                <div class="card">
+                    <h3>حجب التكرار</h3>
+                    <p class="muted">منع التشغيل المتزامن لنفس الترخيص على أكثر من جهاز.</p>
+                </div>
+            </div>
+            <div class="callout" style="margin-top:12px">
+                <div>🛡️</div>
+                <div class="muted">يتم إشعار المالك عند سلوك مشبوه (تفعيل مكرر، HWID غير متطابق، تجاوز صلاحية).</div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">أمان على مستوى الشركات</div>
+                    <div class="muted">فعّل تراخيص HWID المشفّرة واحصل على سجل تدقيق وتنبيهات لحظية.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ ابدأ الآن</a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="fancy-section" data-aos="fade-up" id="faq">
+            <h2>الأسئلة المتكررة عن التراخيص</h2>
+            <div class="faq">
+                <details open>
+                    <summary>هل يعمل الترخيص دون إنترنت؟</summary>
+                    <p class="muted">نعم، ضمن <b>فترة سماح</b> محدودة. بعد انتهائها يتطلب تحققًا سريعًا.</p>
+                </details>
+                <details>
+                    <summary>ماذا يحدث عند انتهاء الترخيص؟</summary>
+                    <p class="muted">يتم <b>إيقاف العمل</b> مع عرض سبب الانتهاء وخيارات التجديد.</p>
+                </details>
+                <details>
+                    <summary>هل يمكن نقل الترخيص لجهاز جديد؟</summary>
+                    <p class="muted">نعم عبر طلب نقل مُراقَب: إبطال المفتاح السابق وإصدار جديد.</p>
+                </details>
+                <details>
+                    <summary>هل يدعم إصدارًا تجريبيًا؟</summary>
+                    <p class="muted">يدعم تراخيص مؤقتة زمنياً أو بعدد مشتركين.</p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- FAQ Structured Data (SEO) -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"هل يعمل الترخيص دون إنترنت؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، يعمل ضمن فترة سماح محدودة ثم يحتاج تحققاً سريعاً."}},
+      {"@type":"Question","name":"ماذا يحدث عند انتهاء الترخيص؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يُوقف البرنامج العمل ويعرض سبب الانتهاء مع خيار التجديد الفوري."}},
+      {"@type":"Question","name":"هل يمكن نقل الترخيص؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يمكن نقل الترخيص عبر طلب نقل مُراقَب يتضمن إبطال المفتاح القديم."}},
+      {"@type":"Question","name":"هل يدعم إصداراً تجريبياً؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يدعم تراخيص مؤقتة زمنياً أو بعدد مشتركين محدد."}}
+    ]
+  }
+  </script>
+
+</body>
 
 </html>

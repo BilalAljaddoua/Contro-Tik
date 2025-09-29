@@ -2,72 +2,163 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>الباقات والاشتراكات</title>
+    <title>ControTik | إدارة الباقات والاشتراكات (سرعات، أحجام، عملات، تجديد تلقائي)</title>
+    <meta name="description"
+        content="أنشئ باقات بسرعات وأحجام وعملات متعددة، اربط الاشتراكات بالمشتركين، فعّل التجديد التلقائي مع تسجيل الدين وإشعارات واتساب، وصدّر النتائج إلى Excel محمي." />
+    <link rel="canonical" href="https://controtik.com/Detailes/plans.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ControTik | إدارة الباقات والاشتراكات" />
+    <meta property="og:description"
+        content="باقات مرنة، تجديد تلقائي، وإشعارات ذكية—كل ما تحتاجه لإدارة الاشتراكات باحتراف." />
+    <meta property="og:url" content="https://controtik.com/Detailes/plans.html" />
+    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
+
+    <!-- Fonts (نفس الخط) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
-<section id="plans" class="fancy-section">
-    <h2>إدارة الباقات والاشتراكات</h2>
-    <img src="../img/addsubscribe.png" alt="إدارة الباقات والاشتراكات">
-    <p>
-        يوفر نظام ControTik واجهة متكاملة ومرنة لإدارة الباقات والاشتراكات، تتيح لصاحب الشبكة التحكم الكامل بجميع
-        تفاصيل
-        العروض المقدمة للمشتركين.
-    </p>
+<body>
 
-    <p>
-        🔹 <strong>إنشاء وتعديل الباقات:</strong> يمكنك إنشاء باقات متعددة تتنوع حسب:
-    </p>
-    <ul>
-        <li>السرعة (مثل 1 ميجا، 2 ميجا، إلخ)</li>
-        <li>حجم البيانات (مثل 5 جيجا، 10 جيجا)</li>
-        <li>الفترة الزمنية (أسبوعي – شهري – ربع سنوي...)</li>
-        <li>العملة (ليرة – دولار – تركي – عملات مخصصة)</li>
-    </ul>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px" />
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
 
-    <p>
-        🔹 <strong>ربط الاشتراك بالمشترك:</strong> عند اختيار باقة، يمكن ربطها بمشترك جديد أو حالي، مع تسجيل تفاصيل
-        العملية وتحديد وسيلة الدفع (كاش أو دين).
-    </p>
+    <main class="container">
 
-    <p>
-        🔹 <strong>التجديد التلقائي:</strong> يمكن تفعيل ميزة التجديد التلقائي، حيث يقوم النظام بعد انتهاء الباقة
-        بـ:
-    </p>
-    <ul>
-        <li>تجديد الاشتراك تلقائيًا بنفس الباقة</li>
-        <li>تسجيل دين على المشترك بالقيمة الجديدة</li>
-        <li>إرسال إشعار للمشترك بتفاصيل التجديد والدين</li>
-        <li>بدء حملة تذكير تلقائي يومي حتى يتم السداد</li>
-    </ul>
+        <!-- مسار تنقّل -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>إدارة الباقات والاشتراكات</span>
+        </nav>
 
-    <p>
-        🔹 <strong>إدارة حالة الباقات:</strong> إمكانية تفعيل أو إلغاء تفعيل أي باقة مؤقتًا دون حذفها، ما يتيح مرونة
-        في
-        العروض حسب المواسم أو العروض الترويجية.
-    </p>
+        <section id="plans" class="fancy-section" data-aos="fade-up">
+            <h2>إدارة الباقات والاشتراكات</h2>
 
-    <p>
-        🔹 <strong>عرض وتحليل الاشتراكات:</strong> يحتوي النظام على شاشة مخصصة لمراجعة جميع الاشتراكات المفعّلة أو
-        المنتهية، مع خيارات فلترة وفلترة مركبة، وتصدير النتائج إلى Excel محمي.
-    </p>
+            <p>
+                يوفر <strong>ControTik</strong> واجهة متكاملة ومرنة لإدارة الباقات والاشتراكات، تُعطيك تحكمًا تفصيليًا
+                بالعروض، الأسعار، العملات، وآلية التجديد مع إشعارات ذكية للمشتركين.
+            </p>
 
-    <p>
-        من خلال هذا النظام، يمكن لصاحب الشبكة إدارة العروض بدقة، وتحقيق أقصى استفادة من نظام الاشتراكات دون أي فوضى
-        أو
-        أخطاء حسابية.
-    </p>
-    <div class="section-images">
-        <img src="../img/sub.png" alt="إدارة الباقات والاشتراكات">
-        <img src="../img/renew.png" alt="إدارة الباقات والاشتراكات">
-        <img src="../img/mes1.png" alt="إدارة الباقات والاشتراكات">
-        <img src="../img/mes2.png" alt="إدارة الباقات والاشتراكات">
+            <div class="grid-3" style="margin-top:12px">
+                <div class="card">
+                    <span class="badge">Plans</span>
+                    <h3>إنشاء وتعديل الباقات</h3>
+                    <p class="muted">حدّد السرعة (1–1000 Mbps)، الحجم (5–1000 GB)، المدة (أسبوع/شهر/ربع سنوي)، والعملة
+                        (SYP, USD, TRY أو مخصصة).</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Linking</span>
+                    <h3>ربط الاشتراك بالمشترك</h3>
+                    <p class="muted">اربط الباقة بعميل جديد أو حالي مع تسجيل وسيلة الدفع (كاش/دين) وتوثيق العملية في
+                        السجل.</p>
+                </div>
+                <div class="card">
+                    <span class="badge">Auto-Renew</span>
+                    <h3>تجديد تلقائي ذكي</h3>
+                    <p class="muted">يُجدد الباقة تلقائيًا، يسجّل الدين عند الحاجة، ويرسل إشعارًا عبر واتساب ويبدأ حملة
+                        تذكير حتى السداد.</p>
+                </div>
+            </div>
 
-    </div>
-</section>
+            <h3 style="margin-top:18px">عناصر مرونة إضافية</h3>
+            <ul class="list">
+                <li>تفعيل/إيقاف أي باقة مؤقتًا دون حذفها لأغراض العروض الموسمية.</li>
+                <li>أسعار متغيرة حسب العملة مع حفظ تاريخ التغييرات.</li>
+                <li>سياسات انتهاء: قطع فوري، تخفيض إلى بروفايل ضعيف، أو مهلة سماح.</li>
+            </ul>
+
+            <div class="callout" style="margin-top:12px">
+                <div>📊</div>
+                <div class="muted">
+                    <strong>لوحة متابعة:</strong> شاشة موحّدة تُظهر النشط/المنتهي/القريب من الانتهاء مع فلاتر مركبة
+                    وتصدير إلى <b>Excel محمي</b> للاستخدام الإداري.
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">ابنِ عروضك… ودع ControTik يهتم بالباقي</div>
+                    <div class="muted">تجديد تلقائي، حملات تذكير، وتقارير جاهزة للطباعة.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ ابدأ الآن</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- Structured Data: Productized Service -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"ControTik Plans",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Windows",
+    "description":"إدارة باقات واشتراكات الشبكة مع تجديد تلقائي وإشعارات وسجلات قابلة للتصدير.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"نسخة تجريبية"},
+    "brand":{"@type":"Brand","name":"ControTik"},
+    "url":"https://controtik.com/Detailes/plans.html"
+  }
+  </script>
+
+</body>
 
 </html>

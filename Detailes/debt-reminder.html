@@ -3,69 +3,284 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ControTik | آلية المطالبة التلقائية بالديون</title>
+    <meta name="description"
+        content="نظام مطالبة ذكي يرسل رسائل واتساب تلقائية يوميًا للديون المتأخرة، مع فلترة دقيقة وحِساب أيام التأخير وتكامل مع التقارير والسجلات." />
+    <link rel="canonical" href="https://controtik.com/Detailes/debt-reminder.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ControTik | آلية المطالبة التلقائية بالديون" />
+    <meta property="og:description"
+        content="رسائل واتساب تلقائية يومية، فلترة دقيقة للمستحقين، وتقارير مفصلة لعدد المطالبات." />
+    <meta property="og:url" content="https://controtik.com/Detailes/debt-reminder.html" />
+    <meta property="og:image" content="https://controtik.com/img/debt-og.jpg" />
+    <meta property="og:image:alt" content="المطالبة التلقائية بالديون في ControTik" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <title>آلية المطالبة التلقائية بالديون</title>
 </head>
 
 <body>
 
-    <section id="debt-reminder" class="fancy-section">
-        <h2>آلية المطالبة الذكية بالديون في <strong>ControTik</strong></h2>
-        <img src="../img/debtMessageExample.png" alt="نموذج رسالة تذكير تلقائية">
-
-        <p>
-            يوفّر ControTik نظامًا ذكيًا للمطالبة بالديون، يعمل <strong>بشكل تلقائي ويومي</strong> دون تدخل بشري، لضمان
-            تذكير المشتركين المستحقين بسداد ديونهم في الوقت المناسب.
-        </p>
-
-        <p>🔹 <strong>الرسائل التلقائية اليومية:</strong> يتم إرسال رسالة واتساب تلقائيًا للمشترك الذي:</p>
-        <ul>
-            <li>عليه جزء من دين لم يتم تسديده بعد.</li>
-            <li>تجاوز موعد استحقاق الدين.</li>
-        </ul>
-
-        <p>🔹 <strong>محتوى الرسالة:</strong> تتضمن الرسالة البيانات التالية:</p>
-        <ul>
-            <li><strong>اسم المشترك</strong></li>
-            <li><strong>المبلغ المتبقي</strong></li>
-            <li><strong>نفاصيل أخرى</strong></li>
-
-        </ul>
-
-        <p>🔹 <strong>فلترة دقيقة للمستحقين:</strong> لا يتم إرسال الرسائل للجميع، بل فقط للمشتركين الذين:</p>
-        <ul>
-            <li>لم يسددوا كامل الدين</li>
-            <li>لمن تأخروا عن سداد دينهم عن الموعد المحدد</li>
-        </ul>
-
-        <p>
-            🔹 <strong>تنوع التذكيرات:</strong> النظام يغيّر صيغة الرسالة تلقائيًا حسب حالة المشترك، مثلاً:
-        </p>
-        <ul>
-            <li>📌 "أنت متأخر بـ 3 أيام عن سداد اشتراكك، يرجى السداد لتجنب قطع الخدمة."</li>
-            <li>📌 "نذكّرك بأن لديك دين مستحق قدره 25 ألف ليرة منذ 5 أيام، آخر مهلة للدفع غدًا."</li>
-        </ul>
-
-        <p>
-            🔹 <strong>تكامل ذكي:</strong> نظام المطالبة التلقائية مرتبط مباشرة بأنظمة:
-        </p>
-        <ul>
-            <li>الديون: لا يتم إرسال أي رسالة إذا تم السداد أو إغلاق الدين.</li>
-            <li>نظام الرسائل: يُسجل كل إرسال تلقائي مع التوقيت والنص.</li>
-            <li>نظام التقارير: يُعرض عدد الرسائل المرسلة يوميًا وشهريًا.</li>
-        </ul>
-
-
-        <div class="sales-images">
-
-            <img src="../img/messagesLogs.png" alt="قائمة الديون الخاضعة للمطالبة التلقائية">
-
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px" />
+                <b>ControTik</b>
+            </a>
+            <nav class="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
         </div>
+    </header>
 
-    </section>
+    <main class="container">
 
+        <!-- Breadcrumbs -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>المطالبة التلقائية بالديون</span>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>آلية المطالبة الذكية بالديون</h1>
+                <p>رسائل واتساب يومية تلقائية للمستحقين فقط، بحساب دقيق لأيام التأخير، وتكامل كامل مع الديون والتقارير
+                    وسجل الإرسال.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#how" class="btn primary">كيف تعمل؟</a>
+                    <a href="#templates" class="btn ghost">نماذج الرسائل</a>
+                </div>
+            </div>
+            <div class="hero-ill">
+                <img src="../img/debtMessageExample.png" alt="نموذج رسالة تذكير تلقائية" loading="lazy" />
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Auto Daily</span>
+                <h3>إرسال تلقائي يومي</h3>
+                <p class="muted">يتعرّف النظام على الديون غير المسددة والمتأخرة ويرسل رسالة تلقائيًا دون تدخل بشري.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Precision</span>
+                <h3>فلترة دقيقة</h3>
+                <p class="muted">لا تُرسل الرسالة إلا لمن تنطبق عليهم الشروط: دين غير مسدد + تاريخ استحقاق متجاوز.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Tracking</span>
+                <h3>سجل وتقرير</h3>
+                <p class="muted">يوثّق كل إرسال (التاريخ/الوقت/المحتوى) ويعرض تقارير يومية وشهرية لعدد المطالبات.</p>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how" class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>كيف تعمل الآلية؟</h3>
+                <ol class="list">
+                    <li><b>فحص الديون:</b> يجلب النظام الديون ذات الرصيد المتبقي وموعد الاستحقاق المتجاوز.</li>
+                    <li><b>حساب التأخير:</b> يحتسب عدد أيام التأخير ويجهّز محتوى الرسالة ديناميكيًا.</li>
+                    <li><b>الإرسال:</b> تُرسل الرسالة عبر واتساب (أو SMS/بريد) وفق القناة المفعّلة لديك.</li>
+                    <li><b>التسجيل:</b> يُحفظ كل إرسال في سجل الرسائل مع ربطه بالمشترك والدين.</li>
+                    <li><b>التقارير:</b> تعرِض لوحة الإحصائيات عدد الرسائل يوميًا/شهريًا مع الفلاتر.</li>
+                </ol>
+                <div class="callout" style="margin-top:10px">
+                    <div>🧠</div>
+                    <div class="muted">إذا أغلق الدين أو سُدّد قبل موعد التشغيل، يتخطّى النظام هذا المشترك تلقائيًا.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>شروط الإرسال</h3>
+                <ul class="list">
+                    <li>لدى المشترك <b>رصيد دين غير مسدد</b>.</li>
+                    <li>تجاوز الدين <b>تاريخ الاستحقاق</b>.</li>
+                    <li>عدم وجود <b>إيقاف يدوي</b> للإشعارات على هذا الحساب.</li>
+                    <li>عدم الإرسال <b>مرتين في نفس اليوم</b> لنفس الدين.</li>
+                </ul>
+                <div class="callout" style="margin-top:10px">
+                    <div>⚙️</div>
+                    <div class="muted">يمكنك ضبط تكرار الإرسال، نافذة التوقيت اليومية، والقنوات (واتساب/بريد/SMS).</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message Templates -->
+        <section id="templates" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3 style="margin:0 0 8px">نماذج الرسائل</h3>
+                <p class="muted" style="margin:0 0 10px">يتغير النص تلقائيًا حسب حالة المشترك، العملة، وعدد أيام
+                    التأخير:</p>
+
+                <div class="two">
+                    <div class="card bg-white border r-12">
+                        <span class="badge">تأخير بسيط</span>
+                        <p class="muted">مرحبًا <b>{الاسم}</b> 👋 نذكّرك بوجود <b>{المبلغ} {العملة}</b> مستحق منذ
+                            <b>{أيام_التأخير}</b> يوم. يرجى السداد لتجنب أي قيود على الخدمة. شكرًا لتعاونك.</p>
+                    </div>
+                    <div class="card bg-white border r-12">
+                        <span class="badge is-yellow">تنبيه متقدم</span>
+                        <p class="muted">عميلنا <b>{الاسم}</b>، ما يزال عليك <b>{المبلغ} {العملة}</b> متأخر منذ
+                            <b>{أيام_التأخير}</b> يوم. <b>آخر مهلة</b> للدفع: <b>{تاريخ_المهلة}</b>. للدفع تواصل:
+                            {رابط/واتساب}.</p>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top:12px">
+                    <div>✍️</div>
+                    <div class="muted">الحقول الديناميكية المتاحة: {الاسم}، {المبلغ}، {العملة}، {أيام_التأخير}،
+                        {تاريخ_المهلة}، {رقم_الاشتراك}، {رابط_الدفع}… إلخ.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logs Table -->
+        <section style="margin-top:18px">
+            <div class="card">
+                <h3 style="margin:0 0 8px">سجل المطالبات (مثال)</h3>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>التاريخ/الوقت</th>
+                                <th>المشترك</th>
+                                <th>المبلغ</th>
+                                <th>العملة</th>
+                                <th>أيام التأخير</th>
+                                <th>القناة</th>
+                                <th>الحالة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-09-10 09:05</td>
+                                <td>محمد الأحمد</td>
+                                <td>25,000</td>
+                                <td>SYP</td>
+                                <td>3</td>
+                                <td>WhatsApp</td>
+                                <td>تم الإرسال</td>
+                            </tr>
+                            <tr>
+                                <td>2025-09-10 09:06</td>
+                                <td>FastLink – حساب تجاري</td>
+                                <td>45</td>
+                                <td>USD</td>
+                                <td>5</td>
+                                <td>Email</td>
+                                <td>تم الإرسال</td>
+                            </tr>
+                            <tr>
+                                <td>2025-09-10 09:07</td>
+                                <td>شبكة الأفق</td>
+                                <td>1,200</td>
+                                <td>TRY</td>
+                                <td>2</td>
+                                <td>SMS</td>
+                                <td>فشل (إعادة لاحقًا)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="sales-images" style="margin-top:12px">
+                    <img src="../img/messagesLogs.png" alt="سجل رسائل المطالبة التلقائية" loading="lazy" />
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="margin-top:18px">
+            <div class="two faq">
+                <details data-aos="fade-up">
+                    <summary>هل يُرسل النظام المطالبة حتى بعد سداد الدين؟</summary>
+                    <p class="muted">لا. بمجرد سداد الدين أو إغلاقه، يستثني النظام هذا المشترك تلقائيًا من قائمة
+                        الإرسال.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل يمكن إيقاف الرسائل عن مشترك معين؟</summary>
+                    <p class="muted">نعم، يوجد خيار إيقاف يدوي للمطالبات على مستوى الحساب أو الدين.</p>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>هل يدعم رسائل متعددة اللغات والعملات؟</summary>
+                    <p class="muted">يدعم قوالب متعددة ومعالجة العملة لكل رسالة على حدة.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل توجد حدود للإرسال اليومي؟</summary>
+                    <p class="muted">يمكن ضبط حد أقصى للإرسال اليومي والتحكم بجدول التنفيذ لتفادي الإزعاج.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">قلّل التأخر… وأكثر التحصيل</div>
+                    <div class="muted">فعّل المطالبة التلقائية واحصل على متابعة مالية يومية بدون مجهود.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ فعّل المطالبة الآن</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"هل يُرسل النظام المطالبة حتى بعد سداد الدين؟",
+       "acceptedAnswer":{"@type":"Answer","text":"لا، إذا سُدّد الدين أو أُغلق قبل وقت التنفيذ، يُستثنى المشترك تلقائيًا."}},
+      {"@type":"Question","name":"هل يمكن إيقاف الرسائل عن مشترك معين؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، يمكنك إيقاف المطالبة يدويًا على مستوى الحساب أو الدين."}},
+      {"@type":"Question","name":"هل يدعم رسائل متعددة اللغات والعملات؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يدعم قوالب متعددة ويطبّق العملة المناسبة لكل رسالة."}},
+      {"@type":"Question","name":"هل توجد حدود للإرسال اليومي؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يمكن ضبط حد يومي وجدولة الإرسال لتفادي الإزعاج ولتحسين التسليم."}}
+    ]
+  }
+  </script>
 </body>
 
 </html>

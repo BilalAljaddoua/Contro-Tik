@@ -3,79 +3,290 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ControTik | تصدير احترافي للتقارير بصيغة Excel</title>
+    <meta name="description"
+        content="تصدير منظم ومحمي لبيانات المبيعات والديون والمصاريف والأرباح والاشتراكات والرسائل إلى ملفات Excel جاهزة للطباعة والأرشفة، مع توثيق الفلاتر والنطاق الزمني.">
+    <link rel="canonical" href="https://controtik.com/Detailes/excel-export.html">
+    <meta name="theme-color" content="#00cfd5">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ControTik | تصدير احترافي للتقارير بصيغة Excel">
+    <meta property="og:description"
+        content="ملفات Excel محمية ضد التعديل، موثقة بالفلاتر والنطاق الزمني، وجاهزة للطباعة والأرشفة.">
+    <meta property="og:url" content="https://controtik.com/Detailes/excel-export.html">
+    <meta property="og:image" content="https://controtik.com/img/excel-og.jpg">
+    <meta property="og:image:alt" content="تصدير تقارير Excel في ControTik">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <title>التقارير</title>
 </head>
-<section id="excel-export" class="fancy-section">
-    <h2>تصدير احترافي للتقارير بصيغة Excel</h2>
-    <img src="../img/rep1.png" alt="نموذج تقرير Excel المحمي">
 
-    <p>
-        في ControTik، لم يعد تصدير البيانات مجرد ميزة ثانوية، بل هو جزء أساسي من تجربة الإدارة الاحترافية، مصمّم
-        بعناية
-        لتقديم ملفات Excel موثوقة، آمنة، وسهلة القراءة والمشاركة.
-    </p>
+<body>
 
-    <p>
-        📁 <strong>تصدير كل الأقسام:</strong> يمكن تصدير البيانات من جميع أنظمة ControTik، بما في ذلك:
-    </p>
-    <ul>
-        <li>المبيعات (كاش وديون)</li>
-        <li>الديون وسجلات الدفعات</li>
-        <li>المصاريف بأنواعها</li>
-        <li>الأرباح وسحوبات الشركاء</li>
-        <li>الاشتراكات المنتهية أو المتأخرة</li>
-        <li>سجلات الفلترة والرسائل</li>
-    </ul>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
+                    height="36" style="border-radius:8px">
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
 
-    <p>
-        🔒 <strong>ملفات محمية ضد التعديل:</strong> يتم إنشاء ملفات Excel <u>غير قابلة للتعديل</u> (Read-Only)، وذلك
-        للحفاظ على مصداقية التقارير، ومنع أي تلاعب داخلي أو خارجي بالبيانات بعد تصديرها.
-    </p>
+    <main class="container">
 
-    <p>
-        📊 <strong>شاملة وتفصيلية:</strong> يحتوي كل ملف Excel على:
-    </p>
-    <ul>
-        <li>البيانات الكاملة والمفصلة لكل سجل</li>
-        <li>خانة لنتيجة الفلترة (مفلتر أو غير مفلتر)</li>
-        <li>نطاق البيانات الزمني المستخدم</li>
-        <li>العملة المستخدمة إن وُجدت</li>
-        <li>رؤوس أعمدة عربية منسقة</li>
-    </ul>
+        <!-- Breadcrumbs -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
+            <a href="../index.html">الرئيسية</a>
+            <span>›</span>
+            <a href="../index.html#features">الميزات</a>
+            <span>›</span>
+            <span>التقارير (Excel)</span>
+        </nav>
 
-    <p>
-        🧠 <strong>ذكية عند الفلترة:</strong> عند تطبيق فلترة مركّبة (مثلاً ديون بالدولار خلال آخر 7 أيام)، يتم
-        توثيق هذه
-        الفلترة داخل الملف في الأعلى، مما يساعدك على فهم سياق التقرير لاحقًا دون الحاجة للرجوع للنظام.
-    </p>
+        <!-- Hero -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>تصدير احترافي للتقارير بصيغة <span style="white-space:nowrap">Excel</span></h1>
+                <p>ملفات محمية ضد التعديل، موثّقة بالفلاتر والنطاق الزمني والعملة—جاهزة للطباعة والأرشفة والمشاركة.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#scope" class="btn primary">ما الذي نُصدّره؟</a>
+                    <a href="#samples" class="btn ghost">أمثلة جاهزة</a>
+                </div>
+            </div>
+        </section>
 
-    <p>
-        🖨️ <strong>جاهزة للطباعة أو الأرشفة:</strong> يمكن استخدام هذه الملفات مباشرة في التعاملات الإدارية، مع
-        الشركاء،
-        أو حتى ضمن تقارير رسمية. الملفات قابلة للطباعة ومنسقة تلقائيًا لسهولة القراءة.
-    </p>
+        <!-- What we export -->
+        <section id="scope" class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Coverage</span>
+                <h3>تغطية شاملة</h3>
+                <p class="muted">المبيعات (كاش/ديون)، الديون والدفعات، المصاريف، الأرباح وسحوبات الشركاء، الاشتراكات
+                    المنتهية/المتأخرة، سجلات الفلترة والرسائل.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Integrity</span>
+                <h3>حماية ضد التعديل</h3>
+                <p class="muted">ملفات <b>Read-Only</b> لمنع العبث بعد التصدير، مع حفظ الترتيب والعناوين العربية
+                    المنسقة.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Context</span>
+                <h3>توثيق الفلاتر</h3>
+                <p class="muted">تضمين ملخص الفلاتر والنطاق الزمني والعملة أعلى الملف ليفهم القارئ سياق التقرير فورًا.
+                </p>
+            </div>
+        </section>
 
-    <p>
-        💼 <strong>أداة موثوقة لاتخاذ القرار:</strong> بفضل تنظيم الأعمدة، حماية المحتوى، ووضوح المعلومات، تصبح
-        تقارير
-        Excel في ControTik أداة حقيقية لإدارة الأعمال وتحليل الأداء.
-    </p>
-    <br>
-    <p><strong>أمثلة عن التقارير التي يتم تصديرها :</strong></p>
-    <div class="section-images">
+        <!-- Details -->
+        <section class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>محتوى ملف Excel</h3>
+                <ul class="list">
+                    <li>البيانات التفصيلية لكل سجل مع أعمدة واضحة بالعربية.</li>
+                    <li>خانة لنتيجة الفلترة (مفلتر/غير مفلتر) ونطاق التاريخ المستخدم.</li>
+                    <li>عرض العملة عند الاقتضاء، وتنسيق الأرقام والفواصل.</li>
+                </ul>
+                <div class="callout" style="margin-top:10px">
+                    <div>🧠</div>
+                    <div class="muted">تتذكر الأداة آخر فلاترك لتعيد استخدامها في التصدير التالي وتضمن الاتساق.</div>
+                </div>
+            </div>
 
-        <img src="../img/excelReport.png" alt="نموذج تقرير Excel المحمي">
-        <img src="../img/rep2.png" alt="نموذج تقرير Excel المحمي">
-        <img src="../img/rep3.png" alt="نموذج تقرير Excel المحمي">
-        <img src="../img/rep4.png" alt="نموذج تقرير Excel المحمي">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>جاهزة للطباعة والأرشفة</h3>
+                <ul class="list">
+                    <li>هوامش موحدة وترويسة تحتوي اسم التقرير وتاريخ الإنشاء.</li>
+                    <li>تصدير متعدد الأوراق (Sheets) عند الحاجة (مثلاً: ملخص + تفاصيل).</li>
+                    <li>تحسين تلقائي لعرض الأعمدة (Auto-fit) لقراءة أسهل على الشاشة والورق.</li>
+                </ul>
+            </div>
+        </section>
 
+        <!-- Samples -->
+        <section id="samples" style="margin-top:18px">
+            <div class="card">
+                <h3 style="margin:0 0 8px">أمثلة عن التقارير المصدّرة</h3>
+                <div class="section-images" style="margin-top:8px">
+                    <img src="../img/excelReport.png" alt="مثال تقرير مبيعات Excel" loading="lazy">
+                    <img src="../img/rep2.png" alt="مثال تقرير ديون Excel" loading="lazy">
+                    <img src="../img/rep3.png" alt="مثال تقرير مصاريف Excel" loading="lazy">
+                    <img src="../img/rep4.png" alt="مثال تقرير أرباح Excel" loading="lazy">
+                </div>
+            </div>
+        </section>
 
+        <!-- Example table -->
+        <section style="margin-top:18px">
+            <div class="card">
+                <h3 style="margin:0 0 8px">مثال بنية جدول التصدير</h3>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>التاريخ</th>
+                                <th>القسم</th>
+                                <th>الوصف</th>
+                                <th>المبلغ</th>
+                                <th>العملة</th>
+                                <th>مفلتر؟</th>
+                                <th>نطاق البيانات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-09-10</td>
+                                <td>مبيعات</td>
+                                <td>اشتراك شهري — أحمد</td>
+                                <td>25,000</td>
+                                <td>SYP</td>
+                                <td>نعم</td>
+                                <td>2025-09-01 → 2025-09-10</td>
+                            </tr>
+                            <tr>
+                                <td>2025-09-10</td>
+                                <td>ديون</td>
+                                <td>رصيد متبقي — FastLink</td>
+                                <td>45</td>
+                                <td>USD</td>
+                                <td>نعم</td>
+                                <td>آخر 7 أيام</td>
+                            </tr>
+                            <tr>
+                                <td>2025-09-10</td>
+                                <td>مصاريف</td>
+                                <td>شراء راوتر</td>
+                                <td>1,200</td>
+                                <td>TRY</td>
+                                <td>لا</td>
+                                <td>كامل الشهر</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout" style="margin-top:10px">
+                    <div>🧾</div>
+                    <div class="muted">يمكن تنزيل الجداول كـ Excel محمي، مع تضمين صفحة <b>ملخص الفلاتر</b> و<span
+                            dir="ltr">log</span> لعملية التصدير.</div>
+                </div>
+            </div>
+        </section>
 
-    </div>
-</section>
+        <!-- FAQ -->
+        <section id="faq" style="margin-top:18px">
+            <div class="two faq">
+                <details data-aos="fade-up">
+                    <summary>هل يمكن تعديل الملف بعد تصديره؟</summary>
+                    <p class="muted">يُصدَّر الملف بوضع <b>Read-Only</b> للحفاظ على المصداقية. يمكن إنشاء نسخة منفصلة
+                        إذا رغبت بالتعديل.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل يُذكر نطاق التاريخ والفلاتر داخل الملف؟</summary>
+                    <p class="muted">نعم، تُوثّق الفلاتر والنطاق أعلى الورقة الأولى لضمان وضوح السياق عند المشاركة.</p>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>هل يدعم تعدد العملات؟</summary>
+                    <p class="muted">يدعم عرض العملة لكل سجل، وإمكانية تجميع/تلخيص حسب العملة في ورقة الملخص.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل يمكن التصدير بأوراق متعددة؟</summary>
+                    <p class="muted">نعم، مثل (ملخص — تفاصيل — سجل الفلاتر) ضمن ملف واحد.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">تقارير موثوقة… قرارات أسرع</div>
+                    <div class="muted">فعّل التصدير المحمي وشارك ملفات جاهزة للطباعة بكل ثقة.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ جرّب التصدير الآن</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+            <div>© 2025 ControTik</div>
+            <div style="display:flex;gap:12px">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu (mobile) -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <!-- Structured Data: FAQ + SoftwareFeature -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"هل يمكن تعديل الملف بعد تصديره؟",
+       "acceptedAnswer":{"@type":"Answer","text":"الملفات تُصدَّر بوضع Read-Only للحفاظ على المصداقية. يمكن نسخها إذا رغبت بالتعديل."}},
+      {"@type":"Question","name":"هل يُذكر نطاق التاريخ والفلاتر داخل الملف؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، يتم تضمين ملخص الفلاتر والنطاق الزمني أعلى الورقة الأولى."}},
+      {"@type":"Question","name":"هل يدعم تعدد العملات؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يدعم عرض العملة لكل سجل والتلخيص حسب العملة في ورقة الملخص."}},
+      {"@type":"Question","name":"هل يمكن التصدير بأوراق متعددة؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، مثل ملخص + تفاصيل + سجل الفلاتر ضمن ملف واحد."}}
+    ]
+  }
+  </script>
+
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"ControTik - Excel Reports",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Windows",
+    "featureList":[
+      "تصدير شامل للمبيعات والديون والمصاريف والأرباح",
+      "ملفات Excel محمية Read-Only",
+      "توثيق الفلاتر والنطاق الزمني",
+      "أوراق متعددة داخل الملف",
+      "جاهزية للطباعة والأرشفة"
+    ],
+    "url":"https://controtik.com/Detailes/excel-export.html"
+  }
+  </script>
+</body>
 
 </html>
