@@ -7,7 +7,7 @@
 
     <title>ControTik | الباقات والأسعار</title>
     <meta name="description"
-        content="اختر باقة ControTik المناسبة: Mini للانطلاق السريع و Pro للتحكم الاحترافي — تقارير، رسائل، صلاحيات، وإدارة شاملة للشبكة. الفوترة سنوية." />
+        content="اختر باقة ControTik المناسبة: Mini للانطلاق السريع و Pro للتحكم الاحترافي — تقارير، رسائل، صلاحيات، وإدارة شاملة للشبكة. الفوترة سنوية، مع إمكانية الشراء الشهري." />
     <link rel="canonical" href="https://controtik.com/pricing.html" />
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
@@ -17,18 +17,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
+    <!-- Styles (الأساسية) -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- تحسينات تنسيق الشريط + الحاسبة المرئية -->
+    <!-- تحسينات بسيطة للشارة/التوفير -->
     <style>
         :root {
             --ribbon-bg: linear-gradient(135deg, #f7feff, #ffffff);
-            --pill-bg: #ffffff;
+            --pill-bg: #fff;
             --pill-dashed: #a6eff2;
             --pill-text: #03686b;
-            --accent: #00cfd5;
-            --accent-2: #00aab0;
+            --accent: #00cfd5
         }
 
         .plans-ribbon {
@@ -44,13 +43,6 @@
             box-shadow: var(--shadow)
         }
 
-        .plans-ribbon .left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap
-        }
-
         .pill {
             display: inline-flex;
             align-items: center;
@@ -63,36 +55,12 @@
             font-weight: 700
         }
 
-        .pill b {
-            color: var(--accent-2)
-        }
-
-        .plans-ribbon .dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: var(--accent-2);
-            opacity: .35
-        }
-
-        .plans-ribbon .hint {
-            color: var(--muted)
-        }
-
-        .plans-ribbon .actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap
-        }
-
         .pill.primary {
             background: var(--accent);
             color: #000;
             border: 1px solid #00c2c8
         }
 
-        /* شارة صغيرة فوق البطاقات */
         .micro-label {
             display: inline-flex;
             align-items: center;
@@ -106,27 +74,63 @@
             font-weight: 700
         }
 
-        /* زر التبديل شهري/سنوي */
         #billing-toggle .btn {
             padding: 10px 14px
         }
 
-        /* تحسين العناصر في الشاشات الصغيرة */
-        @media (max-width:640px) {
-            .plans-ribbon {
-                align-items: flex-start
-            }
+        .saving {
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e9fdf1;
+            border: 1px solid #b8f0cd;
+            color: #0b7a2a;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: .95rem
+        }
 
-            .plans-ribbon .left {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px
-            }
+        .saving .chip {
+            background: #0b7a2a;
+            color: #fff;
+            border-radius: 999px;
+            padding: 2px 8px;
+            font-size: .85rem;
+            font-weight: 800
+        }
+
+        .note-sub {
+            color: var(--muted);
+            font-size: .95rem;
+            margin-top: 4px
+        }
+
+        .price .strike-large {
+            color: #889199;
+            text-decoration: line-through;
+            font-size: .8em;
+            margin-inline-start: 8px
+        }
+
+        .price .year-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e6fbfc;
+            border: 1px solid #c8f5f7;
+            color: #046b6d;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-weight: 800;
+            margin-inline-start: 8px
         }
     </style>
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
         <div class="container nav">
@@ -137,7 +141,6 @@
             </a>
             <nav class="menu" id="menu">
                 <a href="../index.html#features">الميزات</a>
-                <!-- (تم حذف زر التكامل حسب طلبك) -->
                 <a href="../index.html#faq">الأسئلة</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
@@ -146,10 +149,10 @@
     </header>
 
     <main class="container">
-        <!-- شريط ترحيبي -->
+        <!-- شريط ترحيبي + تبديل عرض -->
         <section class="fancy-section" style="padding-top:24px">
             <div class="cta-band"
-                style="text-align:start; display:flex; align-items:center; gap:16px; justify-content:space-between; flex-wrap:wrap">
+                style="text-align:start;display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap">
                 <div>
                     <h2 style="margin:0">💼 خطط تبني شبكة قوية… بلا تعقيد</h2>
                     <p class="muted" style="margin:6px 0 8px">
@@ -158,15 +161,14 @@
                             style="display:inline-block;background:#e6fbfc;border:1px dashed #a6eff2;border-radius:8px;padding:2px 8px;margin-inline-start:6px">الفوترة
                             سنوية</span>
                     </p>
-                    <!-- Toggle: شهري / سنوي (عرض فقط) -->
                     <div id="billing-toggle" role="tablist" aria-label="تبديل طريقة العرض"
                         style="display:flex;gap:6px;align-items:center">
                         <button type="button" class="btn ghost" data-billing="monthly" aria-selected="false">عرض
                             شهري</button>
-                        <button type="button" class="btn primary" data-billing="yearly" aria-selected="true">عرض
-                            سنوي</button>
-                        <small class="muted" style="margin-inline-start:8px">*العرض شهري للتوضيح فقط — الدفع
-                            سنوي</small>
+                        <button type="button" class="btn primary" data-billing="yearly" aria-selected="true">عرض سنوي
+                            (أوفر)</button>
+                        <small class="muted" style="margin-inline-start:8px">*يعرض دائمًا السعر الشهري للمقارنة، والسنوي
+                            أوفر.</small>
                     </div>
                 </div>
                 <a class="btn primary" href="https://wa.me/963982021127?text=مرحباً، أود معرفة أفضل باقة مناسبة لشبكتي."
@@ -174,132 +176,150 @@
             </div>
         </section>
 
-        <!-- شريط منسّق فوق البطاقات -->
+        <!-- بطاقات الأسعار -->
+        <div class="pricing" style="grid-template-columns:repeat(2,1fr)">
+
+            <!-- Mini -->
+            <article class="card plan" style="position:relative;overflow:hidden" data-plan="mini" data-monthly-base="8"
+                data-monthly-shown="13" data-yearly-total="96">
+                <span class="badge">مناسب للبدايات</span>
+                <div style="position:absolute;top:16px;left:16px;"><span class="micro-label">تشغيل سريع</span></div>
+                <h3>Mini</h3>
+
+                <div class="price">
+                    <span class="js-price-main-mini">13</span> $
+                    <small class="muted js-price-caption-mini"> / شهريًا</small>
+                    <span class="strike-large js-strike-mini">156 $</span>
+                    <span class="year-pill js-year-pill-mini">سنوي: 96 $</span>
+                </div>
+                <div class="note-sub js-billing-note">ادفع سنويًا 96$ — توفّر <b class="js-saving-amount">60$</b></div>
+
+                <ul class="muted" style="line-height:1.9">
+                    <li>📦 إدارة الباقات والاشتراكات</li>
+                    <li>👥 إدارة المشتركين</li>
+                    <li>🤖 رسائل تلقائية أساسية</li>
+                    <li>🧾 إدارة المصاريف</li>
+                    <li>💱 عملات متعددة</li>
+                    <li>💵 مبيعات (كاش/دين)</li>
+                    <li>📈 أرباح أساسية</li>
+                    <li>📥 نسخ احتياطي (أساسي)</li>
+                </ul>
+
+                <div class="callout" style="margin-top:12px">
+                    <div>🚀</div>
+                    <div class="muted">أفضل خيار لشبكات تبدأ وتريد نتائج سريعة بأقل إعداد.</div>
+                </div>
+
+                <a class="btn primary" style="margin-top:14px;justify-content:center"
+                    href="https://wa.me/963982021127?text=مرحباً، أود الاشتراك في باقة Mini من ControTik. كيف أبدأ؟"
+                    target="_blank" rel="noopener">✨ احجز Mini الآن</a>
+            </article>
+
+            <!-- Pro -->
+            <article class="card plan most" style="position:relative;overflow:hidden" data-plan="pro"
+                data-monthly-base="10" data-monthly-shown="15" data-yearly-total="120">
+                <span class="tag">الأكثر اختياراً</span>
+                <div style="position:absolute;top:16px;left:16px;">
+                    <span class="micro-label" style="background:#d9ffe2;border-color:#bdefc7;color:#0b7a2a">الأكثر قيمة
+                        سنويًا</span>
+                </div>
+                <h3>Pro</h3>
+
+                <div class="price">
+                    <span class="js-price-main-pro">15</span> $
+                    <small class="muted js-price-caption-pro"> / شهريًا</small>
+                    <span class="strike-large js-strike-pro">180 $</span>
+                    <span class="year-pill js-year-pill-pro">سنوي: 120 $</span>
+                </div>
+                <div class="note-sub js-billing-note">ادفع سنويًا 120$ — توفّر <b class="js-saving-amount">60$</b></div>
+
+                <ul class="muted" style="line-height:1.9">
+                    <li>✅ كل ميزات Mini</li>
+                    <li>🔑 الشركاء وتوزيع الأرباح</li>
+                    <li>🧠 نظام النقاط والولاء</li>
+                    <li>👤 مستخدمون وصلاحيات Bitwise</li>
+                    <li>📥 نسخ احتياطي متقدم</li>
+                    <li>📈 تقارير احترافية (Excel + WhatsApp)</li>
+                    <li>🗃️ سجلات عامة للحركات</li>
+                    <li>💬 رسائل يدوية بفلترة مركّبة</li>
+                    <li>🧰 ممتلكات الشبكة</li>
+                    <li>📡 إدارة الأبراج ومراقبة الأجهزة</li>
+                    <li>🎨 تخصيص الرسائل/التقارير</li>
+                </ul>
+
+                <div class="callout" style="margin-top:12px">
+                    <div>🏆</div>
+                    <div class="muted">تحكّم عميق، رؤية مالية أدق، وتنبيهات حيّة — خيار المحترفين.</div>
+                </div>
+
+                <a class="btn" style="margin-top:14px;justify-content:center;background:#111;color:#fff"
+                    href="https://wa.me/963982021127?text=مرحباً، أود الاشتراك في باقة Pro من ControTik. ما الخطوات التالية؟"
+                    target="_blank" rel="noopener">👑 اشترك في Pro</a>
+            </article>
+
+        </div>
+
+        <!-- شريط فوق البطاقات -->
         <section class="fancy-section" style="padding-top:18px">
             <div class="plans-ribbon">
-                <div class="left">
-                    <span class="pill">⚡ <b>ادفع الآن</b> — فعِّل فورًا</span>
-                    <span class="dot" aria-hidden="true"></span>
-                    <span class="hint">الفوترة سنوية • تفعيل فوري بعد الدفع</span>
-                </div>
-                <div class="actions">
-                    <a class="pill" href="https://wa.me/963982021127?text=أرغب%20بتجربة%20ControTik%20لمدة%2014%20يومًا"
-                        target="_blank" rel="noopener">🎁 <b>تجربة 14 يومًا</b></a>
-                    <a class="pill primary"
-                        href="https://wa.me/963982021127?text=أرغب%20بالاشتراك%20الآن%20وتفعيل%20حسابي" target="_blank"
-                        rel="noopener">🚀 تفعيل فوري</a>
-                </div>
-            </div>
-
-            <!-- بطاقات الأسعار -->
-            <div class="pricing" style="grid-template-columns:repeat(2,1fr)">
-                <!-- Mini -->
-                <article class="card plan" style="position:relative; overflow:hidden" data-plan="mini" data-monthly="8"
-                    data-yearly-total="96">
-                    <span class="badge">مناسب للبدايات</span>
-                    <div style="position:absolute; top:16px; left:16px;"><span class="micro-label">تشغيل سريع</span>
-                    </div>
-                    <h3>Mini</h3>
-
-                    <div class="price">
-                        <span class="js-price-main">96</span> $
-                        <small class="muted js-price-caption"> / سنويًا</small>
-                    </div>
-                    <div class="muted js-billing-note" style="margin:-6px 0 10px">الفوترة سنوية — ما يعادل 8$ شهريًا
-                    </div>
-
-                    <ul class="muted" style="line-height:1.9">
-                        <li>📦 إدارة الباقات والاشتراكات</li>
-                        <li>👥 إدارة المشتركين</li>
-                        <li>🤖 رسائل تلقائية أساسية</li>
-                        <li>🧾 إدارة المصاريف</li>
-                        <li>💱 عملات متعددة</li>
-                        <li>💵 مبيعات (كاش/دين)</li>
-                        <li>📈 أرباح أساسية</li>
-                        <li>📥 نسخ احتياطي (أساسي)</li>
-                    </ul>
-
-                    <div class="callout" style="margin-top:12px">
-                        <div>🚀</div>
-                        <div class="muted">أفضل خيار لشبكات تبدأ وتريد نتائج سريعة بأقل إعداد.</div>
-                    </div>
-
-                    <a class="btn primary" style="margin-top:14px;justify-content:center"
-                        href="https://wa.me/963982021127?text=مرحباً، أود الاشتراك في باقة Mini من ControTik. كيف أبدأ؟"
-                        target="_blank" rel="noopener">✨ احجز Mini الآن</a>
-                </article>
-
-                <!-- Pro -->
-                <article class="card plan most" style="position:relative; overflow:hidden" data-plan="pro"
-                    data-monthly="10" data-yearly-total="120">
-                    <span class="tag">الأكثر اختياراً</span>
-                    <div style="position:absolute; top:16px; left:16px;"><span class="micro-label"
-                            style="background:#d9ffe2;border-color:#bdefc7;color:#0b7a2a">الأكثر قيمة سنويًا</span>
-                    </div>
-                    <h3>Pro</h3>
-
-                    <div class="price">
-                        <span class="js-price-main">120</span> $
-                        <small class="muted js-price-caption"> / سنويًا</small>
-                    </div>
-                    <div class="muted js-billing-note" style="margin:-6px 0 10px">الفوترة سنوية — ما يعادل 10$ شهريًا
-                    </div>
-
-                    <ul class="muted" style="line-height:1.9">
-                        <li>✅ كل ميزات Mini</li>
-                        <li>🔑 الشركاء وتوزيع الأرباح</li>
-                        <li>🧠 نظام النقاط والولاء</li>
-                        <li>👤 مستخدمون وصلاحيات Bitwise</li>
-                        <li>📥 نسخ احتياطي متقدم</li>
-                        <li>📈 تقارير احترافية (Excel + WhatsApp)</li>
-                        <li>🗃️ سجلات عامة للحركات</li>
-                        <li>💬 رسائل يدوية بفلترة مركّبة</li>
-                        <li>🧰 ممتلكات الشبكة</li>
-                        <li>📡 إدارة الأبراج ومراقبة الأجهزة</li>
-                        <li>🎨 تخصيص الرسائل/التقارير</li>
-                    </ul>
-
-                    <div class="callout" style="margin-top:12px">
-                        <div>🏆</div>
-                        <div class="muted">تحكّم عميق، رؤية مالية أدق، وتنبيهات حيّة — خيار المحترفين.</div>
-                    </div>
-
-                    <a class="btn" style="margin-top:14px;justify-content:center;background:#111;color:#fff"
-                        href="https://wa.me/963982021127?text=مرحباً، أود الاشتراك في باقة Pro من ControTik. ما الخطوات التالية؟"
-                        target="_blank" rel="noopener">👑 اشترك في Pro</a>
-                </article>
-            </div>
-
-            <!-- نقاط قوة مختصرة -->
-            <div class="grid-3" style="margin-top:18px">
-                <div class="card">
-                    <h3>⏱️ تشغيل أسرع</h3>
-                    <p class="muted">إعدادات جاهزة، بطاقات هوتسبوت مُهيّأة، وتجربة استخدام سلسة من البداية.</p>
-                </div>
-                <div class="card">
-                    <h3>🔒 ثقة وشفافية</h3>
-                    <p class="muted">تقارير محمية، سجلات دقيقة، وصلاحيات حدّية تقلّل الأخطاء والخلافات.</p>
-                </div>
-                <div class="card">
-                    <h3>📱 إدارة مرنة</h3>
-                    <p class="muted">تنبيهات واتساب حيّة، تصدير Excel، ورسائل مطالبة ذكية بلا متابعة يدوية.</p>
-                </div>
+                <div class="pill">⚡ <b>ادفع الآن</b> — فعِّل فورًا</div>
+                <div class="pill">🎁 تجربة 14 يومًا</div>
+                <div class="pill primary">🚀 تفعيل فوري</div>
             </div>
         </section>
-
-        <!-- مقارنة سريعة -->
+        <!-- مقارنة موسّعة -->
         <section class="fancy-section" style="padding-top:0">
-            <h2>⚖️ مقارنة مختصرة</h2>
+            <h2>⚖️ مقارنة موسّعة: القيمة الحقيقية والفارق</h2>
+
             <div class="table-wrap" style="margin-top:12px">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>الميزة</th>
+                            <th>البند</th>
                             <th>Mini</th>
                             <th>Pro</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- التسعير الأساسي -->
+                        <tr>
+                            <td><b>السعر الشهري</b></td>
+                            <td><b>13 $</b> <span class="muted">/ شهريًا</span></td>
+                            <td><b>15 $</b> <span class="muted">/ شهريًا</span></td>
+                        </tr>
+                        <tr>
+                            <td>التكلفة السنوية عند الدفع شهريًا</td>
+                            <td><span style="text-decoration:line-through;color:#9ca3af">156 $</span> <span
+                                    class="badge">أعلى</span></td>
+                            <td><span style="text-decoration:line-through;color:#9ca3af">180 $</span> <span
+                                    class="badge">أعلى</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>السعر السنوي الفعلي</b></td>
+                            <td><b>96 $</b> <span class="muted">(8 $/شهر)</span> <span class="tag"
+                                    style="margin-inline-start:6px">أوفر</span></td>
+                            <td><b>120 $</b> <span class="muted">(10 $/شهر)</span> <span class="tag"
+                                    style="margin-inline-start:6px">أوفر</span></td>
+                        </tr>
+                        <tr>
+                            <td>التوفير السنوي مقابل الدفع شهريًا</td>
+                            <td><b style="color:#0b7a2a">60 $</b></td>
+                            <td><b style="color:#0b7a2a">60 $</b></td>
+                        </tr>
+
+                        <!-- لقطة نصف سنوية / قصيرة -->
+                        <tr>
+                            <td>مثال 6 أشهر (عند الشراء شهريًا)</td>
+                            <td>78 $ <span class="muted">= 13×6</span></td>
+                            <td>90 $ <span class="muted">= 15×6</span></td>
+                        </tr>
+                        <tr>
+                            <td>ملاحظة على الالتزام</td>
+                            <td colspan="2" class="muted">الدفع السنوي هو الافتراضي للتفعيل الفوري. الشراء الشهري متاح
+                                للمدد القصيرة (&lt; 6 أشهر) دون خصم.</td>
+                        </tr>
+
+                        <!-- قدرات المنتج -->
                         <tr>
                             <td>إدارة الباقات والاشتراكات</td>
                             <td>✔️</td>
@@ -339,8 +359,27 @@
                 </table>
             </div>
 
+            <!-- بطاقات قيمة مختصرة -->
+            <div class="grid-3" style="margin-top:18px">
+                <div class="card">
+                    <h3>💡 لمن Mini؟</h3>
+                    <p class="muted">شبكات تبدأ أو تريد أقل تكلفة سنوية مع الأساسيات المطلوبة للتشغيل. أفضل قيمة: <b>96
+                            $/سنة</b> بدلًا من <span style="text-decoration:line-through">156 $</span>.</p>
+                </div>
+                <div class="card">
+                    <h3>👑 لمن Pro؟</h3>
+                    <p class="muted">شبكات تحتاج تقارير احترافية، شركاء، وأتمتة رسائل متقدمة. أفضل قيمة: <b>120
+                            $/سنة</b> بدلًا من <span style="text-decoration:line-through">180 $</span>.</p>
+                </div>
+                <div class="card">
+                    <h3>📌 خلاصة مالية</h3>
+                    <p class="muted">كلا الخيارين يوفّر <b>60 $</b> سنويًا عند الدفع السنوي مقارنة بالدفع شهريًا—مع
+                        تفعيل فوري ودعم الميزات الكاملة للخطة.</p>
+                </div>
+            </div>
+
             <!-- ضمان وثقة -->
-            <div class="card" style="margin-top:18px; display:flex; gap:14px; align-items:center; flex-wrap:wrap">
+            <div class="card" style="margin-top:18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap">
                 <div style="font-size:24px">🛡️</div>
                 <div>
                     <div style="font-weight:700">ضمان رضا خلال 14 يومًا</div>
@@ -350,16 +389,17 @@
             </div>
         </section>
 
-        <!-- CTA ختامي -->
+
+        <!-- CTA -->
         <section class="fancy-section" style="padding-top:0">
             <div class="cta-band"
-                style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+                style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
                 <div>
                     <h3 style="margin:0">جاهز للانطلاق؟</h3>
                     <p class="muted" style="margin:6px 0 0">اطلب نسخة تجريبية أو تواصل معنا لنرشّح لك الخطة الأمثل
                         لشبكتك.</p>
                 </div>
-                <div class="actions" style="display:flex; gap:10px">
+                <div class="actions" style="display:flex;gap:10px">
                     <a href="https://wa.me/963982021127?text=أرغب بتجربة ControTik قبل الشراء." class="btn primary"
                         target="_blank" rel="noopener">✨ تجربة مجانية</a>
                     <a href="../index.html#features" class="btn ghost">استعراض الميزات</a>
@@ -384,55 +424,89 @@
     <script>
         function toggleMenu() {
             const m = document.getElementById('menu');
-            const isOpen = getComputedStyle(m).display !== 'none';
-            m.style.display = isOpen ? 'none' : 'flex';
+            const open = getComputedStyle(m).display !== 'none';
+            m.style.display = open ? 'none' : 'flex';
         }
 
-        // تبديل عرض الأسعار (شهري/سنوي) - الفوترة تبقى سنوية
-        (function initBillingToggle() {
+        // إظهار السعر الشهري دائمًا، وتبديل أسلوب الإقناع فقط
+        (function initBilling() {
             const toggle = document.getElementById('billing-toggle');
             if (!toggle) return;
 
-            function setMode(mode) {
-                // أزرار الحالة البصرية
-                [...toggle.querySelectorAll('button')].forEach(btn => {
-                    const active = btn.dataset.billing === mode;
-                    btn.classList.toggle('primary', active);
-                    btn.classList.toggle('ghost', !active);
-                    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+            function render(mode) {
+                [...toggle.querySelectorAll('button')].forEach(b => {
+                    const active = b.dataset.billing === mode;
+                    b.classList.toggle('primary', active);
+                    b.classList.toggle('ghost', !active);
+                    b.setAttribute('aria-selected', active ? 'true' : 'false');
                 });
 
-                // تحديث بطاقات الأسعار
                 document.querySelectorAll('.plan[data-plan]').forEach(card => {
-                    const monthly = Number(card.dataset.monthly);
-                    const yearlyTotal = Number(card.dataset.yearlyTotal);
+                    const monthlyShown = Number(card.dataset.monthlyShown); // 13 / 15
+                    const yearlyTotal = Number(card.dataset.yearlyTotal);  // 96 / 120
+                    const annualized = monthlyShown * 12;                 // 156 / 180
+                    const saving = annualized - yearlyTotal;
 
-                    const main = card.querySelector('.js-price-main');
-                    const cap = card.querySelector('.js-price-caption');
+                    // عناصر
+                    const mainMini = card.querySelector('.js-price-main-mini');
+                    const mainPro = card.querySelector('.js-price-main-pro');
+                    const capMini = card.querySelector('.js-price-caption-mini');
+                    const capPro = card.querySelector('.js-price-caption-pro');
+
+                    const strikePro = card.querySelector('.js-strike-pro');
+                    const strikeMini = card.querySelector('.js-strike-mini');
+                    const ypillPro = card.querySelector('.js-year-pill-pro');
+                    const ypillMini = card.querySelector('.js-year-pill-mini');
+
                     const note = card.querySelector('.js-billing-note');
+                    const saveA = card.querySelector('.js-saving-amount');
 
-                    if (mode === 'monthly') {
-                        // عرض شهري (للتوضيح)
-                        if (main) main.textContent = monthly.toString();
-                        if (cap) cap.textContent = '/ شهريًا';
-                        if (note) note.textContent = `الفوترة سنوية — ما يعادل ${monthly}$ شهريًا (إجمالي ${yearlyTotal}$ سنويًا)`;
+
+                    if (mode === 'yearly') {
+                        // نبرز المقارنة السنوية (المكافئ مشطوب + السنوي الحقيقي + التوفير)
+                        if (strikePro) { strikePro.style.display = 'inline'; strikePro.textContent = `180 $`; }
+                        if (strikeMini) { strikeMini.style.display = 'inline'; strikeMini.textContent = `145 $`; }
+
+                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوي:  96 $`; }
+                        if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوي: 120 $`; }
+
+                        if (note) { note.innerHTML = `ادفع سنويًا ${yearlyTotal}$ — توفّر <b class="js-saving-amount">${saving}$</b>`; }
+                        if (saveA) { saveA.textContent = `${saving}$`; }
+
+                        // السعر الشهري دائمًا
+                        if (mainPro) mainPro.textContent = '10';
+                        if (capPro) capPro.textContent = ' / شهريًا';
+                        if (mainMini) mainMini.textContent = '8';
+                        if (capMini) capMini.textContent = ' / شهريًا';
+
                     } else {
-                        // عرض سنوي (الافتراضي)
-                        if (main) main.textContent = yearlyTotal.toString();
-                        if (cap) cap.textContent = ' / سنويًا';
-                        if (note) note.textContent = `الفوترة سنوية — ما يعادل ${monthly}$ شهريًا`;
+                        // نعرض تلميحًا رقيقًا للسنوي بدون أرقام ضخمة
+                        if (strikeMini) { strikeMini.style.display = 'none'; }
+                        if (strikePro) { strikePro.style.display = 'none'; }
+
+                        if (note) { note.innerHTML = `الاشتراك الشهري ${monthlyShown}$ — السنوي ${yearlyTotal}$ (توفير ${saving}$)`; }
+                        if (saveA) { saveA.textContent = `${saving}$`; }
+
+                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوي:  145 $`; }
+                        if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوي: 180 $`; }
+
+
+                        if (mainPro) mainPro.textContent = '15';
+                        if (capPro) capPro.textContent = ' / شهريًا';
+                        if (mainMini) mainMini.textContent = '13';
+                        if (capMini) capMini.textContent = ' / شهريًا';
                     }
                 });
             }
 
-            toggle.addEventListener('click', (e) => {
+            toggle.addEventListener('click', e => {
                 const btn = e.target.closest('button[data-billing]');
                 if (!btn) return;
-                setMode(btn.dataset.billing);
+                render(btn.dataset.billing);
             });
 
-            // الوضع الافتراضي: سنوي
-            setMode('yearly');
+            // الافتراضي: سنوي (للتشجيع)
+            render('yearly');
         })();
     </script>
 
@@ -448,14 +522,20 @@
         "name":"ControTik Mini",
         "description":"إدارة أساسية: باقات، اشتراكات، رسائل تلقائية أساسية، مصاريف، مبيعات، عملات، أرباح أساسية، نسخ احتياطي.",
         "brand":{"@type":"Brand","name":"ControTik"},
-        "offers":{"@type":"Offer","price":"96","priceCurrency":"USD","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"}
+        "offers":[
+          {"@type":"Offer","price":"96","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"96","unitCode":"ANN"}},
+          {"@type":"Offer","price":"13","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"13","unitCode":"MON"}}
+        ]
       },
       {
         "@type":"Product",
         "name":"ControTik Pro",
         "description":"تحكم احترافي: كل مزايا Mini + شركاء وأرباح، نقاط، صلاحيات، تقارير احترافية، ممتلكات، أبراج، تخصيص.",
         "brand":{"@type":"Brand","name":"ControTik"},
-        "offers":{"@type":"Offer","price":"120","priceCurrency":"USD","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"}
+        "offers":[
+          {"@type":"Offer","price":"120","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"120","unitCode":"ANN"}},
+          {"@type":"Offer","price":"15","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"15","unitCode":"MON"}}
+        ]
       }
     ]
   }

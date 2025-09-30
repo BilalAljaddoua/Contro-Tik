@@ -2,14 +2,15 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>ControTik | نظام احترافي لإدارة شبكات الإنترنت</title>
   <meta name="description"
     content="ControTik — منصة SaaS لإدارة شبكات الإنترنت: هوتسبوت، PPPoE/برودباند، فوترة، تقارير، رسائل واتساب تلقائية، وصلاحيات.">
-  <link rel="canonical" href="https://controtik.com/">
-  <meta name="theme-color" content="#00cfd5">
-  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://controtik.com/" />
+  <meta name="theme-color" content="#00cfd5" />
+  <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -19,15 +20,16 @@
   <meta property="og:image" content="https://controtik.com/img/cover.jpg">
   <meta property="og:image:alt" content="لوحة تحكم ControTik">
 
-  <!-- Fonts (Cairo) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Cairo Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Base Styles (موجودة ومُنظّفة بدون inline) -->
   <style>
     :root {
       --bg: #f9fafa;
-      --card: #ffffff;
+      --card: #fff;
       --text: #1f2937;
       --muted: #6b7280;
       --primary: #00cfd5;
@@ -35,7 +37,7 @@
       --line: #e5e7eb;
       --ring: rgba(0, 207, 213, .25);
       --shadow: 0 10px 30px rgba(0, 0, 0, .06);
-      --radius: 16px
+      --radius: 16px;
     }
 
     * {
@@ -192,9 +194,15 @@
       box-shadow: var(--shadow)
     }
 
+    .hero-illustration {
+      width: 100%;
+      height: auto;
+      display: block
+    }
+
     .hero-stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
       margin-top: 14px
     }
@@ -211,7 +219,7 @@
       font-size: 22px
     }
 
-    /* Sections & cards */
+    /* Sections & Cards */
     section {
       padding: 56px 0
     }
@@ -287,51 +295,21 @@
       border: 0
     }
 
-    /* Pricing preview (optional on home) */
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px
+    /* CTA Band */
+    .cta-band {
+      background: linear-gradient(135deg, #e8feff, #ffffff);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      text-align: center
     }
 
-    .plan {
-      padding: 22px
+    .actions.center {
+      justify-content: center
     }
 
-    .price {
-      font-size: 34px;
-      font-weight: 800;
-      margin: 6px 0
-    }
-
-    .plan ul {
-      list-style: none;
-      padding: 0;
-      margin: 14px 0 0
-    }
-
-    .plan li {
-      display: flex;
-      gap: 8px;
-      margin: 8px 0
-    }
-
-    .most {
-      border: 2px solid var(--primary)
-    }
-
-    .tag {
-      background: var(--primary);
-      color: #000;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 12px;
-      margin-bottom: 10px;
-      display: inline-block
-    }
-
-    /* Testimonials / FAQ */
+    /* Testimonials */
     .testi {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -360,6 +338,7 @@
       border-radius: 999px
     }
 
+    /* FAQ */
     .faq {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -378,15 +357,7 @@
       font-weight: 700
     }
 
-    .cta-band {
-      background: linear-gradient(135deg, #e8feff, #ffffff);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      text-align: center
-    }
-
+    /* Footer */
     footer {
       border-top: 1px solid var(--line);
       padding: 28px 0;
@@ -407,6 +378,44 @@
       margin: 0 0 8px
     }
 
+    .foot-note {
+      margin-top: 18px;
+      color: #9ca3af
+    }
+
+    /* Utilities (بدل أي inline styles قديمة) */
+    .mt-18 {
+      margin-top: 18px
+    }
+
+    .list-clean {
+      list-style: none;
+      padding: 0;
+      margin: 0
+    }
+
+    .text-start {
+      text-align: start
+    }
+
+    /* Reveal on scroll */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: .6s ease
+    }
+
+    [data-reveal].show {
+      opacity: 1;
+      transform: none
+    }
+
+    .ring:focus-visible {
+      outline: 2px solid var(--ring);
+      outline-offset: 2px;
+      border-radius: 12px
+    }
+
     /* Responsive */
     @media (max-width:1024px) {
       .hero {
@@ -414,7 +423,6 @@
       }
 
       .grid-3,
-      .pricing,
       .testi,
       .faq,
       .foot {
@@ -440,30 +448,11 @@
       }
 
       .grid-3,
-      .pricing,
       .testi,
       .faq,
       .foot {
         grid-template-columns: 1fr
       }
-    }
-
-    /* Reveal on scroll */
-    [data-reveal] {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: .6s ease
-    }
-
-    [data-reveal].show {
-      opacity: 1;
-      transform: none
-    }
-
-    .ring:focus-visible {
-      outline: 2px solid var(--ring);
-      outline-offset: 2px;
-      border-radius: 12px
     }
   </style>
 </head>
@@ -483,7 +472,6 @@
 
       <nav class="menu" id="menu">
         <a href="#features" class="ring">الميزات</a>
-        <!-- ربط الصفحة الأساسية بصفحة الباقات plans.html -->
         <a href="plans.html" class="ring">الباقات</a>
         <a href="#faq" class="ring">الأسئلة</a>
         <a href="plans.html" class="cta ring">✨ اختر باقتك</a>
@@ -494,34 +482,34 @@
   <!-- Hero -->
   <section class="hero container">
     <div data-reveal>
-      <h1>منصة واحدة تُدير شبكتك… وتبيع الإنترنت باحتراف</h1>
+      <h1>نظام واحد يُدير شبكتك… ويبيع لك الإنترنت باحتراف</h1>
       <p>مع <b>ControTik</b> تحصل على بيع جملة ومفرّق منظم، رسائل واتساب ذكية، إدارة دين وفوترة دقيقة، وتقارير محمية —
         كل ذلك ضمن واجهة عصرية خفيفة.</p>
       <div class="actions">
         <a href="plans.html" class="btn primary ring">ابدأ الآن</a>
-        <a href="#video" class="btn ghost ring">شاهد الديمو</a>
+        <a href="#video" class="btn ghost ring">شاهد الفيديو التوضيحي</a>
       </div>
+
       <div class="hero-stats">
-        <div class="stat"><b>+120</b>
-          <div class="muted">شبكة مُدارة</div>
-        </div>
-        <div class="stat"><b>99.9%</b>
+        <div class="stat">
+          <b>99.9%</b>
           <div class="muted">استقرار</div>
         </div>
-        <div class="stat"><b>24/7</b>
+        <div class="stat">
+          <b>24/7</b>
           <div class="muted">دعم أساسي</div>
         </div>
       </div>
     </div>
+
     <div class="hero-card" data-reveal>
-      <object type="image/svg+xml" data="./img/home-img.svg" class="hero-illustration" aria-label="لوحة تحكم ControTik">
-      </object>
+      <!-- استخدم الـSVG الخارجي بدل الرسم inline -->
+      <object type="image/svg+xml" data="./img/svg/home-hero.svg" class="hero-illustration"
+        aria-label="لوحة تحكم ControTik"></object>
     </div>
-
-
   </section>
 
-  <!-- Features (Cards only – الكروت محفوظة) -->
+  <!-- Features -->
   <section id="features">
     <div class="container">
       <div class="sec-head">
@@ -530,7 +518,7 @@
       </div>
 
       <div class="grid-3">
-        <!-- بيع الجملة -->
+        <!-- Wholesale -->
         <div class="card" data-reveal>
           <span class="badge">Wholesale • Top</span>
           <h3>بيع الإنترنت بالجملة</h3>
@@ -539,7 +527,7 @@
           <a href="Detailes/wholesale.html" class="btn ghost">🏪 تفاصيل الجملة</a>
         </div>
 
-        <!-- PPPoE / Broadband -->
+        <!-- PPPoE -->
         <div class="card" data-reveal>
           <span class="badge">PPPoE • Broadband</span>
           <h3>البرودباند وPPPoE</h3>
@@ -555,7 +543,7 @@
           <a href="Detailes/hotspot.html" class="btn ghost">🧾 القوالب والطباعة</a>
         </div>
 
-        <!-- الرسائل -->
+        <!-- Messaging -->
         <div class="card" data-reveal>
           <span class="badge">Messaging • Growth</span>
           <h3>نظام رسائل ذكي</h3>
@@ -564,7 +552,7 @@
           <a href="Detailes/messages.html" class="btn ghost">💬 إدارة الرسائل</a>
         </div>
 
-        <!-- المطالبة بالديون -->
+        <!-- Dunning -->
         <div class="card" data-reveal>
           <span class="badge">Dunning</span>
           <h3>مطالبة تلقائية بالديون</h3>
@@ -572,7 +560,7 @@
           <a href="Detailes/debt-reminder.html" class="btn ghost">📬 آلية المطالبة</a>
         </div>
 
-        <!-- الديون والدفعات -->
+        <!-- Debts -->
         <div class="card" data-reveal>
           <span class="badge">Finance</span>
           <h3>ديون ودُفعات بلا ضياع</h3>
@@ -580,7 +568,7 @@
           <a href="Detailes/debts.html" class="btn ghost">💰 سجل الديون</a>
         </div>
 
-        <!-- المبيعات -->
+        <!-- Sales -->
         <div class="card" data-reveal>
           <span class="badge">Sales</span>
           <h3>مبيعات كاش ودين</h3>
@@ -588,7 +576,7 @@
           <a href="Detailes/sales.html" class="btn ghost">📊 آلية البيع</a>
         </div>
 
-        <!-- الباقات -->
+        <!-- Plans -->
         <div class="card" data-reveal>
           <span class="badge">Plans</span>
           <h3>باقات واشتراكات مرنة</h3>
@@ -596,7 +584,7 @@
           <a href="Detailes/plans-subscribs.html" class="btn ghost">🗂 إدارة الباقات</a>
         </div>
 
-        <!-- الأرباح والشركاء -->
+        <!-- Partners -->
         <div class="card" data-reveal>
           <span class="badge">Partners</span>
           <h3>أرباح وشركاء بشفافية</h3>
@@ -604,7 +592,7 @@
           <a href="Detailes/profits.html" class="btn ghost">🤝 إدارة الأرباح</a>
         </div>
 
-        <!-- التقارير -->
+        <!-- Reports -->
         <div class="card" data-reveal>
           <span class="badge">Reports</span>
           <h3>تقارير Excel/PDF محمية</h3>
@@ -612,7 +600,7 @@
           <a href="Detailes/excel-export.html" class="btn ghost">📂 أمثلة التقارير</a>
         </div>
 
-        <!-- المستخدمون -->
+        <!-- RBAC -->
         <div class="card" data-reveal>
           <span class="badge">RBAC</span>
           <h3>مستخدمون وصلاحيات Bitwise</h3>
@@ -620,7 +608,7 @@
           <a href="Detailes/users.html" class="btn ghost">🛡️ صلاحيات الفريق</a>
         </div>
 
-        <!-- العملات -->
+        <!-- Currencies -->
         <div class="card" data-reveal>
           <span class="badge">Currencies</span>
           <h3>تعدد عملات دون فوضى</h3>
@@ -628,7 +616,7 @@
           <a href="Detailes/currencies.html" class="btn ghost">💱 إدارة العملات</a>
         </div>
 
-        <!-- المصاريف -->
+        <!-- Expenses -->
         <div class="card" data-reveal>
           <span class="badge">Expenses</span>
           <h3>مصاريف مُنظمة</h3>
@@ -636,7 +624,7 @@
           <a href="Detailes/expenses.html" class="btn ghost">🧾 أنواع المصاريف</a>
         </div>
 
-        <!-- النسخ الاحتياطي -->
+        <!-- Backup -->
         <div class="card" data-reveal>
           <span class="badge">Backup</span>
           <h3>نسخ احتياطي تلقائي</h3>
@@ -644,7 +632,7 @@
           <a href="Detailes/backup.html" class="btn ghost">☁️ خطة النسخ</a>
         </div>
 
-        <!-- الأبراج -->
+        <!-- Towers -->
         <div class="card" data-reveal>
           <span class="badge">Towers</span>
           <h3>إدارة الأبراج والتنبيهات</h3>
@@ -652,7 +640,7 @@
           <a href="Detailes/towers.html" class="btn ghost">🏢 تفاصيل الأبراج</a>
         </div>
 
-        <!-- الممتلكات -->
+        <!-- Assets -->
         <div class="card" data-reveal>
           <span class="badge">Assets</span>
           <h3>ممتلكات الشبكة</h3>
@@ -660,7 +648,7 @@
           <a href="Detailes/properties.html" class="btn ghost">🧰 إدارة الممتلكات</a>
         </div>
 
-        <!-- الولاء -->
+        <!-- Loyalty -->
         <div class="card" data-reveal>
           <span class="badge">Loyalty</span>
           <h3>نظام ولاء يحرّك التجديد</h3>
@@ -670,9 +658,9 @@
       </div>
 
       <!-- مستقبل -->
-      <div class="card" style="margin-top:18px" data-reveal>
+      <div class="card mt-18" data-reveal>
         <h3>🚀 ميزات مستقبلية قادمة</h3>
-        <ul style="margin:0; padding:0 18px; color:#374151; line-height:2">
+        <ul class="list-clean muted">
           <li>🏪 إدارة بيع القطع والإكسسوارات مع مستودع</li>
           <li>🛒 متجر محلي للقطع الإلكترونية مع تتبع أرباح/ديون/فواتير</li>
           <li>🌐 منصة سحابية للوصول من أي مكان</li>
@@ -699,9 +687,9 @@
       <div class="cta-band" data-reveal>
         <h2>جاهز للانطلاق؟</h2>
         <p class="muted">اطّلع على تفاصيل الأسعار واختر الخطة الأنسب لمرحلتك.</p>
-        <div class="actions" style="justify-content:center">
+        <div class="actions center">
           <a href="plans.html" class="btn primary ring">✨ اطلع على الباقات</a>
-          <a href="https://wa.me/963900000000" class="btn ghost ring" target="_blank" rel="noopener">تواصل واتساب</a>
+          <a href="https://wa.me/963982021127" class="btn ghost ring" target="_blank" rel="noopener">تواصل واتساب</a>
         </div>
       </div>
     </div>
@@ -716,24 +704,30 @@
       <div class="testi">
         <div class="card quote" data-reveal>
           <p>“اختصر علينا متابعة الديون والهوتسبوت. لوحة نظيفة وسريعة.”</p>
-          <div class="avatar"><img src="https://dummyimage.com/80x80/ddd/aaa.png&text=A" alt="صورة عميل" loading="lazy">
-            <div><b>شبكة الأفق</b>
+          <div class="avatar">
+            <img src="https://dummyimage.com/80x80/ddd/aaa.png&text=A" alt="صورة عميل" loading="lazy">
+            <div>
+              <b>شبكة الأفق</b>
               <div class="muted">دمشق</div>
             </div>
           </div>
         </div>
         <div class="card quote" data-reveal>
           <p>“التجديد الذكي والتنبيهات قبل الانتهاء أنقذتنا من الفوضى.”</p>
-          <div class="avatar"><img src="https://dummyimage.com/80x80/ddd/aaa.png&text=B" alt="صورة عميل" loading="lazy">
-            <div><b>FastLink ISP</b>
+          <div class="avatar">
+            <img src="https://dummyimage.com/80x80/ddd/aaa.png&text=B" alt="صورة عميل" loading="lazy">
+            <div>
+              <b>FastLink ISP</b>
               <div class="muted">حلب</div>
             </div>
           </div>
         </div>
         <div class="card quote" data-reveal>
           <p>“تقارير جاهزة للطباعة وPDF للهوتسبوت—موضوع البطاقات صار سهل.”</p>
-          <div class="avatar"><img src="https://dummyimage.com/80x80/ddd/aaa.png&text=C" alt="صورة عميل" loading="lazy">
-            <div><b>Sky Tower Net</b>
+          <div class="avatar">
+            <img src="https://dummyimage.com/80x80/ddd/aaa.png&text=C" alt="صورة عميل" loading="lazy">
+            <div>
+              <b>Sky Tower Net</b>
               <div class="muted">أنطاكية</div>
             </div>
           </div>
@@ -774,7 +768,7 @@
     <div class="container foot">
       <div>
         <h4>ControTik</h4>
-        <p class="muted">منصة لإدارة شبكات الإنترنت — هوتسبوت، برودباند، وPPPoE — بتصميم SaaS فاتح مع سيان.</p>
+        <p class="muted">منصة لإدارة شبكات الإنترنت — هوتسبوت، برودباند، و PPPoE </p>
       </div>
       <div>
         <h4>المنتج</h4>
@@ -785,8 +779,8 @@
       <div>
         <h4>الدعم</h4>
         <a href="#faq">الأسئلة</a><br>
-        <a href="mailto:support@controtik.com">support@controtik.com</a><br>
-        <a href="tel:+963900000000">+963 900 000 000</a>
+        <a href="mailto:controtik1@Gmail.com">controtik1@Gmail.com</a><br>
+        <a href="tel:+9639982021127">+963982021127</a>
       </div>
       <div>
         <h4>روابط</h4>
@@ -794,7 +788,7 @@
         <a href="#">الشروط</a>
       </div>
     </div>
-    <div class="container" style="margin-top:18px;color:#9ca3af">© 2025 ControTik</div>
+    <div class="container foot-note">© 2025 ControTik</div>
   </footer>
 
   <!-- JS -->
@@ -813,7 +807,7 @@
     document.addEventListener('DOMContentLoaded', reveal);
   </script>
 
-  <!-- Structured Data (FAQ + Organization) -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"هل يوجد إصدار تجريبي؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يمكنك التجربة قبل الالتزام بالشراء."}},
@@ -827,7 +821,7 @@
   </script>
 
   <!-- AOS (اختياري) -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
 
