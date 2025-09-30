@@ -752,3 +752,43 @@ footer {
 .pricing-duo .plan .btn {
     margin-top: auto;
 }
+
+
+.pricing-duo {
+    display: flex;
+    flex-direction: column;
+    /* موبايل: عمودي */
+    gap: 18px;
+}
+
+@media (min-width:1024px) {
+    .pricing-duo {
+        flex-direction: row;
+        align-items: stretch
+    }
+}
+
+
+.pricing-duo .plan {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-duo .plan .btn {
+    margin-top: auto;
+}
+
+.strike-large {
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.strike-large[style*="display: inline"] {
+    opacity: 1;
+    transform: none;
+}
+
+.strike-large[style*="display: none"] {
+    opacity: 0;
+    transform: translateY(-4px);
+}

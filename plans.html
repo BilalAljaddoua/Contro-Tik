@@ -171,8 +171,8 @@
                             أوفر.</small>
                     </div>
                 </div>
-                <a class="btn primary" href="https://wa.me/963982021127?text=مرحباً، أود معرفة أفضل باقة مناسبة لشبكتي."
-                    target="_blank" rel="noopener">💬 اسأل خبير الآن</a>
+                <!-- <a class="btn primary" href="https://wa.me/963982021127?text=مرحباً، أود معرفة أفضل باقة مناسبة لشبكتي."
+                    target="_blank" rel="noopener">💬 اسأل خبير الآن</a> -->
             </div>
         </section>
 
@@ -267,14 +267,6 @@
         </section>
 
 
-        <!-- شريط فوق البطاقات -->
-        <section class="fancy-section" style="padding-top:18px">
-            <div class="plans-ribbon">
-                <div class="pill">⚡ <b>ادفع الآن</b> — فعِّل فورًا</div>
-                <div class="pill">🎁 تجربة 14 يومًا</div>
-                <div class="pill primary">🚀 تفعيل فوري</div>
-            </div>
-        </section>
         <!-- مقارنة موسّعة -->
         <section class="fancy-section" style="padding-top:0">
             <h2>⚖️ مقارنة موسّعة: القيمة الحقيقية والفارق</h2>
@@ -369,20 +361,36 @@
 
             <!-- بطاقات قيمة مختصرة -->
             <div class="grid-3" style="margin-top:18px">
-                <div class="card">
+                <div class="card highlight">
                     <h3>💡 لمن Mini؟</h3>
-                    <p class="muted">شبكات تبدأ أو تريد أقل تكلفة سنوية مع الأساسيات المطلوبة للتشغيل. أفضل قيمة: <b>96
-                            $/سنة</b> بدلًا من <span style="text-decoration:line-through">156 $</span>.</p>
+                    <p class="muted">
+                        إذا كنت <b>تدير شبكة ناشئة</b> أو تبحث عن دخول آمن وبتكلفة منخفضة
+                        — فهذه الخطة مثالية لك. <br><br>
+                        تمنحك <b>Mini</b> كل الأساسيات: إدارة باقات ومشتركين، رسائل تلقائية،
+                        ومصاريف منظمة تساعدك على الانطلاق بسرعة وبدون تعقيد. <br><br>
+                    </p>
                 </div>
-                <div class="card">
+
+                <div class="card highlight">
                     <h3>👑 لمن Pro؟</h3>
-                    <p class="muted">شبكات تحتاج تقارير احترافية، شركاء، وأتمتة رسائل متقدمة. أفضل قيمة: <b>120
-                            $/سنة</b> بدلًا من <span style="text-decoration:line-through">180 $</span>.</p>
+                    <p class="muted">
+                        إذا كنت <b>مدير شبكة طموح</b> وتبحث عن تحكم كامل ورؤية أوضح
+                        — فهذه هي خطتك. <br><br>
+                        تمنحك <b>Pro</b> تقارير متقدمة جاهزة للمستثمرين،
+                        إدارة شركاء وأرباح بشفافية،
+                        وأتمتة رسائل ذكية تجعل شبكتك تعمل
+                        وكأن لديها فريق دعم خاص على مدار الساعة. <br><br>
+
+                    </p>
                 </div>
+
                 <div class="card">
                     <h3>📌 خلاصة مالية</h3>
-                    <p class="muted">كلا الخيارين يوفّر <b>60 $</b> سنويًا عند الدفع السنوي مقارنة بالدفع شهريًا—مع
-                        تفعيل فوري ودعم الميزات الكاملة للخطة.</p>
+                    <p class="muted">
+                        أيًا كان اختيارك، <b>Mini</b> أو <b>Pro</b>، كلاهما يمنحك
+                        تفعيلًا فوريًا وتوفيرًا مؤكدًا قدره <b>60 $</b> سنويًا مقارنة بالدفع شهريًا
+                        — الفارق أن <b>Pro</b> يفتح لك أبواب التحكم المتقدم والاحترافية الكاملة.
+                    </p>
                 </div>
             </div>
 
@@ -473,7 +481,7 @@
                     if (mode === 'yearly') {
                         // نبرز المقارنة السنوية (المكافئ مشطوب + السنوي الحقيقي + التوفير)
 
-                        if (strikeMini) { strikeMini.style.display = 'inline'; strikeMini.textContent = `145 $`; }
+                        if (strikeMini) { strikeMini.style.display = 'inline'; strikeMini.textContent = `156 $`; }
                         if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  96 $`; }
 
                         if (strikePro) { strikePro.style.display = 'inline'; strikePro.textContent = `180 $`; }
@@ -496,7 +504,7 @@
                         if (note) { note.innerHTML = `الاشتراك الشهري ${monthlyShown}$ — السنوي ${yearlyTotal}$ (توفير ${saving}$)`; }
                         if (saveA) { saveA.textContent = `${saving}$`; }
 
-                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  145 $`; }
+                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  156 $`; }
                         if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوياً: 180 $`; }
 
 
@@ -550,32 +558,6 @@
 }
 </script>
 
-    <!-- CSS خاص بتوزيع الكروت -->
-    <style>
-        .pricing-duo {
-            display: flex;
-            flex-direction: column;
-            /* موبايل: عمودي */
-            gap: 18px;
-        }
-
-        @media (min-width:1024px) {
-            .pricing-duo {
-                flex-direction: row;
-                /* لابتوب: أفقي */
-            }
-        }
-
-        .pricing-duo .plan {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pricing-duo .plan .btn {
-            margin-top: auto;
-        }
-    </style>
 
     <!-- AOS (اختياري) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
