@@ -512,34 +512,61 @@
 
     <!-- Structured Data (Pricing) -->
     <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"ControTik Plans",
-    "itemListElement":[
-      {
-        "@type":"Product",
-        "name":"ControTik Mini",
-        "description":"إدارة أساسية: باقات، اشتراكات، رسائل تلقائية أساسية، مصاريف، مبيعات، عملات، أرباح أساسية، نسخ احتياطي.",
-        "brand":{"@type":"Brand","name":"ControTik"},
-        "offers":[
-          {"@type":"Offer","price":"96","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"96","unitCode":"ANN"}},
-          {"@type":"Offer","price":"13","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"13","unitCode":"MON"}}
-        ]
-      },
-      {
-        "@type":"Product",
-        "name":"ControTik Pro",
-        "description":"تحكم احترافي: كل مزايا Mini + شركاء وأرباح، نقاط، صلاحيات، تقارير احترافية، ممتلكات، أبراج، تخصيص.",
-        "brand":{"@type":"Brand","name":"ControTik"},
-        "offers":[
-          {"@type":"Offer","price":"120","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"120","unitCode":"ANN"}},
-          {"@type":"Offer","price":"15","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"15","unitCode":"MON"}}
-        ]
-      }
-    ]
-  }
-  </script>
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"ControTik Plans",
+  "itemListElement":[
+    {
+      "@type":"Product",
+      "name":"ControTik Mini",
+      "description":"إدارة أساسية: باقات، اشتراكات، رسائل تلقائية أساسية، مصاريف، مبيعات، عملات، أرباح أساسية، نسخ احتياطي.",
+      "brand":{"@type":"Brand","name":"ControTik"},
+      "offers":[
+        {"@type":"Offer","price":"96","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"96","unitCode":"ANN"}},
+        {"@type":"Offer","price":"13","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"13","unitCode":"MON"}}
+      ]
+    },
+    {
+      "@type":"Product",
+      "name":"ControTik Pro",
+      "description":"تحكم احترافي: كل مزايا Mini + شركاء وأرباح، نقاط، صلاحيات، تقارير احترافية، ممتلكات، أبراج، تخصيص.",
+      "brand":{"@type":"Brand","name":"ControTik"},
+      "offers":[
+        {"@type":"Offer","price":"120","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"120","unitCode":"ANN"}},
+        {"@type":"Offer","price":"15","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"15","unitCode":"MON"}}
+      ]
+    }
+  ]
+}
+</script>
+
+    <!-- CSS خاص بتوزيع الكروت -->
+    <style>
+        .pricing-duo {
+            display: flex;
+            flex-direction: column;
+            /* موبايل: عمودي */
+            gap: 18px;
+        }
+
+        @media (min-width:1024px) {
+            .pricing-duo {
+                flex-direction: row;
+                /* لابتوب: أفقي */
+            }
+        }
+
+        .pricing-duo .plan {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-duo .plan .btn {
+            margin-top: auto;
+        }
+    </style>
 
     <!-- AOS (اختياري) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
