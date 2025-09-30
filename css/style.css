@@ -723,3 +723,32 @@ footer {
     /* لو كنت تريد نسبة ثابتة بصريًا */
     /* aspect-ratio: 5 / 3; */
 }
+
+/* توزيع البطاقات: موبايل عمودي، لابتوب أفقي */
+.pricing-duo {
+    display: flex !important;
+    /* !important ليتغلّب على أي display:grid قديم */
+    flex-direction: column;
+    /* موبايل: عمودي */
+    gap: 18px;
+}
+
+/* لابتوب فما فوق */
+@media (min-width: 1024px) {
+    .pricing-duo {
+        flex-direction: row;
+        /* لابتوب: أفقي جنب بعض */
+        align-items: stretch;
+    }
+}
+
+/* تأكد أن كل كرت يتمدّد بالتساوي وأن زر CTA يهبط للأسفل */
+.pricing-duo .plan {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-duo .plan .btn {
+    margin-top: auto;
+}
