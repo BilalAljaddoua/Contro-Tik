@@ -191,8 +191,8 @@
                     <div class="price">
                         <span class="js-price-main-mini">13</span> $
                         <small class="muted js-price-caption-mini"> / شهريًا</small>
+                        <span class="year-pill js-year-pill-mini">سنوياً: 96 $</span>
                         <span class="strike-large js-strike-mini">156 $</span>
-                        <span class="year-pill js-year-pill-mini">سنوي: 96 $</span>
                     </div>
                     <div class="note-sub js-billing-note">
                         ادفع سنويًا 96$ — توفّر <b class="js-saving-amount">60$</b>
@@ -233,8 +233,8 @@
                     <div class="price">
                         <span class="js-price-main-pro">15</span> $
                         <small class="muted js-price-caption-pro"> / شهريًا</small>
+                        <span class="year-pill js-year-pill-pro">سنوياً: 120 $</span>
                         <span class="strike-large js-strike-pro">180 $</span>
-                        <span class="year-pill js-year-pill-pro">سنوي: 120 $</span>
                     </div>
                     <div class="note-sub js-billing-note">
                         ادفع سنويًا 120$ — توفّر <b class="js-saving-amount">60$</b>
@@ -472,11 +472,12 @@
 
                     if (mode === 'yearly') {
                         // نبرز المقارنة السنوية (المكافئ مشطوب + السنوي الحقيقي + التوفير)
-                        if (strikePro) { strikePro.style.display = 'inline'; strikePro.textContent = `180 $`; }
-                        if (strikeMini) { strikeMini.style.display = 'inline'; strikeMini.textContent = `145 $`; }
 
-                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوي:  96 $`; }
-                        if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوي: 120 $`; }
+                        if (strikeMini) { strikeMini.style.display = 'inline'; strikeMini.textContent = `145 $`; }
+                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  96 $`; }
+
+                        if (strikePro) { strikePro.style.display = 'inline'; strikePro.textContent = `180 $`; }
+                        if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوياً: 120 $`; }
 
                         if (note) { note.innerHTML = `ادفع سنويًا ${yearlyTotal}$ — توفّر <b class="js-saving-amount">${saving}$</b>`; }
                         if (saveA) { saveA.textContent = `${saving}$`; }
@@ -495,8 +496,8 @@
                         if (note) { note.innerHTML = `الاشتراك الشهري ${monthlyShown}$ — السنوي ${yearlyTotal}$ (توفير ${saving}$)`; }
                         if (saveA) { saveA.textContent = `${saving}$`; }
 
-                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوي:  145 $`; }
-                        if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوي: 180 $`; }
+                        if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  145 $`; }
+                        if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوياً: 180 $`; }
 
 
                         if (mainPro) mainPro.textContent = '15';
