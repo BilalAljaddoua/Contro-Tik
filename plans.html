@@ -7,22 +7,126 @@
 
     <title>ControTik | الباقات والأسعار</title>
     <meta name="description"
-        content="اختر باقة ControTik المناسبة: Mini للانطلاق السريع و Pro للتحكم الاحترافي — تقارير، رسائل، صلاحيات، وإدارة شاملة للشبكة. الدفع نصف سنوي." />
+        content="اختر باقة ControTik المناسبة: Mini للانطلاق السريع و Pro للتحكم الاحترافي — تقارير، رسائل، صلاحيات، وإدارة شاملة للشبكة. الفوترة سنوية." />
     <link rel="canonical" href="https://controtik.com/pricing.html" />
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
 
-    <!-- Fonts (نفس الخط) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="Detailes/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- تحسينات تنسيق الشريط + الحاسبة المرئية -->
+    <style>
+        :root {
+            --ribbon-bg: linear-gradient(135deg, #f7feff, #ffffff);
+            --pill-bg: #ffffff;
+            --pill-dashed: #a6eff2;
+            --pill-text: #03686b;
+            --accent: #00cfd5;
+            --accent-2: #00aab0;
+        }
+
+        .plans-ribbon {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: var(--ribbon-bg);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 16px;
+            box-shadow: var(--shadow)
+        }
+
+        .plans-ribbon .left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--pill-bg);
+            border: 1px dashed var(--pill-dashed);
+            color: var(--pill-text);
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-weight: 700
+        }
+
+        .pill b {
+            color: var(--accent-2)
+        }
+
+        .plans-ribbon .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent-2);
+            opacity: .35
+        }
+
+        .plans-ribbon .hint {
+            color: var(--muted)
+        }
+
+        .plans-ribbon .actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .pill.primary {
+            background: var(--accent);
+            color: #000;
+            border: 1px solid #00c2c8
+        }
+
+        /* شارة صغيرة فوق البطاقات */
+        .micro-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e6fbfc;
+            border: 1px solid #c8f5f7;
+            color: #046b6d;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: .9rem;
+            font-weight: 700
+        }
+
+        /* زر التبديل شهري/سنوي */
+        #billing-toggle .btn {
+            padding: 10px 14px
+        }
+
+        /* تحسين العناصر في الشاشات الصغيرة */
+        @media (max-width:640px) {
+            .plans-ribbon {
+                align-items: flex-start
+            }
+
+            .plans-ribbon .left {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px
+            }
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- Header -->
     <header>
         <div class="container nav">
@@ -33,7 +137,7 @@
             </a>
             <nav class="menu" id="menu">
                 <a href="../index.html#features">الميزات</a>
-                <a href="../index.html#integrations">التكامل</a>
+                <!-- (تم حذف زر التكامل حسب طلبك) -->
                 <a href="../index.html#faq">الأسئلة</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
@@ -48,24 +152,61 @@
                 style="text-align:start; display:flex; align-items:center; gap:16px; justify-content:space-between; flex-wrap:wrap">
                 <div>
                     <h2 style="margin:0">💼 خطط تبني شبكة قوية… بلا تعقيد</h2>
-                    <p class="muted" style="margin:6px 0 0">اختر ما يناسب مرحلتك: <b>Mini</b> للانطلاق السريع،
-                        و<b>Pro</b> للتحكم الكامل. الدفع كل <b>6 أشهر</b> دفعة واحدة.</p>
+                    <p class="muted" style="margin:6px 0 8px">
+                        اختر ما يناسبك: <b>Mini</b> للانطلاق السريع، و<b>Pro</b> للتحكم الكامل.
+                        <span
+                            style="display:inline-block;background:#e6fbfc;border:1px dashed #a6eff2;border-radius:8px;padding:2px 8px;margin-inline-start:6px">الفوترة
+                            سنوية</span>
+                    </p>
+                    <!-- Toggle: شهري / سنوي (عرض فقط) -->
+                    <div id="billing-toggle" role="tablist" aria-label="تبديل طريقة العرض"
+                        style="display:flex;gap:6px;align-items:center">
+                        <button type="button" class="btn ghost" data-billing="monthly" aria-selected="false">عرض
+                            شهري</button>
+                        <button type="button" class="btn primary" data-billing="yearly" aria-selected="true">عرض
+                            سنوي</button>
+                        <small class="muted" style="margin-inline-start:8px">*العرض شهري للتوضيح فقط — الدفع
+                            سنوي</small>
+                    </div>
                 </div>
                 <a class="btn primary" href="https://wa.me/963982021127?text=مرحباً، أود معرفة أفضل باقة مناسبة لشبكتي."
                     target="_blank" rel="noopener">💬 اسأل خبير الآن</a>
             </div>
         </section>
 
-        <!-- بطاقات الأسعار -->
+        <!-- شريط منسّق فوق البطاقات -->
         <section class="fancy-section" style="padding-top:18px">
-            <div class="pricing" style="grid-template-columns:repeat(2,1fr)">
+            <div class="plans-ribbon">
+                <div class="left">
+                    <span class="pill">⚡ <b>ادفع الآن</b> — فعِّل فورًا</span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="hint">الفوترة سنوية • تفعيل فوري بعد الدفع</span>
+                </div>
+                <div class="actions">
+                    <a class="pill" href="https://wa.me/963982021127?text=أرغب%20بتجربة%20ControTik%20لمدة%2014%20يومًا"
+                        target="_blank" rel="noopener">🎁 <b>تجربة 14 يومًا</b></a>
+                    <a class="pill primary"
+                        href="https://wa.me/963982021127?text=أرغب%20بالاشتراك%20الآن%20وتفعيل%20حسابي" target="_blank"
+                        rel="noopener">🚀 تفعيل فوري</a>
+                </div>
+            </div>
 
+            <!-- بطاقات الأسعار -->
+            <div class="pricing" style="grid-template-columns:repeat(2,1fr)">
                 <!-- Mini -->
-                <article class="card plan" style="position:relative; overflow:hidden">
+                <article class="card plan" style="position:relative; overflow:hidden" data-plan="mini" data-monthly="8"
+                    data-yearly-total="96">
                     <span class="badge">مناسب للبدايات</span>
+                    <div style="position:absolute; top:16px; left:16px;"><span class="micro-label">تشغيل سريع</span>
+                    </div>
                     <h3>Mini</h3>
-                    <div class="price">8 $ <small class="muted">/ شهريًا</small></div>
-                    <div class="muted" style="margin:-6px 0 10px">يُدفع نصف سنوي (48$ لكل 6 أشهر)</div>
+
+                    <div class="price">
+                        <span class="js-price-main">96</span> $
+                        <small class="muted js-price-caption"> / سنويًا</small>
+                    </div>
+                    <div class="muted js-billing-note" style="margin:-6px 0 10px">الفوترة سنوية — ما يعادل 8$ شهريًا
+                    </div>
 
                     <ul class="muted" style="line-height:1.9">
                         <li>📦 إدارة الباقات والاشتراكات</li>
@@ -89,11 +230,20 @@
                 </article>
 
                 <!-- Pro -->
-                <article class="card plan most" style="position:relative; overflow:hidden">
+                <article class="card plan most" style="position:relative; overflow:hidden" data-plan="pro"
+                    data-monthly="10" data-yearly-total="120">
                     <span class="tag">الأكثر اختياراً</span>
+                    <div style="position:absolute; top:16px; left:16px;"><span class="micro-label"
+                            style="background:#d9ffe2;border-color:#bdefc7;color:#0b7a2a">الأكثر قيمة سنويًا</span>
+                    </div>
                     <h3>Pro</h3>
-                    <div class="price">10 $ <small class="muted">/ شهريًا</small></div>
-                    <div class="muted" style="margin:-6px 0 10px">يُدفع نصف سنوي (60$ لكل 6 أشهر)</div>
+
+                    <div class="price">
+                        <span class="js-price-main">120</span> $
+                        <small class="muted js-price-caption"> / سنويًا</small>
+                    </div>
+                    <div class="muted js-billing-note" style="margin:-6px 0 10px">الفوترة سنوية — ما يعادل 10$ شهريًا
+                    </div>
 
                     <ul class="muted" style="line-height:1.9">
                         <li>✅ كل ميزات Mini</li>
@@ -216,29 +366,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- FAQ -->
-        <section class="fancy-section" id="faq" style="padding-top:0">
-            <h2>الأسئلة المتكررة</h2>
-            <div class="faq">
-                <details open>
-                    <summary>هل أستطيع الترقية من Mini إلى Pro لاحقًا؟</summary>
-                    <p class="muted">نعم، تتم الترقية بسلاسة مع الحفاظ على البيانات والإعدادات.</p>
-                </details>
-                <details>
-                    <summary>هل الأسعار تشمل التحديثات؟</summary>
-                    <p class="muted">نعم، تحصل على التحسينات الدورية ضمن خطتك الحالية.</p>
-                </details>
-                <details>
-                    <summary>هل يوجد التزام طويل؟</summary>
-                    <p class="muted">لا. الدفع نصف سنوي، ويمكنك الإيقاف قبل دورة الدفع التالية.</p>
-                </details>
-                <details>
-                    <summary>هل توجد نسخة تجريبية؟</summary>
-                    <p class="muted">نعم، يمكنك التجربة قبل الالتزام بالشراء.</p>
-                </details>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -260,6 +387,53 @@
             const isOpen = getComputedStyle(m).display !== 'none';
             m.style.display = isOpen ? 'none' : 'flex';
         }
+
+        // تبديل عرض الأسعار (شهري/سنوي) - الفوترة تبقى سنوية
+        (function initBillingToggle() {
+            const toggle = document.getElementById('billing-toggle');
+            if (!toggle) return;
+
+            function setMode(mode) {
+                // أزرار الحالة البصرية
+                [...toggle.querySelectorAll('button')].forEach(btn => {
+                    const active = btn.dataset.billing === mode;
+                    btn.classList.toggle('primary', active);
+                    btn.classList.toggle('ghost', !active);
+                    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+                });
+
+                // تحديث بطاقات الأسعار
+                document.querySelectorAll('.plan[data-plan]').forEach(card => {
+                    const monthly = Number(card.dataset.monthly);
+                    const yearlyTotal = Number(card.dataset.yearlyTotal);
+
+                    const main = card.querySelector('.js-price-main');
+                    const cap = card.querySelector('.js-price-caption');
+                    const note = card.querySelector('.js-billing-note');
+
+                    if (mode === 'monthly') {
+                        // عرض شهري (للتوضيح)
+                        if (main) main.textContent = monthly.toString();
+                        if (cap) cap.textContent = '/ شهريًا';
+                        if (note) note.textContent = `الفوترة سنوية — ما يعادل ${monthly}$ شهريًا (إجمالي ${yearlyTotal}$ سنويًا)`;
+                    } else {
+                        // عرض سنوي (الافتراضي)
+                        if (main) main.textContent = yearlyTotal.toString();
+                        if (cap) cap.textContent = ' / سنويًا';
+                        if (note) note.textContent = `الفوترة سنوية — ما يعادل ${monthly}$ شهريًا`;
+                    }
+                });
+            }
+
+            toggle.addEventListener('click', (e) => {
+                const btn = e.target.closest('button[data-billing]');
+                if (!btn) return;
+                setMode(btn.dataset.billing);
+            });
+
+            // الوضع الافتراضي: سنوي
+            setMode('yearly');
+        })();
     </script>
 
     <!-- Structured Data (Pricing) -->
@@ -274,14 +448,14 @@
         "name":"ControTik Mini",
         "description":"إدارة أساسية: باقات، اشتراكات، رسائل تلقائية أساسية، مصاريف، مبيعات، عملات، أرباح أساسية، نسخ احتياطي.",
         "brand":{"@type":"Brand","name":"ControTik"},
-        "offers":{"@type":"Offer","price":"8","priceCurrency":"USD","availability":"https://schema.org/InStock"}
+        "offers":{"@type":"Offer","price":"96","priceCurrency":"USD","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"}
       },
       {
         "@type":"Product",
         "name":"ControTik Pro",
         "description":"تحكم احترافي: كل مزايا Mini + شركاء وأرباح، نقاط، صلاحيات، تقارير احترافية، ممتلكات، أبراج، تخصيص.",
         "brand":{"@type":"Brand","name":"ControTik"},
-        "offers":{"@type":"Offer","price":"10","priceCurrency":"USD","availability":"https://schema.org/InStock"}
+        "offers":{"@type":"Offer","price":"120","priceCurrency":"USD","priceValidUntil":"2026-12-31","availability":"https://schema.org/InStock"}
       }
     ]
   }
@@ -291,7 +465,6 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>
-
 </body>
 
 </html>
