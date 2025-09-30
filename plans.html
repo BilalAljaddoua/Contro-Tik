@@ -549,6 +549,32 @@
 }
 </script>
 
+    <!-- CSS خاص بتوزيع الكروت -->
+    <style>
+        .pricing-duo {
+            display: flex;
+            flex-direction: column;
+            /* موبايل: عمودي */
+            gap: 18px;
+        }
+
+        @media (min-width:1024px) {
+            .pricing-duo {
+                flex-direction: row;
+                /* لابتوب: أفقي */
+            }
+        }
+
+        .pricing-duo .plan {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-duo .plan .btn {
+            margin-top: auto;
+        }
+    </style>
 
     <!-- AOS (اختياري) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
