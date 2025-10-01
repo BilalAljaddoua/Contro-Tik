@@ -2,65 +2,121 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ControTik | نظام مرن قابل للتخصيص</title>
     <meta name="description"
-        content="خصّص ControTik كما تريد: ميزات حسب الطلب، واجهات وهوية بصرية، تنبيهات ذكية، تقارير مخصّصة، وتكاملات مع MikroTik وRADIUS.">
-    <link rel="canonical" href="https://controtik.com/Detailes/custom.html">
-    <meta name="theme-color" content="#00cfd5">
-    <meta name="robots" content="index,follow">
+        content="خصّص ControTik كما تريد: ميزات حسب الطلب، واجهات وهوية بصرية، تنبيهات ذكية، تقارير مخصّصة، وتكاملات مع MikroTik وRADIUS." />
+    <link rel="canonical" href="https://controtik.com/Detailes/custom.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ControTik | نظام مرن قابل للتخصيص">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ControTik | نظام مرن قابل للتخصيص" />
     <meta property="og:description"
-        content="منصة تتكيّف مع شبكتك: ميزات حسب الطلب، واجهات وهوية، تنبيهات، تقارير، وتكاملات.">
-    <meta property="og:url" content="https://controtik.com/Detailes/custom.html">
-    <meta property="og:image" content="https://controtik.com/img/custom-og.jpg">
-    <meta property="og:image:alt" content="تخصيص ControTik">
+        content="منصة تتكيّف مع شبكتك: ميزات حسب الطلب، واجهات وهوية، تنبيهات، تقارير، وتكاملات." />
+    <meta property="og:url" content="https://controtik.com/Detailes/custom.html" />
+    <meta property="og:image" content="https://controtik.com/img/custom-og.jpg" />
+    <meta property="og:image:alt" content="تخصيص ControTik" />
 
-    <!-- Fonts (نفس الخط) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Global Styles -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Page tweaks -->
+    <style>
+        /* تحسينات خفيفة لهذه الصفحة فقط */
+        .hero-ill img {
+            max-width: 220px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .badge.is-green {
+            background: #ecfdf5;
+            border-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge.is-yellow {
+            background: #fffbeb;
+            border-color: #fde68a;
+            color: #92400e;
+        }
+
+        .callout.cta-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 16px;
+        }
+
+        .callout.cta-bar .cta-text {
+            flex: 1;
+            min-width: 280px;
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+
+        .callout.cta-bar .btn {
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        @media (max-width:600px) {
+            .callout.cta-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .callout.cta-bar .btn {
+                align-self: flex-start;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- Header مختصر -->
+    <!-- Header -->
     <header>
-        <div class="container nav" style="padding:14px 0">
-            <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:10px">
+        <div class="container nav">
+            <a class="brand" href="../index.html">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
-                    height="36" style="border-radius:8px">
+                    height="36" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-            <nav class="menu" style="display:flex;gap:16px">
+            <nav class="menu" id="menu" aria-label="القائمة الرئيسية">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
     <main class="container">
-
         <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
             <a href="../index.html#features">الميزات</a>
             <span>›</span>
-            <span>تخصيص</span>
+            <span aria-current="page">تخصيص</span>
         </nav>
 
-        <!-- Hero -->
+        <!-- Hero (كرت البداية) -->
         <section class="hero-slim" data-aos="fade-up">
             <div>
                 <h1>نظام مرن قابل للتخصيص</h1>
@@ -71,8 +127,8 @@
                     <a href="#faq" class="btn ghost">الأسئلة الشائعة</a>
                 </div>
             </div>
-            <div class="hero-ill">
-                <img src="../img/custom.png" alt="تخصيص ControTik" loading="lazy">
+            <div class="hero-ill" aria-hidden="true">
+                <img src="../img/custom.png" alt="" loading="lazy" />
             </div>
         </section>
 
@@ -142,7 +198,7 @@
             </div>
         </section>
 
-        <!-- Process (How we customize) -->
+        <!-- Process -->
         <section id="process" class="two" style="margin-top:18px">
             <div class="card" data-aos="fade-up">
                 <h3>آلية تنفيذ التخصيص</h3>
@@ -154,7 +210,7 @@
                     <li><b>الإطلاق والمتابعة:</b> تدريب مختصر ودعم بعد الإطلاق لتحسين التجربة.</li>
                 </ol>
                 <div class="callout" style="margin-top:10px">
-                    <div>🧪</div>
+                    <div aria-hidden="true">🧪</div>
                     <div class="muted">يمكن توفير بيئة تجريبية Staging قبل الإطلاق لضمان سلاسة الدمج مع بياناتك
                         الحقيقية.</div>
                 </div>
@@ -168,9 +224,9 @@
                     <li>اتفاقية مستوى خدمة (SLA).</li>
                     <li>دعم أولوية وتدريب الفريق.</li>
                 </ul>
-                <div class="callout" style="margin-top:10px;justify-content:space-between;gap:12px">
-                    <div class="muted">ابدأ محادثة سريعة لنعرف بالضبط ماذا تريد تخصيصه.</div>
-                    <a href="../index.html#contact" class="btn primary btn sm">تواصل الآن</a>
+                <div class="callout cta-bar" style="margin-top:10px">
+                    <div class="cta-text muted">ابدأ محادثة سريعة لنعرف بالضبط ماذا تريد تخصيصه.</div>
+                    <a href="../index.html#contact" class="btn primary">تواصل الآن</a>
                 </div>
             </div>
         </section>
@@ -200,18 +256,17 @@
 
         <!-- CTA -->
         <section style="margin:22px 0">
-            <div class="callout" style="justify-content:space-between;gap:14px">
-                <div>
-                    <div style="font-weight:700;margin-bottom:6px">خلّي النظام يشتغل بطريقتك</div>
+            <div class="callout cta-bar">
+                <div class="cta-text">
+                    <div class="h5" style="font-weight:700;margin-bottom:6px">خلّي النظام يشتغل بطريقتك</div>
                     <div class="muted">أرسل لنا لائحة مختصرة بمتطلباتك لنقترح أفضل خطة تخصيص مناسبة لمقاس شبكتك.</div>
                 </div>
                 <a href="../index.html#contact" class="btn primary">✨ ابدأ التخصيص الآن</a>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer مختصر -->
+    <!-- Footer -->
     <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
         <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
@@ -223,28 +278,34 @@
         </div>
     </footer>
 
+    <!-- JS: Menu toggle -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+
     <!-- AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
-    <!-- Structured Data: FAQ + Service (Customization) -->
+    <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"هل يؤثر التخصيص على التحديثات القادمة؟",
-       "acceptedAnswer":{"@type":"Answer","text":"نحرص على إبقاء التخصيصات متوافقة مع نواة النظام لتلقي التحديثات دون كسر الوظائف."}},
-      {"@type":"Question","name":"هل أحتاج سيرفر خاص؟",
-       "acceptedAnswer":{"@type":"Answer","text":"يمكن الاستضافة السحابية العامة أو بيئتك الداخلية وفق سياسة الأمان لديك."}},
-      {"@type":"Question","name":"هل التدفقات الآلية قابلة للضبط بالكامل؟",
-       "acceptedAnswer":{"@type":"Answer","text":"نعم، يمكن تخصيص المحتوى والقنوات والجداول وشروط الإرسال."}},
-      {"@type":"Question","name":"هل يمكن ربطه بأنظمة محاسبة خارجية؟",
-       "acceptedAnswer":{"@type":"Answer","text":"يُدعم عبر API وExports، كما يمكن تنفيذ موصلات مخصّصة."}}
+      {"@type":"Question","name":"هل يؤثر التخصيص على التحديثات القادمة؟","acceptedAnswer":{"@type":"Answer","text":"نحرص على إبقاء التخصيصات متوافقة مع نواة النظام لتلقي التحديثات دون كسر الوظائف."}},
+      {"@type":"Question","name":"هل أحتاج سيرفر خاص؟","acceptedAnswer":{"@type":"Answer","text":"يمكن الاستضافة السحابية العامة أو بيئتك الداخلية وفق سياسة الأمان لديك."}},
+      {"@type":"Question","name":"هل التدفقات الآلية قابلة للضبط بالكامل؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يمكن تخصيص المحتوى والقنوات والجداول وشروط الإرسال."}},
+      {"@type":"Question","name":"هل يمكن ربطه بأنظمة محاسبة خارجية؟","acceptedAnswer":{"@type":"Answer","text":"يُدعم عبر API وExports، كما يمكن تنفيذ موصلات مخصّصة."}}
     ]
   }
   </script>
 
+    <!-- Structured Data: Service -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",

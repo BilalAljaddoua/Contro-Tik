@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://controtik.com/Detailes/users.html" />
     <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
 
-    <!-- Fonts (نفس الخط) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -31,89 +31,123 @@
 </head>
 
 <body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <a class="brand" href="../index.html" aria-label="العودة للرئيسية">
+                <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik" width="36" height="36"
+                    style="border-radius:8px" />
+                <b>ControTik</b>
+            </a>
+            <nav class="menu" id="menu">
+                <a href="../index.html#features">الميزات</a>
+                <a href="../index.html#integrations">التكامل</a>
+                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
+            </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
     <main class="container">
-        <nav class="crumbs" aria-label="مسار الصفحة" style="margin-top:12px">
+
+        <!-- Breadcrumbs -->
+        <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
             <a href="../index.html#features">الميزات</a>
             <span>›</span>
-            <span>نظام المستخدمين والصلاحيات</span>
+            <span aria-current="page">نظام المستخدمين والصلاحيات</span>
         </nav>
 
-        <section id="users" class="fancy-section" data-aos="fade-up">
-            <h2>🛡️ نظام المستخدمين والصلاحيات</h2>
-
-            <p>
-                يوفّر <strong>ControTik</strong> إدارة احترافية للمستخدمين: إنشاء حسابات غير محدودة، تحديد صلاحيات دقيقة
-                بتقنية <b>Bitwise</b>، وسجل نشاط شامل مع تقارير يومية عبر واتساب—كل ذلك لضبط الوصول ومنع الأخطاء.
-            </p>
-
-            <div class="grid-3" style="margin-top:14px">
-                <div class="card">
-                    <span class="badge">Accounts</span>
-                    <h3>إنشاء مستخدمين بلا قيود</h3>
-                    <ul class="list muted">
-                        <li>اسم المستخدم وكلمة المرور</li>
-                        <li>رقم الهاتف للتنبيهات (اختياري)</li>
-                        <li>تعيين صلاحيات دقيقة حسب الدور</li>
-                        <li>تفعيل/تعطيل الحساب فورًا</li>
-                    </ul>
+        <!-- Hero (Card first) -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>نظام المستخدمين والصلاحيات</h1>
+                <p>إنشاء حسابات غير محدودة، <b>صلاحيات Bitwise</b> دقيقة لكل وحدة، وسجل نشاط مُفصّل مع تقارير واتساب
+                    يومية—تحكّم محكم وتقليل للأخطاء.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#highlights" class="btn primary">المزايا الأساسية</a>
+                    <a href="#audit" class="btn ghost">التدقيق والتقارير</a>
                 </div>
+            </div>
+        </section>
 
-                <div class="card">
-                    <span class="badge">Bitwise</span>
-                    <h3>صلاحيات مرنة بدقة بتّية</h3>
-                    <p class="muted">
-                        نموذج <b>Bitwise Permissions</b> يمنحك تركيب صلاحيات مركّبة: قراءة/إضافة/تعديل/حذف لكل وحدة
-                        (اشتراكات،
-                        ديون، أرباح، رسائل، تقارير…)، أو حصر أدوات حسّاسة مثل سحب الأرباح أو إرسال الرسائل الجماعية.
-                    </p>
-                </div>
+        <!-- Highlights -->
+        <section id="highlights" class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Accounts</span>
+                <h3>إنشاء مستخدمين بلا قيود</h3>
+                <ul class="list muted">
+                    <li>اسم المستخدم وكلمة المرور</li>
+                    <li>رقم هاتف للتنبيهات (اختياري)</li>
+                    <li>تعيين صلاحيات حسب الدور</li>
+                    <li>تفعيل/تعطيل فورًا</li>
+                </ul>
+            </div>
 
-                <div class="card">
-                    <span class="badge">Audit</span>
-                    <h3>سجل نشاط شفاف</h3>
-                    <p class="muted">
-                        توثيق اسم المستخدم، العملية، التاريخ/الوقت، وعدد السجلات المتأثرة. فلترة حسب
-                        المستخدم/الوحدة/المدى الزمني
-                        مع تصدير Excel/PDF للأرشفة.
-                    </p>
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Bitwise</span>
+                <h3>صلاحيات بدقة بتّية</h3>
+                <p class="muted">قراءة/إضافة/تعديل/حذف لكل وحدة (اشتراكات، ديون، أرباح، رسائل، تقارير…) مع قفل عمليات
+                    حساسة مثل سحب الأرباح أو الإرسال الجماعي.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="150" id="audit">
+                <span class="badge">Audit</span>
+                <h3>سجل نشاط شفاف</h3>
+                <p class="muted">توثيق المستخدم، العملية، الزمن، وعدد السجلات المتأثرة. فلاتر حسب المستخدم/الوحدة/الفترة
+                    وتصدير Excel/PDF.</p>
+            </div>
+        </section>
+
+        <!-- Scenarios -->
+        <section class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>أمثلة لسيناريوهات صلاحيات</h3>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>موظف اشتراكات</h3>
+                        <p class="muted">إدارة الاشتراكات فقط، بدون رؤية الأرباح أو المصاريف.</p>
+                    </div>
+                    <div class="card">
+                        <h3>محاسب</h3>
+                        <p class="muted">عرض التقارير والمبيعات والديون، إضافة دفعات—بدون حذف.</p>
+                    </div>
+                    <div class="card">
+                        <h3>مدير تنفيذي</h3>
+                        <p class="muted">صلاحيات كاملة مع موافقة مزدوجة اختياريًا للعمليات الحساسة.</p>
+                    </div>
                 </div>
             </div>
 
-            <h3 style="margin-top:18px">أمثلة لسيناريوهات صلاحيات</h3>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>موظف اشتراكات</h3>
-                    <p class="muted">إدارة الاشتراكات فقط، بدون رؤية الأرباح أو المصاريف.</p>
-                </div>
-                <div class="card">
-                    <h3>محاسب</h3>
-                    <p class="muted">عرض التقارير والمبيعات والديون، إضافة دفعات—بدون حذف.</p>
-                </div>
-                <div class="card">
-                    <h3>مدير تنفيذي</h3>
-                    <p class="muted">صلاحيات كاملة مع قفلٍ لعمليات حساسة بموافقة مزدوجة (اختياري).</p>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>تقارير واتساب يومية</h3>
+                <div class="callout" style="margin-top:6px">
+                    <div>📬</div>
+                    <div class="muted">يُرسل النظام ملخص النشاط يوميًا لمالك الشبكة ويتضمن أهم التعديلات والعمليات غير
+                        الاعتيادية لاتخاذ قرار سريع.</div>
                 </div>
             </div>
+        </section>
 
-            <div class="callout" style="margin-top:14px">
-                <div>📬</div>
-                <div class="muted">
-                    <strong>تقارير واتساب يومية:</strong> يُرسل النظام ملخص نشاط المستخدمين يوميًا لصاحب الشبكة،
-                    بما في ذلك أهم التعديلات والعمليات غير الاعتيادية—لتتخذ القرار سريعًا.
-                </div>
+        <!-- Account controls -->
+        <section style="margin-top:18px">
+            <div class="card">
+                <h3 style="margin:0 0 8px">التحكم بالحسابات</h3>
+                <ul class="list">
+                    <li>✅ تعديل البيانات والصلاحيات في أي وقت</li>
+                    <li>✅ تعطيل مؤقت بدل الحذف للحفاظ على الأثر التدقيقي</li>
+                    <li>✅ تتبّع محاولات الدخول غير المصرح بها (اختياري)</li>
+                </ul>
             </div>
+        </section>
 
-            <h3 style="margin-top:18px">التحكم بالحسابات</h3>
-            <ul class="list">
-                <li>✅ تعديل البيانات والصلاحيات في أي وقت</li>
-                <li>✅ تعطيل مؤقت بدلاً من الحذف للحفاظ على الأثر التدقيقي</li>
-                <li>✅ تتبّع محاولات الدخول غير المصرّح بها (اختياري)</li>
-            </ul>
-
-
-            <div class="callout" style="margin-top:14px; justify-content:space-between; gap:12px">
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
                 <div>
                     <div style="font-weight:700;margin-bottom:6px">دخول أقل… أثر أوضح</div>
                     <div class="muted">وزّع الصلاحيات بذكاء وخفّض المخاطر—كل نقرة مسجّلة، وكل صلاحية مقاسة.</div>
@@ -121,8 +155,10 @@
                 <a href="../index.html#contact" class="btn primary">✨ فعّل نظام الصلاحيات</a>
             </div>
         </section>
+
     </main>
 
+    <!-- Footer -->
     <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
         <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
@@ -134,8 +170,16 @@
         </div>
     </footer>
 
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
     <!-- Structured Data (اختياري) -->
     <script type="application/ld+json">

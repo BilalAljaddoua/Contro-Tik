@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>ControTik | البرودباند وPPPoE</title>
+    <title>ControTik | إدارة البرودباند وPPPoE</title>
     <meta name="description"
-        content="إدارة البرودباند وPPPoE في ControTik: تعطيل أو تخفيض البروفايل تلقائيًا عند الانتهاء، تنبيهات ذكية قبل الانتهاء، ومطالبات ديون تلقائية—all مباشرة على السيرفر.">
+        content="تعطيل/تخفيض تلقائي عند الانتهاء، تنبيهات قبل الانتهاء، ومطالبات ديون ذكية—تنفيذ مباشر على السيرفر وإدارة موحّدة من لوحة التحكم." />
     <link rel="canonical" href="https://controtik.com/Detailes/broadband-pppoe.html" />
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ControTik | إدارة البرودباند وPPPoE" />
+    <meta property="og:description"
+        content="تعطيل/تخفيض تلقائي، تنبيهات ذكية، ومطالبات ديون—كلها تعمل تلقائيًا على السيرفر." />
+    <meta property="og:url" content="https://controtik.com/Detailes/broadband-pppoe.html" />
+    <meta property="og:image" content="https://controtik.com/img/broadband-og.jpg" />
+    <meta property="og:image:alt" content="إدارة البرودباند وPPPoE في ControTik" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
@@ -20,14 +28,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="ControTik | البرودباند وPPPoE" />
-    <meta property="og:description"
-        content="إدارة البرودباند وPPPoE: تعطيل تلقائي، تخفيض السرعة، تنبيهات قبل الانتهاء، ومطالبات ذكية مباشرة على السيرفر.">
-    <meta property="og:url" content="https://controtik.com/Detailes/broadband-pppoe.html" />
-    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
 </head>
 
 <body>
@@ -43,7 +43,6 @@
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
-                <a href="../index.html#faq">الأسئلة</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
             <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
@@ -51,7 +50,7 @@
     </header>
 
     <main class="container">
-        <!-- مسار تنقّل -->
+        <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
@@ -60,66 +59,180 @@
             <span>البرودباند وPPPoE</span>
         </nav>
 
-        <!-- المحتوى -->
-        <section id="broadband" class="fancy-section" data-aos="fade-up">
-            <h2>⚙️ إدارة البرودباند وPPPoE</h2>
-            <img src="../img/broadband.png" alt="إدارة البرودباند وPPPoE" />
-
-            <p>
-                يقدم <strong>ControTik</strong> نظامًا احترافيًا لإدارة
-                <strong>البرودباند وPPPoE</strong>، مصمم خصيصًا لضمان
-                <b>التحكم الذكي بالمشتركين</b> وتنفيذ القرارات مباشرة على السيرفر
-                دون أي تدخل يدوي.
-            </p>
-
-            <div class="grid-3" style="margin-top:16px">
-                <div class="card">
-                    <span class="badge">Auto Control</span>
-                    <h3>تعطيل/تخفيض تلقائي</h3>
-                    <p class="muted">
-                        عند انتهاء الباقة يتم تعطيل الحساب تلقائيًا أو تحويله إلى
-                        <b>بروفايل سرعة منخفضة</b>، ما يمنع الاستهلاك غير المشروع.
-                    </p>
+        <!-- Hero (كرت البداية) -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>إدارة البرودباند وPPPoE</h1>
+                <p>
+                    تحكّم مؤتمت بالمشتركين مع تنفيذ مباشر على السيرفر: تعطيل الحساب أو <b>تخفيض السرعة تلقائيًا</b> عند
+                    انتهاء الباقة، تنبيهات قبل الانتهاء، ومطالبات ديون ذكية ترتبط بحالة السداد.
+                </p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#how" class="btn primary">كيف تعمل؟</a>
+                    <a href="#profiles" class="btn ghost">البروفايلات والسرعات</a>
                 </div>
-                <div class="card">
-                    <span class="badge">Smart Alerts</span>
-                    <h3>تنبيهات ذكية</h3>
-                    <p class="muted">
-                        إشعارات قبل انتهاء الاشتراك، تذكيرات ودية للمشترك، وتنبيهات
-                        للمدير—كلها تُرسل عبر واتساب أو SMS.
-                    </p>
-                </div>
-                <div class="card">
-                    <span class="badge">Dunning</span>
-                    <h3>مطالبات ديون</h3>
-                    <p class="muted">
-                        ربط كامل مع نظام الديون—يتم إرسال رسالة تلقائية تحتوي على المبلغ
-                        المستحق وعدد أيام التأخير حتى يتم السداد.
-                    </p>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Auto Control</span>
+                <h3>تعطيل/تخفيض تلقائي</h3>
+                <p class="muted">عند انتهاء الباقة يُعطَّل الحساب أو يتحول إلى <b>بروفايل سرعة منخفضة</b> لمنع الاستهلاك
+                    غير المشروع.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Smart Alerts</span>
+                <h3>تنبيهات قبل الانتهاء</h3>
+                <p class="muted">إشعارات ودّية للمشترك، وتنبيهات للمدير عبر واتساب/SMS/البريد مع جدولة وتكرار مرن.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Dunning</span>
+                <h3>مطالبات ديون</h3>
+                <p class="muted">رسائل بالمبلغ المستحق وعدد أيام التأخير وتاريخ الاستحقاق—وتتوقف تلقائيًا عند السداد.
+                </p>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how" class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>كيف يعمل التحكم المؤتمت؟</h3>
+                <ol class="list">
+                    <li><b>مراقبة الاشتراكات:</b> تتبّع تواريخ الانتهاء وحالة PPPoE لحظيًا.</li>
+                    <li><b>التصرف عند الانتهاء:</b> تعطيل أو تخفيض السرعة حسب سياسة الباقة.</li>
+                    <li><b>الإشعارات:</b> إرسال قبل الانتهاء وبعده مع قنوات متعددة.</li>
+                    <li><b>الربط مع الديون:</b> تسجيل الدين وتجديد تلقائي اختياري مع تفعيل المطالبة.</li>
+                    <li><b>التقارير:</b> لوحات تعرض الحالات والتأخيرات يوميًا/شهريًا.</li>
+                </ol>
+                <div class="callout" style="margin-top:10px">
+                    <div>🧠</div>
+                    <div class="muted">إذا جُدّد الاشتراك أو سُدِّد الدين قبل وقت التنفيذ، يتخطّى النظام إجراء
+                        التخفيض/التعطيل تلقائيًا.</div>
                 </div>
             </div>
 
-            <h3 style="margin-top:18px">مزايا إضافية</h3>
-            <ul class="list">
-                <li>📊 تتبع حالة كل حساب PPPoE لحظيًا من لوحة التحكم.</li>
-                <li>🔄 تجديد تلقائي للباقة مع تسجيل الدين عند الحاجة.</li>
-                <li>🗂️ فلترة المشتركين حسب الباقة، الحالة، أو أيام التأخير.</li>
-                <li>📂 تصدير تقارير Excel محمية لعرض النتائج الرسمية.</li>
-            </ul>
-
-            <div class="callout" style="margin-top:16px">
-                <div>💡</div>
-                <div class="muted">
-                    مع ControTik، تتحول إدارة PPPoE من مهمة يدوية مرهقة إلى نظام آلي
-                    ذكي يراقب ويطالب ويُذكّر نيابةً عنك.
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3 id="profiles">سياسات البروفايل</h3>
+                <ul class="list">
+                    <li>تحويل تلقائي إلى <b>Low-Speed Profile</b> حتى السداد/التجديد.</li>
+                    <li>إرجاع فوري إلى <b>Profile الأصلي</b> بعد الدفع.</li>
+                    <li>استثناءات قابلة للتهيئة لحسابات VIP أو الساعات البيضاء.</li>
+                    <li>منع ازدواج الجلسات والتحقق من MAC (اختياري).</li>
+                </ul>
+                <div class="callout" style="margin-top:10px">
+                    <div>⚙️</div>
+                    <div class="muted">اضبط السرعات، حدّ الجلسات، ونافذة السماح من إعدادات البروفايل.</div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Message Templates (alerts) -->
+        <section id="templates" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3 style="margin:0 0 8px">نماذج التنبيهات</h3>
+                <p class="muted" style="margin:0 0 10px">يتم تكييف النص حسب حالة المشترك والباقة وتاريخ الانتهاء:</p>
+                <div class="two">
+                    <div class="card bg-white border r-12">
+                        <span class="badge">قبل الانتهاء</span>
+                        <p class="muted">مرحبًا <b>{الاسم}</b> 👋 اشتراكك <b>{اسم_الباقة}</b> سينتهي بتاريخ
+                            <b>{تاريخ_الانتهاء}</b>. للتجديد: {رابط_الدفع}.</p>
+                    </div>
+                    <div class="card bg-white border r-12">
+                        <span class="badge is-yellow">بعد الانتهاء</span>
+                        <p class="muted">عميلنا <b>{الاسم}</b>، تم تحويل حسابك مؤقتًا إلى بروفايل منخفض السرعة. للتفعيل
+                            الكامل، يرجى التجديد. المبلغ: <b>{المبلغ} {العملة}</b>. للتجديد: {رابط_الدفع}.</p>
+                    </div>
+                </div>
+                <div class="callout" style="margin-top:12px">
+                    <div>✍️</div>
+                    <div class="muted">حقول ديناميكية: {الاسم}، {اسم_الباقة}، {تاريخ_الانتهاء}، {المبلغ}، {العملة}،
+                        {رابط_الدفع}… إلخ.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Example -->
+        <section style="margin-top:18px">
+            <div class="card">
+                <h3 style="margin:0 0 8px">حالة حسابات PPPoE (مثال)</h3>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>المشترك</th>
+                                <th>الحالة</th>
+                                <th>الباقة</th>
+                                <th>ينتهي في</th>
+                                <th>البروفايل الحالي</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>محمد الأحمد</td>
+                                <td>فعال</td>
+                                <td>25Mbps/30d</td>
+                                <td>2025-10-12</td>
+                                <td>Default</td>
+                            </tr>
+                            <tr>
+                                <td>FastLink – تجاري</td>
+                                <td>منتهي</td>
+                                <td>50Mbps/30d</td>
+                                <td>2025-09-28</td>
+                                <td>Low-Speed</td>
+                            </tr>
+                            <tr>
+                                <td>شبكة الأفق</td>
+                                <td>معلّق</td>
+                                <td>10Mbps/30d</td>
+                                <td>2025-10-01</td>
+                                <td>Low-Speed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" style="margin-top:18px">
+            <div class="two faq">
+                <details data-aos="fade-up">
+                    <summary>هل يمكن تعطيل PPPoE تلقائيًا عند انتهاء الباقة؟</summary>
+                    <p class="muted">نعم، يتم التعطيل أو التحويل إلى بروفايل منخفض السرعة تلقائيًا حسب سياسة الباقة.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل توجد تنبيهات قبل الانتهاء؟</summary>
+                    <p class="muted">يدعم النظام تذكيرات متعددة القنوات مع جدولة مرنة.</p>
+                </details>
+                <details data-aos="fade-up">
+                    <summary>ماذا يحدث بعد الدفع؟</summary>
+                    <p class="muted">يعود الحساب للبروفايل الأصلي فور تسجيل الدفع دون تدخل يدوي.</p>
+                </details>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل يتكامل مع وحدة الديون؟</summary>
+                    <p class="muted">نعم، يتم إنشاء دين عند التجديد الآلي وتفعيل المطالبات الذكية عند التأخير.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">تحكّم تلقائي… خدمة أكثر استقرارًا</div>
+                    <div class="muted">فعّل إدارة PPPoE المؤتمتة لتقليل الانقطاعات وزيادة التحصيل.</div>
+                </div>
+                <a href="../index.html#contact" class="btn primary">✨ فعّل التحكم المؤتمت</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
-        <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
             <div style="display:flex;gap:12px">
                 <a href="../index.html#features">الميزات</a>
@@ -129,51 +242,31 @@
         </div>
     </footer>
 
-    <!-- JS -->
+    <!-- Menu (mobile) -->
     <script>
         function toggleMenu() {
-            const m = document.getElementById("menu");
-            const isOpen = getComputedStyle(m).display !== "none";
-            m.style.display = isOpen ? "none" : "flex";
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
         }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
     </script>
 
-    <!-- FAQ Structured Data -->
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
+
+    <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "هل يمكن تعطيل PPPoE تلقائيًا عند انتهاء الباقة؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "نعم، يتم تعطيل الحساب أو تحويله إلى بروفايل منخفض السرعة تلقائيًا عبر ControTik."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "هل توجد تنبيهات قبل انتهاء الاشتراك؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "نعم، يرسل النظام إشعارات عبر واتساب أو SMS قبل أيام من انتهاء الاشتراك."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "كيف تتم مطالبة الديون في PPPoE؟",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "النظام متكامل مع وحدة الديون، حيث يتم إرسال رسالة تلقائية بالمبلغ المستحق وعدد أيام التأخير."
-          }
-        }
-      ]
-    }
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"هل يمكن تعطيل PPPoE تلقائيًا عند انتهاء الباقة؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يتم التعطيل أو التحويل إلى بروفايل منخفض السرعة تلقائيًا حسب سياسة الباقة."}},
+      {"@type":"Question","name":"هل توجد تنبيهات قبل الانتهاء؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يدعم النظام تذكيرات متعددة القنوات بجدولة مرنة."}},
+      {"@type":"Question","name":"ماذا يحدث بعد الدفع؟","acceptedAnswer":{"@type":"Answer","text":"يعود الحساب للبروفايل الأصلي فور تسجيل الدفع دون تدخل يدوي."}},
+      {"@type":"Question","name":"هل يتكامل مع وحدة الديون؟","acceptedAnswer":{"@type":"Answer","text":"نعم، يتم إنشاء دين عند التجديد الآلي وتفعيل المطالبات الذكية عند التأخير."}}
+    ]
+  }
   </script>
 </body>
 

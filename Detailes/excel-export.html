@@ -2,53 +2,60 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ControTik | تصدير احترافي للتقارير بصيغة Excel</title>
     <meta name="description"
-        content="تصدير منظم ومحمي لبيانات المبيعات والديون والمصاريف والأرباح والاشتراكات والرسائل إلى ملفات Excel جاهزة للطباعة والأرشفة، مع توثيق الفلاتر والنطاق الزمني.">
-    <link rel="canonical" href="https://controtik.com/Detailes/excel-export.html">
-    <meta name="theme-color" content="#00cfd5">
-    <meta name="robots" content="index,follow">
+        content="تصدير منظم ومحمي لبيانات المبيعات والديون والمصاريف والأرباح والاشتراكات والرسائل إلى ملفات Excel جاهزة للطباعة والأرشفة، مع توثيق الفلاتر والنطاق الزمني." />
+    <link rel="canonical" href="https://controtik.com/Detailes/excel-export.html" />
+    <meta name="theme-color" content="#00cfd5" />
+    <meta name="robots" content="index,follow" />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="ControTik | تصدير احترافي للتقارير بصيغة Excel">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ControTik | تصدير احترافي للتقارير بصيغة Excel" />
     <meta property="og:description"
-        content="ملفات Excel محمية ضد التعديل، موثقة بالفلاتر والنطاق الزمني، وجاهزة للطباعة والأرشفة.">
-    <meta property="og:url" content="https://controtik.com/Detailes/excel-export.html">
-    <meta property="og:image" content="https://controtik.com/img/excel-og.jpg">
-    <meta property="og:image:alt" content="تصدير تقارير Excel في ControTik">
+        content="ملفات Excel محمية ضد التعديل، موثقة بالفلاتر والنطاق الزمني، وجاهزة للطباعة والأرشفة." />
+    <meta property="og:url" content="https://controtik.com/Detailes/excel-export.html" />
+    <meta property="og:image" content="https://controtik.com/img/excel-og.jpg" />
+    <meta property="og:image:alt" content="تصدير تقارير Excel في ControTik" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- Header (Burger CSS-only) -->
     <header>
         <div class="container nav">
             <a class="brand" href="../index.html">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
-                    height="36" style="border-radius:8px">
+                    height="36" class="brand-logo" loading="lazy" decoding="async" />
                 <b>ControTik</b>
             </a>
-            <nav class="menu" id="menu">
+
+            <!-- toggle -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+            <label class="burger" for="nav-toggle" aria-label="فتح القائمة" aria-controls="menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </label>
+
+            <nav class="menu" id="menu" aria-label="القائمة الرئيسية">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#faq">الأسئلة</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
-            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
@@ -57,20 +64,19 @@
         <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
-            <span>›</span>
+            <span aria-hidden="true">›</span>
             <a href="../index.html#features">الميزات</a>
-            <span>›</span>
-            <span>التقارير (Excel)</span>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">التقارير (Excel)</span>
         </nav>
 
         <!-- Hero -->
         <section class="hero-slim" data-aos="fade-up">
             <div>
-                <h1>تصدير احترافي للتقارير بصيغة <span style="white-space:nowrap">Excel</span></h1>
+                <h1>تصدير احترافي للتقارير بصيغة <span class="nowrap">Excel</span></h1>
                 <p>ملفات محمية ضد التعديل، موثّقة بالفلاتر والنطاق الزمني والعملة—جاهزة للطباعة والأرشفة والمشاركة.</p>
-                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                <div class="actions">
                     <a href="#scope" class="btn primary">ما الذي نُصدّره؟</a>
-                    <a href="#samples" class="btn ghost">أمثلة جاهزة</a>
                 </div>
             </div>
         </section>
@@ -98,7 +104,7 @@
         </section>
 
         <!-- Details -->
-        <section class="two" style="margin-top:18px">
+        <section class="two section-gap">
             <div class="card" data-aos="fade-up">
                 <h3>محتوى ملف Excel</h3>
                 <ul class="list">
@@ -106,8 +112,8 @@
                     <li>خانة لنتيجة الفلترة (مفلتر/غير مفلتر) ونطاق التاريخ المستخدم.</li>
                     <li>عرض العملة عند الاقتضاء، وتنسيق الأرقام والفواصل.</li>
                 </ul>
-                <div class="callout" style="margin-top:10px">
-                    <div>🧠</div>
+                <div class="callout">
+                    <div aria-hidden="true">🧠</div>
                     <div class="muted">تتذكر الأداة آخر فلاترك لتعيد استخدامها في التصدير التالي وتضمن الاتساق.</div>
                 </div>
             </div>
@@ -116,29 +122,16 @@
                 <h3>جاهزة للطباعة والأرشفة</h3>
                 <ul class="list">
                     <li>هوامش موحدة وترويسة تحتوي اسم التقرير وتاريخ الإنشاء.</li>
-                    <li>تصدير متعدد الأوراق (Sheets) عند الحاجة (مثلاً: ملخص + تفاصيل).</li>
+                    <li>تصدير متعدد الأوراق (Sheets) عند الحاجة (مثلًا: ملخص + تفاصيل).</li>
                     <li>تحسين تلقائي لعرض الأعمدة (Auto-fit) لقراءة أسهل على الشاشة والورق.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Samples -->
-        <section id="samples" style="margin-top:18px">
-            <div class="card">
-                <h3 style="margin:0 0 8px">أمثلة عن التقارير المصدّرة</h3>
-                <div class="section-images" style="margin-top:8px">
-                    <img src="../img/excelReport.png" alt="مثال تقرير مبيعات Excel" loading="lazy">
-                    <img src="../img/rep2.png" alt="مثال تقرير ديون Excel" loading="lazy">
-                    <img src="../img/rep3.png" alt="مثال تقرير مصاريف Excel" loading="lazy">
-                    <img src="../img/rep4.png" alt="مثال تقرير أرباح Excel" loading="lazy">
-                </div>
-            </div>
-        </section>
-
         <!-- Example table -->
-        <section style="margin-top:18px">
+        <section class="section-gap">
             <div class="card">
-                <h3 style="margin:0 0 8px">مثال بنية جدول التصدير</h3>
+                <h3 class="section-title">مثال بنية جدول التصدير</h3>
                 <div class="table-wrap">
                     <table class="table">
                         <thead>
@@ -183,16 +176,16 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="callout" style="margin-top:10px">
-                    <div>🧾</div>
-                    <div class="muted">يمكن تنزيل الجداول كـ Excel محمي، مع تضمين صفحة <b>ملخص الفلاتر</b> و<span
-                            dir="ltr">log</span> لعملية التصدير.</div>
+                <div class="callout">
+                    <div aria-hidden="true">🧾</div>
+                    <div class="muted">يمكن تنزيل الجداول كـ Excel محمي، مع تضمين صفحة <b>ملخص الفلاتر</b> وlog لعملية
+                        التصدير.</div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section id="faq" style="margin-top:18px">
+        <section id="faq" class="section-gap">
             <div class="two faq">
                 <details data-aos="fade-up">
                     <summary>هل يمكن تعديل الملف بعد تصديره؟</summary>
@@ -215,10 +208,10 @@
         </section>
 
         <!-- CTA -->
-        <section style="margin:22px 0">
-            <div class="callout" style="justify-content:space-between;gap:14px">
-                <div>
-                    <div style="font-weight:700;margin-bottom:6px">تقارير موثوقة… قرارات أسرع</div>
+        <section class="section-gap">
+            <div class="callout cta-bar">
+                <div class="cta-text">
+                    <div class="h5">تقارير موثوقة… قرارات أسرع</div>
                     <div class="muted">فعّل التصدير المحمي وشارك ملفات جاهزة للطباعة بكل ثقة.</div>
                 </div>
                 <a href="../index.html#contact" class="btn primary">✨ جرّب التصدير الآن</a>
@@ -228,10 +221,10 @@
     </main>
 
     <!-- Footer -->
-    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
-        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <footer class="footbar">
+        <div class="container footwrap">
             <div>© 2025 ControTik</div>
-            <div style="display:flex;gap:12px">
+            <div class="footlinks">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#faq">الأسئلة</a>
@@ -239,20 +232,22 @@
         </div>
     </footer>
 
-    <!-- Menu (mobile) -->
+    <!-- AOS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
+
+    <!-- اختياري: وصولية للـburger -->
     <script>
-        function toggleMenu() {
-            const m = document.getElementById('menu');
-            const isOpen = getComputedStyle(m).display !== 'none';
-            m.style.display = isOpen ? 'none' : 'flex';
-        }
+        const t = document.getElementById('nav-toggle');
+        const b = document.querySelector('label[for="nav-toggle"]');
+        const links = document.querySelectorAll('#menu a');
+        const sync = () => b.setAttribute('aria-expanded', t.checked ? 'true' : 'false');
+        t.addEventListener('change', sync);
+        links.forEach(a => a.addEventListener('click', () => { t.checked = false; sync(); }));
+        sync();
     </script>
 
-    <!-- AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
-
-    <!-- Structured Data: FAQ + SoftwareFeature -->
+    <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -270,6 +265,7 @@
   }
   </script>
 
+    <!-- Structured Data: Software -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",

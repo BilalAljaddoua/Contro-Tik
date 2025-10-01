@@ -12,7 +12,16 @@
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
 
-    <!-- Fonts (نفس الخط) -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ControTik | هوتسبوت احترافي" />
+    <meta property="og:description"
+        content="بطاقات هوتسبوت بقوالب مخصّصة، مستودع وإحصائيات، وطباعة PDF مع باركود—تكامل مباشر مع MikroTik." />
+    <meta property="og:url" content="https://controtik.com/Detailes/hotspot.html" />
+    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
+    <meta property="og:image:alt" content="هوتسبوت ControTik" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -20,26 +29,18 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="ControTik | هوتسبوت احترافي" />
-    <meta property="og:description"
-        content="بطاقات هوتسبوت بقوالب مخصصة، مستودع وإحصائيات، وطباعة PDF مع باركود—تكامل مباشر مع MikroTik." />
-    <meta property="og:url" content="https://controtik.com/Detailes/hotspot.html" />
-    <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Header مختصر -->
     <header>
-        <div class="container nav">
-            <a class="brand" href="../index.html">
+        <div class="container nav" style="padding:14px 0">
+            <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:10px">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
                     height="36" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-            <nav class="menu" id="menu">
+            <nav class="menu" id="menu" style="display:flex;gap:16px">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
@@ -51,7 +52,7 @@
     </header>
 
     <main class="container">
-        <!-- مسار تنقّل -->
+        <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
@@ -60,107 +61,98 @@
             <span>هوتسبوت</span>
         </nav>
 
-        <!-- المحتوى -->
-        <section id="hotspot" class="fancy-section" data-aos="fade-up">
-            <h2>🔥 هوتسبوت احترافي متكامل مع MikroTik</h2>
-            <img src="../img/hotspotCover.png" alt="هوتسبوت ControTik" />
-
-            <p>
-                يقدّم <strong>ControTik</strong> نظام هوتسبوت متكامل يعمل مباشرة على <b>MikroTik</b>:
-                إنشاء البطاقات، تفعيل عند أول دخول، انتهاء تلقائي، مستودع، إحصائيات، وطباعة PDF مع باركود—
-                كل ذلك من مكان واحد وبنقرات قليلة.
-            </p>
-
-            <div class="grid-3" style="margin-top:16px">
-                <div class="card">
-                    <span class="badge">Cards</span>
-                    <h3>توليد بطاقات مرن</h3>
-                    <p class="muted">
-                        تحكم بعدد المحارف، البادئة، الكمية، مدة الصلاحية، وحجم/سرعة الباقة.
-                        يدعم إنشاء دفعات ضخمة بزمن قياسي.
-                    </p>
+        <!-- Hero -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>🔥 هوتسبوت احترافي متكامل مع MikroTik</h1>
+                <p>توليد بطاقات مرن، تفعيل عند أول دخول، انتهاء تلقائي، مستودع وإحصائيات، وطباعة PDF مع باركود — كل ذلك
+                    من مكان
+                    واحد وبنقرات قليلة.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#features" class="btn primary">استعرض الميزات</a>
+                    <a href="#faq" class="btn ghost">الأسئلة الشائعة</a>
                 </div>
-
-                <div class="card">
-                    <span class="badge">Activation</span>
-                    <h3>تفعيل عند أول دخول</h3>
-                    <p class="muted">
-                        يبدأ عدّاد الصلاحية لحظة أول تسجيل دخول. وعند الانتهاء تُعطّل البطاقة تلقائيًا أو تتحول لسرعة
-                        منخفضة حسب الإعداد.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <span class="badge">Inventory</span>
-                    <h3>مستودع وإحصائيات</h3>
-                    <p class="muted">
-                        رصيد بطاقات جاهزة، مباعة، منتهية، قيد الاستخدام. لوحات ورسوم بسيطة لفهم الحركة اليومية والشهرية.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <span class="badge">Templates</span>
-                    <h3>قوالب طباعة PDF</h3>
-                    <p class="muted">
-                        قوالب قابلة للتخصيص مع وضع اسم المستخدم/كلمة المرور، صفوف/أعمدة، هوية بصرية،
-                        و<strong>باركود</strong> للمسح السريع.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <span class="badge">Ops</span>
-                    <h3>إدارة كاملة</h3>
-                    <p class="muted">
-                        تعديل/حذف/تعطيل/إعادة إصدار، فلترة بحسب الحالة أو الشخص، وتوثيق كل عملية في سجل آمن مرتبط
-                        بالمستخدم.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <span class="badge">Export</span>
-                    <h3>تقارير رسمية</h3>
-                    <p class="muted">
-                        تصدير القوائم إلى <b>Excel/PDF محمي</b> مع توثيق للفلاتر والمدى الزمني—جاهزة للطباعة والأرشفة.
-                    </p>
-                </div>
-            </div>
-
-            <h3 style="margin-top:18px">سير العمل المثالي</h3>
-            <ul class="list">
-                <li>✳️ أنشئ دفعة بطاقات وفق السرعة/المدة/الحجم المطلوبة.</li>
-                <li>🖨️ اطبعها كـ PDF مع باركود ووزعها لنقاط البيع.</li>
-                <li>🔓 يتفعّل كل كرت عند أول تسجيل دخول ويبدأ عدّاد الصلاحية.</li>
-                <li>⏱️ عند الانتهاء: تعطيل تلقائي أو تحويل لسرعة منخفضة.</li>
-                <li>📈 راقب المستودع والإحصائيات وصدّر التقارير عند الحاجة.</li>
-            </ul>
-
-            <div class="callout" style="margin-top:16px">
-                <div>💡</div>
-                <div class="muted">
-                    يدعم النظام <b>الربط مع الرسائل</b> لإرسال تنبيهات انتهاء أو تذكير ودي للمستخدمين—تمامًا كأنظمة
-                    شركات الاتصالات.
-                </div>
-            </div>
-
-            <div class="section-images" style="margin-top:14px">
-                <img src="../img/hotspotWarehouse.png" alt="مستودع بطاقات الهوتسبوت" />
-                <img src="../img/hotspotPrint.png" alt="طباعة بطاقات PDF مع باركود" />
             </div>
         </section>
 
-        <!-- أسئلة متكررة -->
-        <section class="fancy-section" data-aos="fade-up">
-            <h2>الأسئلة المتكررة</h2>
-            <div class="faq">
-                <details open>
+        <!-- Highlights (Cards) -->
+        <section id="features" class="grid-3">
+            <div class="card" data-aos="fade-up" data-aos-delay="50">
+                <span class="badge">Cards</span>
+                <h3>توليد بطاقات مرن</h3>
+                <p class="muted">تحكّم بعدد المحارف، البادئة، الكمية، مدة الصلاحية، وحجم/سرعة الباقة. يدعم إنشاء دفعات
+                    ضخمة بزمن قياسي.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <span class="badge">Activation</span>
+                <h3>تفعيل عند أول دخول</h3>
+                <p class="muted">يبدأ عدّاد الصلاحية لحظة أول تسجيل دخول. وعند الانتهاء تُعطّل البطاقة تلقائيًا أو تتحول
+                    لسرعة منخفضة حسب الإعداد.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Inventory</span>
+                <h3>مستودع وإحصائيات</h3>
+                <p class="muted">رصيد بطاقات جاهزة، مباعة، منتهية، قيد الاستخدام. لوحات ورسوم بسيطة لفهم الحركة اليومية
+                    والشهرية.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <span class="badge">Templates</span>
+                <h3>قوالب طباعة PDF</h3>
+                <p class="muted">قوالب قابلة للتخصيص مع اسم المستخدم/كلمة المرور، صفوف/أعمدة، هوية بصرية،
+                    و<strong>باركود</strong> للمسح السريع.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="250">
+                <span class="badge">Ops</span>
+                <h3>إدارة كاملة</h3>
+                <p class="muted">تعديل/حذف/تعطيل/إعادة إصدار، فلترة بحسب الحالة أو المستخدم، وتوثيق كل عملية في سجل آمن
+                    مرتبط بالمستخدم.</p>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <span class="badge">Export</span>
+                <h3>تقارير رسمية</h3>
+                <p class="muted">تصدير القوائم إلى <b>Excel/PDF محمي</b> مع توثيق للفلاتر والمدى الزمني—جاهزة للطباعة
+                    والأرشفة.</p>
+            </div>
+        </section>
+
+        <!-- توضيحات وسير العمل -->
+        <section class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>سير العمل المثالي</h3>
+                <ul class="list">
+                    <li>✳️ أنشئ دفعة بطاقات وفق السرعة/المدة/الحجم المطلوبة.</li>
+                    <li>🖨️ اطبعها كـ PDF مع باركود ووزعها لنقاط البيع.</li>
+                    <li>🔓 يتفعّل كل كرت عند أول تسجيل دخول ويبدأ عدّاد الصلاحية.</li>
+                    <li>⏱️ عند الانتهاء: تعطيل تلقائي أو تحويل لسرعة منخفضة.</li>
+                    <li>📈 راقب المستودع والإحصائيات وصدّر التقارير عند الحاجة.</li>
+                </ul>
+                <div class="callout" style="margin-top:10px">
+                    <div>💡</div>
+                    <div class="muted">يدعم النظام <b>الربط مع الرسائل</b> لإرسال تنبيهات انتهاء أو تذكير ودي — تمامًا
+                        كأنظمة شركات الاتصالات.</div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- FAQ -->
+        <section style="margin-top:18px">
+            <div class="two faq">
+                <details data-aos="fade-up">
                     <summary>هل يبدأ توقيت البطاقة فور إنشائها؟</summary>
                     <p class="muted">لا، يبدأ التوقيت عند أول تسجيل دخول، ما يمنع خسارة صلاحية قبل الاستخدام.</p>
                 </details>
-                <details>
+                <details data-aos="fade-up" data-aos-delay="50">
                     <summary>هل يمكن تخصيص قالب الطباعة؟</summary>
                     <p class="muted">نعم، يمكنك ضبط الهوية، عدد الصفوف/الأعمدة، موضع الحقول، وإضافة باركود.</p>
                 </details>
-                <details>
+                <details data-aos="fade-up">
                     <summary>هل يدعم التصدير إلى Excel/PDF؟</summary>
                     <p class="muted">يدعم كلا التنسيقين بملفات محمية مع توثيق للفلاتر والمدى الزمني.</p>
                 </details>
@@ -172,14 +164,14 @@
             <div class="callout" style="justify-content:space-between;gap:14px">
                 <div>
                     <div style="font-weight:700;margin-bottom:6px">حوّل بيع الإنترنت المسبق إلى عملية احترافية</div>
-                    <div class="muted">بطاقات بقوالب مخصصة، مستودع وإحصائيات، وباركود للمسح السريع.</div>
+                    <div class="muted">بطاقات بقوالب مخصّصة، مستودع وإحصائيات، وباركود للمسح السريع.</div>
                 </div>
                 <a href="../index.html#contact" class="btn primary">✨ ابدأ الآن</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer مختصر -->
     <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
         <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
@@ -202,7 +194,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>
 
-    <!-- FAQ Structured Data (SEO) -->
+    <!-- FAQ Structured Data -->
     <script type="application/ld+json">
   {
    "@context":"https://schema.org",

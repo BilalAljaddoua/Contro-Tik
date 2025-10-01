@@ -1,0 +1,393 @@
+:root {
+  --brand: #00cfd5;
+  --brand-ink: #065f60;
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: #e5e7eb;
+  --bg: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(2, 8, 23, .06);
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 14px;
+  --space-4: 18px;
+  --space-5: 24px;
+}
+
+html[dir="rtl"] body {
+  font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ecfeff;
+  border: 1px solid #d6f7f9;
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--brand-ink);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.callout {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  background: #f7feff;
+  border: 1px solid #dbf7f9;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px
+}
+
+.table th,
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: right
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  text-decoration: none
+}
+
+.btn.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff
+}
+
+.btn.ghost {
+  background: #fff;
+  color: var(--text)
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit
+}
+
+.menu {
+  display: flex;
+  gap: 14px;
+  align-items: center
+}
+
+.hero-slim {
+  padding: 24px 0 8px
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px
+}
+
+.muted {
+  color: var(--muted)
+}
+
+.faq details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px
+}
+
+@media (max-width:920px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .two {
+    grid-template-columns: 1fr
+  }
+
+  .menu {
+    flex-wrap: wrap
+  }
+}
+
+/* هوامش وحشوات موحّدة للكروت والنداءات */
+:root {
+  --card-pad: 24px;
+  --card-pad-lg: 28px;
+}
+
+.card,
+.callout {
+  padding: var(--card-pad);
+}
+
+@media (min-width: 1024px) {
+
+  .card,
+  .callout {
+    padding: var(--card-pad-lg);
+  }
+}
+
+/* الهيدر والقائمة */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-logo {
+  border-radius: 8px;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* البطل والأقسام */
+.hero-slim {
+  padding: 24px 0 8px;
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.section-gap {
+  margin-top: 18px;
+}
+
+.section-title {
+  margin: 0 0 8px;
+}
+
+/* CTA مصحّحة: نص على جهة وزر على الجهة المقابلة، مع منع التكسّر */
+.callout.cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.callout.cta-bar .cta-text {
+  flex: 1;
+  min-width: 280px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.callout.cta-bar .h5 {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.callout.cta-bar .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* تذييل */
+.footbar {
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+  margin-top: 24px;
+  color: var(--muted);
+}
+
+.footwrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footlinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* جداول */
+.table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.table th,
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+}
+
+/* ====== Header / Burger ====== */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-logo {
+  border-radius: 8px;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* أيقونة الثلاث خطوط */
+.burger {
+  display: none;
+  /* تُعرض على الشاشات الصغيرة فقط */
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  margin: 3px 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* عنصر التحكم */
+.nav-toggle {
+  display: none;
+}
+
+/* سطح المكتب */
+@media (min-width: 901px) {
+  .menu {
+    display: flex !important;
+  }
+}
+
+/* الجوال */
+@media (max-width: 900px) {
+  .burger {
+    display: inline-flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    /* منسدلة تحت الهيدر */
+    top: var(--nav-bottom, 64px);
+    right: 16px;
+    left: 16px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    z-index: 50;
+    box-shadow: var(--shadow, 0 10px 30px rgba(0, 0, 0, .06));
+  }
+
+  /* إظهار القائمة عند التفعيل */
+  .nav-toggle:checked~.menu {
+    display: flex;
+  }
+
+  /* حركة تحويل الأشرطة إلى X */
+  .nav-toggle:checked+.burger span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .nav-toggle:checked+.burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked+.burger span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}

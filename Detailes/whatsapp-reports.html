@@ -12,15 +12,6 @@
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
 
-    <!-- Fonts (نفس الخط) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="ControTik | تقارير واتساب حيّة لمدير الشبكة" />
@@ -28,6 +19,15 @@
         content="تنبيهات ذكية عبر واتساب: انتهاء اشتراكات، ديون مستحقة، نشاط الموظفين، ووقت النسخة الاحتياطية—تصل يوميًا تلقائيًا." />
     <meta property="og:url" content="https://controtik.com/Detailes/whatsapp-reports.html" />
     <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -35,7 +35,7 @@
     <!-- Header -->
     <header>
         <div class="container nav">
-            <a class="brand" href="../index.html">
+            <a class="brand" href="../index.html" aria-label="العودة للرئيسية">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
                     height="36" style="border-radius:8px" />
                 <b>ControTik</b>
@@ -53,70 +53,73 @@
 
     <main class="container">
 
-        <!-- مسار تنقّل -->
+        <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
             <a href="../index.html#features">الميزات</a>
             <span>›</span>
-            <span>تقارير واتساب</span>
+            <span aria-current="page">تقارير واتساب</span>
         </nav>
 
-        <!-- المحتوى -->
-        <section id="whatsapp-reports" class="fancy-section" data-aos="fade-up">
-            <h2>📲 نظام تقارير واتساب الحيّة لمدير الشبكة</h2>
-
-            <p>
-                <strong>ControTik</strong> لا ينتظر منك الدخول لفحص الحالة؛ بل يرسل لك
-                <b>تقارير يومية ذكية عبر واتساب</b>—كموظف افتراضي يعمل 24/7—لتبقى مطّلعًا على كل ما يجري في شبكتك.
-            </p>
-
-            <div class="grid-3" style="margin-top:12px">
-                <div class="card">
-                    <span class="badge">Notifications</span>
-                    <h3>أنواع الرسائل المدعومة</h3>
-                    <ul class="muted">
-                        <li>📆 اشتراكات تنتهي خلال 24 ساعة</li>
-                        <li>⚠️ ديون مستحقة اليوم والمتأخرة</li>
-                        <li>📈 تجديدات اليوم والإضافات</li>
-                        <li>🗂 موجز نشاط النظام يوميًا</li>
-                        <li>🗄️ وقت وتاريخ آخر نسخة احتياطية</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <span class="badge">Preferences</span>
-                    <h3>قابلية التخصيص</h3>
-                    <p class="muted">فعّل/أوقف أي نوع من الرسائل بنقرة واحدة. تُطبّق الإعدادات فورًا دون إعادة تشغيل.
-                    </p>
-                    <ul class="muted">
-                        <li>تحديد توقيت الإرسال اليومي</li>
-                        <li>قنوات بديلة (واتساب/‏SMS)</li>
-                        <li>متغيرات ذكية داخل النص: <code>{الاسم}</code>، <code>{المبلغ}</code>، <code>{التاريخ}</code>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <span class="badge">Layout</span>
-                    <h3>شكل التقرير</h3>
-                    <ul class="muted">
-                        <li>📑 عدد الاشتراكات المنتهية/القادمة</li>
-                        <li>💰 الديون حسب العملة والحالة</li>
-                        <li>🔄 عدد عمليات التجديد/الإضافة</li>
-                        <li>🗄️ آخر نسخة احتياطية بنجاح</li>
-                        <li>👥 ملخص نشاط الموظفين (اختياري)</li>
-                    </ul>
+        <!-- Hero (Card-first) -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>تقارير واتساب حيّة لمدير الشبكة</h1>
+                <p>لا حاجة لفتح النظام كل يوم—<b>تقارير ذكية يومية عبر واتساب</b> تبقيك على اطلاع بالانتهاءات والديون
+                    والأنشطة والنسخ الاحتياطي.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#highlights" class="btn primary">ما الذي يصلك يوميًا؟</a>
+                    <a href="#faq" class="btn ghost">الأسئلة الشائعة</a>
                 </div>
             </div>
+        </section>
 
+        <!-- Highlights -->
+        <section id="highlights" class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Notifications</span>
+                <h3>أنواع الرسائل</h3>
+                <ul class="list muted">
+                    <li>📆 اشتراكات تنتهي خلال 24 ساعة</li>
+                    <li>⚠️ ديون مستحقة اليوم والمتأخرة</li>
+                    <li>📈 تجديدات اليوم والإضافات</li>
+                    <li>🗂 موجز نشاط النظام اليومي</li>
+                    <li>🗄️ وقت وتاريخ آخر نسخة احتياطية</li>
+                </ul>
+            </div>
 
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Preferences</span>
+                <h3>قابلية التخصيص</h3>
+                <p class="muted">فعّل/أوقف أي نوع من الرسائل فورًا دون إعادة تشغيل.</p>
+                <ul class="list muted">
+                    <li>تحديد توقيت الإرسال اليومي</li>
+                    <li>قنوات بديلة (واتساب/SMS)</li>
+                    <li>متغيّرات ذكية: <code>{الاسم}</code> <code>{المبلغ}</code> <code>{التاريخ}</code></li>
+                </ul>
+            </div>
 
-            <div class="callout" style="margin-top:12px">
-                <div>✅</div>
-                <div class="muted">
-                    هذه التقارير تحوّلك من متابعٍ سلبي إلى مدير تصلُه البيانات تلقائيًا—بدقة وانتظام—كما في أنظمة
-                    المؤسّسات.
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Layout</span>
+                <h3>شكل التقرير</h3>
+                <ul class="list muted">
+                    <li>📑 عدد الاشتراكات المنتهية/القادمة</li>
+                    <li>💰 الديون حسب العملة والحالة</li>
+                    <li>🔄 التجديدات والإضافات</li>
+                    <li>🗄️ آخر نسخة احتياطية ناجحة</li>
+                    <li>👥 ملخص نشاط الموظفين (اختياري)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Note -->
+        <section style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <div class="callout">
+                    <div>✅</div>
+                    <div class="muted">تحوّلك هذه التقارير من متابعة يدوية إلى <b>إدارة استباقية</b> ببيانات تصل
+                        تلقائيًا وبانتظام—كما في أنظمة المؤسسات.</div>
                 </div>
             </div>
         </section>
@@ -178,7 +181,7 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
     <!-- FAQ Structured Data (SEO) -->
     <script type="application/ld+json">
@@ -197,7 +200,6 @@
     ]
   }
   </script>
-
 </body>
 
 </html>

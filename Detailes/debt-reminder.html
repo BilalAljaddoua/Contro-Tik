@@ -35,17 +35,18 @@
     <!-- Header -->
     <header>
         <div class="container nav">
-            <a class="brand" href="../index.html">
+            <a class="brand" href="../index.html" aria-label="العودة للرئيسية">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
                     height="36" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-            <nav class="menu">
+            <nav class="menu" id="menu" aria-label="القائمة الرئيسية">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
@@ -60,19 +61,16 @@
             <span>المطالبة التلقائية بالديون</span>
         </nav>
 
-        <!-- Hero -->
-        <section class="hero-slim" data-aos="fade-up">
-            <div>
-                <h1>آلية المطالبة الذكية بالديون</h1>
+        <!-- Hero (يبدأ بكرت) -->
+        <section class="hero-slim" data-aos="fade-up" style="padding-top:16px">
+            <div class="card" style="width:100%">
+                <h1 style="margin-top:0">آلية المطالبة الذكية بالديون</h1>
                 <p>رسائل واتساب يومية تلقائية للمستحقين فقط، بحساب دقيق لأيام التأخير، وتكامل كامل مع الديون والتقارير
                     وسجل الإرسال.</p>
-                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
                     <a href="#how" class="btn primary">كيف تعمل؟</a>
                     <a href="#templates" class="btn ghost">نماذج الرسائل</a>
                 </div>
-            </div>
-            <div class="hero-ill">
-                <img src="../img/debtMessageExample.png" alt="نموذج رسالة تذكير تلقائية" loading="lazy" />
             </div>
         </section>
 
@@ -208,9 +206,6 @@
                     </table>
                 </div>
 
-                <div class="sales-images" style="margin-top:12px">
-                    <img src="../img/messagesLogs.png" alt="سجل رسائل المطالبة التلقائية" loading="lazy" />
-                </div>
             </div>
         </section>
 
@@ -262,7 +257,14 @@
         </div>
     </footer>
 
-    <!-- AOS -->
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>
 

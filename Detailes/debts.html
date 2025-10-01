@@ -21,44 +21,51 @@
     <meta property="og:image" content="https://controtik.com/img/debts-og.jpg" />
     <meta property="og:image:alt" content="نظام الديون والدفعات في ControTik" />
 
-    <!-- Fonts (نفس الخط) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
-
-    <!-- Header -->
     <header>
         <div class="container nav">
             <a class="brand" href="../index.html">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
-                    height="36" style="border-radius:8px" />
+                    height="36" class="brand-logo" />
                 <b>ControTik</b>
             </a>
-            <nav class="menu">
+
+            <!-- تبديل القائمة بالـCSS -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+            <label for="nav-toggle" class="burger" aria-label="فتح القائمة" aria-controls="menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </label>
+
+            <nav id="menu" class="menu" aria-label="القائمة الرئيسية">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
+                <a href="../index.html#faq">الأسئلة</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
         </div>
     </header>
 
-    <main class="container">
 
+    <main class="container">
         <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
-            <span>›</span>
+            <span aria-hidden="true">›</span>
             <a href="../index.html#features">الميزات</a>
-            <span>›</span>
-            <span>الديون والدفعات</span>
+            <span aria-hidden="true">›</span>
+            <span aria-current="page">الديون والدفعات</span>
         </nav>
 
         <!-- Hero -->
@@ -67,12 +74,10 @@
                 <h1>نظام الديون والدفعات</h1>
                 <p>تسجيل مرن للديون (كلي/جزئي)، سجل دفعات مفصل مع إشعار واتساب، فلترة دقيقة وتقارير محمية—كل ذلك في لوحة
                     واحدة.</p>
-                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                <div class="actions">
                     <a href="#features" class="btn primary">المزايا العملية</a>
-                    <a href="#examples" class="btn ghost">لقطات وأمثلة</a>
                 </div>
             </div>
-
         </section>
 
         <!-- Key Features -->
@@ -98,7 +103,7 @@
         </section>
 
         <!-- More Details -->
-        <section class="two" style="margin-top:18px">
+        <section class="two section-gap">
             <div class="card" data-aos="fade-up">
                 <h3>متابعة وتنبيهات</h3>
                 <ul class="list">
@@ -106,8 +111,8 @@
                     <li>تحديث لحظي للحالة في لوحة الإدارة.</li>
                     <li>استثناء تلقائي بعد الإغلاق أو السداد الكامل.</li>
                 </ul>
-                <div class="callout" style="margin-top:10px">
-                    <div>📲</div>
+                <div class="callout">
+                    <div aria-hidden="true">📲</div>
                     <div class="muted">إشعار واتساب يتضمن تفاصيل الدفع فور التسجيل—يحصل العميل على إيصال فوري.</div>
                 </div>
             </div>
@@ -123,22 +128,10 @@
             </div>
         </section>
 
-        <!-- Examples / Gallery -->
-        <section id="examples" style="margin-top:18px">
-            <div class="card">
-                <h3 style="margin:0 0 8px">لقطات وأمثلة</h3>
-                <div class="sales-images" style="margin-top:8px">
-                    <img src="../img/sumeryDebts.png" alt="سجل دفعات مشترك" loading="lazy" />
-                    <img src="../img/debts.png" alt="قائمة الديون والفلترة" loading="lazy" />
-                    <img src="../img/debtPayment.png" alt="إضافة دفعة وتفاصيلها" loading="lazy" />
-                </div>
-            </div>
-        </section>
-
         <!-- Sample Table -->
-        <section style="margin-top:18px">
+        <section class="section-gap">
             <div class="card">
-                <h3 style="margin:0 0 8px">مثال سجل الديون</h3>
+                <h3 class="section-title">مثال سجل الديون</h3>
                 <div class="table-wrap">
                     <table class="table">
                         <thead>
@@ -179,8 +172,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="callout" style="margin-top:10px">
-                    <div>🧾</div>
+                <div class="callout">
+                    <div aria-hidden="true">🧾</div>
                     <div class="muted">يمكن تصدير الجدول أعلاه لـ Excel محمي مع الحفاظ على الفلاتر المطبقة والهوامش
                         الزمنية.</div>
                 </div>
@@ -188,7 +181,7 @@
         </section>
 
         <!-- FAQ -->
-        <section id="faq" style="margin-top:18px">
+        <section id="faq" class="section-gap">
             <div class="two faq">
                 <details data-aos="fade-up">
                     <summary>هل يدعم تعدد العملات داخل نفس الشبكة؟</summary>
@@ -211,23 +204,22 @@
         </section>
 
         <!-- CTA -->
-        <section style="margin:22px 0">
-            <div class="callout" style="justify-content:space-between;gap:14px">
-                <div>
-                    <div style="font-weight:700;margin-bottom:6px">تحصيل أسهل… رؤية أوضح</div>
+        <section class="section-gap">
+            <div class="callout cta-bar">
+                <div class="cta-text">
+                    <div class="h5">تحصيل أسهل… رؤية أوضح</div>
                     <div class="muted">فعّل نظام الديون والدفعات وراقب التدفق النقدي لحظة بلحظة.</div>
                 </div>
                 <a href="../index.html#contact" class="btn primary">✨ جرّبه الآن</a>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
-    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
-        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <footer class="footbar">
+        <div class="container footwrap">
             <div>© 2025 ControTik</div>
-            <div style="display:flex;gap:12px">
+            <div class="footlinks">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#faq">الأسئلة</a>
@@ -236,27 +228,24 @@
     </footer>
 
     <!-- AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
-    <!-- Structured Data: FAQ + SoftwareFeature -->
+    <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"هل يدعم تعدد العملات؟",
-       "acceptedAnswer":{"@type":"Answer","text":"يمكن تحديد العملة لكل عملية وعرض التقارير حسب العملة."}},
-      {"@type":"Question","name":"هل يمكن إرفاق ملاحظات أو مستندات؟",
-       "acceptedAnswer":{"@type":"Answer","text":"يدعم الحقول النصية للملاحظات، ويمكن تفعيل المرفقات بحسب الإعدادات."}},
-      {"@type":"Question","name":"هل تُرسل رسالة تأكيد بعد الدفع؟",
-       "acceptedAnswer":{"@type":"Answer","text":"نعم، رسالة تلقائية عبر واتساب/بريد تتضمن تفاصيل الدفعة."}},
-      {"@type":"Question","name":"هل توجد صلاحيات للوصول؟",
-       "acceptedAnswer":{"@type":"Answer","text":"نعم، باستخدام نظام الأدوار والصلاحيات."}}
+      {"@type":"Question","name":"هل يدعم تعدد العملات؟","acceptedAnswer":{"@type":"Answer","text":"يمكن تحديد العملة لكل عملية وعرض التقارير حسب العملة."}},
+      {"@type":"Question","name":"هل يمكن إرفاق ملاحظات أو مستندات؟","acceptedAnswer":{"@type":"Answer","text":"يدعم الحقول النصية للملاحظات، ويمكن تفعيل المرفقات بحسب الإعدادات."}},
+      {"@type":"Question","name":"هل تُرسل رسالة تأكيد بعد الدفع؟","acceptedAnswer":{"@type":"Answer","text":"نعم، رسالة تلقائية عبر واتساب/بريد تتضمن تفاصيل الدفعة."}},
+      {"@type":"Question","name":"هل توجد صلاحيات للوصول؟","acceptedAnswer":{"@type":"Answer","text":"نعم، باستخدام نظام الأدوار والصلاحيات."}}
     ]
   }
   </script>
 
+    <!-- Structured Data: Software -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",

@@ -792,3 +792,127 @@ footer {
     opacity: 0;
     transform: translateY(-4px);
 }
+
+/* ==== Fast, classy rise-in for cards (no HTML changes) ==== */
+
+/* حركة أساسية مع لمسة overshoot خفيفة */
+@keyframes ct-rise-fast {
+    0% {
+        opacity: 0;
+        transform: translateY(22px) scale(.995);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.001);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* فعّل الحركة فقط عندما يأخذ العنصر كلاس .show الموجود مسبقًا */
+[data-reveal].show {
+    animation: ct-rise-fast .45s cubic-bezier(.2, .8, .2, 1) both;
+    will-change: transform, opacity;
+}
+
+/* خصّص الكروت لتكون أسرع ولمّاعة أكثر */
+.card[data-reveal].show,
+.pricing-duo .plan[data-reveal].show {
+    animation-duration: .40s;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .07);
+}
+
+/* تدرّج زمني جميل داخل شبكات الميزات/التسعير/الشهادات */
+.grid-3 [data-reveal].card:nth-child(1).show {
+    animation-delay: .00s;
+}
+
+.grid-3 [data-reveal].card:nth-child(2).show {
+    animation-delay: .06s;
+}
+
+.grid-3 [data-reveal].card:nth-child(3).show {
+    animation-delay: .12s;
+}
+
+.grid-3 [data-reveal].card:nth-child(4).show {
+    animation-delay: .18s;
+}
+
+.grid-3 [data-reveal].card:nth-child(5).show {
+    animation-delay: .24s;
+}
+
+.grid-3 [data-reveal].card:nth-child(6).show {
+    animation-delay: .30s;
+}
+
+/* خطط التسعير (عمودي على الموبايل/أفقي على اللابتوب) */
+.pricing-duo .plan[data-reveal]:nth-child(1).show {
+    animation-delay: .00s;
+}
+
+.pricing-duo .plan[data-reveal]:nth-child(2).show {
+    animation-delay: .08s;
+}
+
+/* شبكة الشهادات لو موجودة */
+.testi [data-reveal].card:nth-child(1).show {
+    animation-delay: .00s;
+}
+
+.testi [data-reveal].card:nth-child(2).show {
+    animation-delay: .06s;
+}
+
+.testi [data-reveal].card:nth-child(3).show {
+    animation-delay: .12s;
+}
+
+/* Hover lift أقوى للكرت */
+.card {
+    transition: transform .18s ease, box-shadow .18s ease;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .08);
+}
+
+/* تقليل الحركة لمن يفضّل ذلك */
+@media (prefers-reduced-motion: reduce) {
+
+    [data-reveal],
+    [data-reveal].show,
+    .card,
+    .card:hover {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+:root {
+    /* تحكم مركزي بمسافة الحواف داخل البطاقات */
+    --card-pad: 24px;
+    --card-pad-lg: 28px;
+}
+
+/* تطبّق على جميع البطاقات والتنبيهات */
+.card,
+.callout {
+    padding: var(--card-pad);
+}
+
+@media (min-width: 1024px) {
+
+    .card,
+    .callout {
+        padding: var(--card-pad-lg);
+    }
+}

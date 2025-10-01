@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://controtik.com/Detailes/plans.html" />
     <meta property="og:image" content="https://controtik.com/img/meta.jpg" />
 
-    <!-- Fonts (نفس الخط) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -53,59 +53,89 @@
 
     <main class="container">
 
-        <!-- مسار تنقّل -->
+        <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
             <a href="../index.html#features">الميزات</a>
             <span>›</span>
-            <span>إدارة الباقات والاشتراكات</span>
+            <span aria-current="page">إدارة الباقات والاشتراكات</span>
         </nav>
 
-        <section id="plans" class="fancy-section" data-aos="fade-up">
-            <h2>إدارة الباقات والاشتراكات</h2>
-
-            <p>
-                يوفر <strong>ControTik</strong> واجهة متكاملة ومرنة لإدارة الباقات والاشتراكات، تُعطيك تحكمًا تفصيليًا
-                بالعروض، الأسعار، العملات، وآلية التجديد مع إشعارات ذكية للمشتركين.
-            </p>
-
-            <div class="grid-3" style="margin-top:12px">
-                <div class="card">
-                    <span class="badge">Plans</span>
-                    <h3>إنشاء وتعديل الباقات</h3>
-                    <p class="muted">حدّد السرعة (1–1000 Mbps)، الحجم (5–1000 GB)، المدة (أسبوع/شهر/ربع سنوي)، والعملة
-                        (SYP, USD, TRY أو مخصصة).</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Linking</span>
-                    <h3>ربط الاشتراك بالمشترك</h3>
-                    <p class="muted">اربط الباقة بعميل جديد أو حالي مع تسجيل وسيلة الدفع (كاش/دين) وتوثيق العملية في
-                        السجل.</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Auto-Renew</span>
-                    <h3>تجديد تلقائي ذكي</h3>
-                    <p class="muted">يُجدد الباقة تلقائيًا، يسجّل الدين عند الحاجة، ويرسل إشعارًا عبر واتساب ويبدأ حملة
-                        تذكير حتى السداد.</p>
+        <!-- Hero (Card First) -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>إدارة الباقات والاشتراكات</h1>
+                <p>أنشئ باقات بسرعات وأحجام ومدد متعددة وبعملات مختلفة، واربطها بالمشتركين مع <b>تجديد تلقائي ذكي</b>
+                    وتكامل كامل مع الديون والرسائل.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#highlights" class="btn primary">المزايا الأساسية</a>
+                    <a href="#setup" class="btn ghost">كيف نبدأ؟</a>
                 </div>
             </div>
+        </section>
 
-            <h3 style="margin-top:18px">عناصر مرونة إضافية</h3>
-            <ul class="list">
-                <li>تفعيل/إيقاف أي باقة مؤقتًا دون حذفها لأغراض العروض الموسمية.</li>
-                <li>أسعار متغيرة حسب العملة مع حفظ تاريخ التغييرات.</li>
-                <li>سياسات انتهاء: قطع فوري، تخفيض إلى بروفايل ضعيف، أو مهلة سماح.</li>
-            </ul>
+        <!-- Highlights -->
+        <section id="highlights" class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Plans</span>
+                <h3>إنشاء وتعديل الباقات</h3>
+                <p class="muted">حدّد السرعة (1–1000 Mbps)، الحجم (5–1000 GB)، المدة (أسبوع/شهر/ربع سنوي)، والعملة (SYP,
+                    USD, TRY أو مخصصة).</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Linking</span>
+                <h3>ربط الاشتراك بالمشترك</h3>
+                <p class="muted">اربط الباقة بعميل جديد/حالي مع توثيق وسيلة الدفع (كاش/دين) وتحديث السجل لحظيًا.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Auto-Renew</span>
+                <h3>تجديد تلقائي ذكي</h3>
+                <p class="muted">تجديد عند الانتهاء مع خيار تسجيل الدين، وإرسال إشعار واتساب وحملة تذكير حتى السداد.</p>
+            </div>
+        </section>
 
-            <div class="callout" style="margin-top:12px">
-                <div>📊</div>
-                <div class="muted">
-                    <strong>لوحة متابعة:</strong> شاشة موحّدة تُظهر النشط/المنتهي/القريب من الانتهاء مع فلاتر مركبة
-                    وتصدير إلى <b>Excel محمي</b> للاستخدام الإداري.
-                </div>
+        <!-- Extra flexibility + Policies -->
+        <section class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>مرونة التسعير والسياسات</h3>
+                <ul class="list">
+                    <li>أسعار حسب العملة مع حفظ تاريخ التغييرات.</li>
+                    <li>تفعيل/إيقاف مؤقت للباقة دون حذف (عروض موسمية).</li>
+                    <li>سياسات انتهاء: قطع فوري، خفض لبروفايل ضعيف، أو مهلة سماح.</li>
+                </ul>
             </div>
 
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>لوحة متابعة وتقارير</h3>
+                <ul class="list">
+                    <li>رؤية موحّدة للنشط/المنتهي/القريب من الانتهاء مع فلاتر مركّبة.</li>
+                    <li>تصدير إلى <b>Excel/PDF محمي</b> للاستخدام الإداري.</li>
+                    <li>تكامل مع الديون والرسائل والنقاط لرحلة عميل متكاملة.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Quick setup (How-to) -->
+        <section id="setup" class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>إنشاء باقة جديدة (خطوات سريعة)</h3>
+                <ol class="list">
+                    <li>الإعدادات ⇢ <b>الباقات</b> ⇢ <b>إضافة باقة</b>.</li>
+                    <li>تحديد السرعة/الحجم/المدة والعملة والسعر.</li>
+                    <li>اختيار سياسة الانتهاء والرسائل التلقائية المرتبطة.</li>
+                    <li>حفظ—تصبح جاهزة للربط بالمشتركين فورًا.</li>
+                </ol>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>تفعيل التجديد التلقائي</h3>
+                <ol class="list">
+                    <li>الإعدادات ⇢ <b>الاشتراكات</b> ⇢ تفعيل <b>التجديد التلقائي</b>.</li>
+                    <li>اختيار السلوك عند عدم كفاية الرصيد: <b>تسجيل دين</b> أو <b>إيقاف</b>.</li>
+                    <li>تمكين إشعارات واتساب قبل/بعد الانتهاء.</li>
+                </ol>
+            </div>
         </section>
 
         <!-- CTA -->
@@ -142,9 +172,9 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
-    <!-- Structured Data: Productized Service -->
+    <!-- Structured Data: SoftwareApplication -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -153,8 +183,8 @@
     "applicationCategory":"BusinessApplication",
     "operatingSystem":"Windows",
     "description":"إدارة باقات واشتراكات الشبكة مع تجديد تلقائي وإشعارات وسجلات قابلة للتصدير.",
-    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"نسخة تجريبية"},
     "brand":{"@type":"Brand","name":"ControTik"},
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"نسخة تجريبية"},
     "url":"https://controtik.com/Detailes/plans.html"
   }
   </script>

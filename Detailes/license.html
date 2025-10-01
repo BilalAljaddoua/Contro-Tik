@@ -12,15 +12,17 @@
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
 
-    <link rel="stylesheet" href="../css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <!-- Fonts (نفس الخط) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
     <!-- Open Graph -->
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="ControTik | الأمان ونظام التراخيص المشفّر (HWID)" />
     <meta property="og:description"
         content="تراخيص رقمية مشفّرة مرتبطة بهوية الجهاز HWID، تفعيل سريع، تدقيق مستمر، وإنفاذ تلقائي." />
@@ -30,15 +32,15 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- Header مختصر -->
     <header>
-        <div class="container nav">
-            <a class="brand" href="../index.html">
+        <div class="container nav" style="padding:14px 0">
+            <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:10px">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
                     height="36" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-            <nav class="menu" id="menu">
+            <nav class="menu" id="menu" style="display:flex;gap:16px">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#integrations">التكامل</a>
                 <a href="../index.html#pricing">الأسعار</a>
@@ -51,166 +53,144 @@
 
     <main class="container">
 
-        <!-- مسار -->
+        <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
             <span>›</span>
             <a href="../index.html#features">الميزات</a>
             <span>›</span>
-            <span>الأمان والتراخيص</span>
+            <span aria-current="page">الأمان والتراخيص</span>
         </nav>
 
-        <!-- البطل -->
-        <section id="license" class="fancy-section" data-aos="fade-up">
-            <h2>الأمان ونظام التراخيص في <strong>ControTik</strong></h2>
-            <p>
-                يطبّق <strong>ControTik</strong> طبقة تراخيص رقمية مشفّرة مرتبطة بـ<strong>هوية الجهاز (HWID)</strong>،
-                لضمان
-                أن البرنامج يعمل فقط على الأجهزة المصرّح بها، مع <strong>تفعيل سريع</strong>، <strong>تتبّع
-                    دقيق</strong>،
-                و<strong>إيقاف تلقائي</strong> عند انتهاء الصلاحية أو رصد محاولة خرق.
-            </p>
-
-            <div class="grid-3" style="margin-top:12px">
-                <div class="card">
-                    <span class="badge">HWID</span>
-                    <h3>ربط مُحكم بالجهاز</h3>
-                    <p class="muted">كل ترخيص يرتبط بمعرّف جهاز فريد. لا تشغيل خارج الجهاز المرخّص بدون نقل مُعتمد.</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Realtime</span>
-                    <h3>تفعيل لحظي</h3>
-                    <p class="muted">طلب آمن لسيرفر التراخيص وإصدار المفتاح خلال ثوانٍ دون ملفات حساسة.</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Audit</span>
-                    <h3>سجل تدقيق</h3>
-                    <p class="muted">تسجيل كل محاولة تشغيل/تفعيل/نقل وإشعارات فورية عند السلوك المريب.</p>
+        <!-- Hero كبطاقة أولى -->
+        <section class="hero-slim" data-aos="fade-up">
+            <div>
+                <h1>الأمان ونظام التراخيص المشفّر (HWID)</h1>
+                <p>تفعيل سريع وآمن، ترخيص مرتبط بـ <b>هوية الجهاز HWID</b>، تدقيق مستمر لمحاولات التشغيل، وإنفاذ تلقائي
+                    عند الانتهاء أو الاشتباه.</p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#types" class="btn primary">أنواع التراخيص</a>
+                    <a href="#steps" class="btn ghost">خطوات التفعيل</a>
                 </div>
             </div>
         </section>
 
-        <!-- جدول أنواع التراخيص -->
-        <section class="fancy-section" data-aos="fade-up">
-            <h2>أنواع التراخيص والخصائص</h2>
-
-            <div class="table-wrap">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>النوع</th>
-                            <th>المدة/الحدود</th>
-                            <th>النقل بين الأجهزة</th>
-                            <th>الاتصال بالإنترنت</th>
-                            <th>الاستخدام الأنسب</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><b>تجريبي</b></td>
-                            <td>أيام محدودة أو حد مشتركين</td>
-                            <td>غير متاح</td>
-                            <td>عند التفعيل فقط</td>
-                            <td>التجربة قبل الشراء</td>
-                        </tr>
-                        <tr>
-                            <td><b>احترافي (Pro)</b></td>
-                            <td>شهري/سنوي</td>
-                            <td>مسموح بنقل مُراقَب</td>
-                            <td>تحقق دوري مرن</td>
-                            <td>شبكات نشطة ومتوسطة/كبيرة</td>
-                        </tr>
-                        <tr>
-                            <td><b>مؤسسي (Enterprise)</b></td>
-                            <td>مخصص مع قيود خاصة</td>
-                            <td>بسياسة شركات</td>
-                            <td>خادم ترخيص خاص/On-Prem</td>
-                            <td>مزودو خدمة وشركات كبيرة</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Highlights -->
+        <section class="grid-3">
+            <div class="card" data-aos="fade-up">
+                <span class="badge">HWID</span>
+                <h3>ربط مُحكم بالجهاز</h3>
+                <p class="muted">كل ترخيص يرتبط بمعرّف جهاز فريد. لا تشغيل خارج الجهاز المرخّص إلا عبر نقل مُعتمد.</p>
             </div>
-
-            <div class="callout" style="margin-top:10px">
-                <div>🔐</div>
-                <div class="muted">كل المفاتيح تُخزَّن مُشفّرة ويُتحقق منها على جانب الخادم والعميل مع حماية ضد العبث.
-                </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
+                <span class="badge">Realtime</span>
+                <h3>تفعيل لحظي</h3>
+                <p class="muted">طلب آمن إلى خادم التراخيص وإصدار المفتاح خلال ثوانٍ—بدون تبادل ملفات حساسة.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
+                <span class="badge">Audit</span>
+                <h3>سجل تدقيق</h3>
+                <p class="muted">توثيق كل تشغيل/تفعيل/نقل مع تنبيهات فورية عند السلوك المريب.</p>
             </div>
         </section>
 
-        <!-- خطوات التفعيل -->
-        <section class="fancy-section" data-aos="fade-up">
-            <h2>خطوات التفعيل والنقل</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <span class="badge">1</span>
-                    <h3>جمع HWID</h3>
-                    <p class="muted">يقوم التطبيق بإنشاء بصمة جهاز (CPU/Board/OS) ويوقّع الطلب محليًا.</p>
+        <!-- جدول الأنواع -->
+        <section id="types" class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>أنواع التراخيص والخصائص</h3>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>النوع</th>
+                                <th>المدة/الحدود</th>
+                                <th>النقل بين الأجهزة</th>
+                                <th>الاتصال بالإنترنت</th>
+                                <th>الاستخدام الأنسب</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>تجريبي</b></td>
+                                <td>أيام محدودة أو حد مشتركين</td>
+                                <td>غير متاح</td>
+                                <td>عند التفعيل فقط</td>
+                                <td>التجربة قبل الشراء</td>
+                            </tr>
+                            <tr>
+                                <td><b>احترافي (Pro)</b></td>
+                                <td>شهري/سنوي</td>
+                                <td>مسموح بنقل مُراقَب</td>
+                                <td>تحقق دوري مرن</td>
+                                <td>شبكات نشطة ومتوسطة/كبيرة</td>
+                            </tr>
+                            <tr>
+                                <td><b>مؤسسي (Enterprise)</b></td>
+                                <td>مخصص مع قيود خاصة</td>
+                                <td>بسياسة شركات</td>
+                                <td>خادم ترخيص خاص/On-Prem</td>
+                                <td>مزودو خدمة وشركات كبيرة</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="card">
-                    <span class="badge">2</span>
-                    <h3>طلب آمن</h3>
-                    <p class="muted">إرسال الطلب عبر قناة مشفّرة إلى خادم التراخيص مع التحقق من النزاهة.</p>
-                </div>
-                <div class="card">
-                    <span class="badge">3</span>
-                    <h3>إصدار المفتاح</h3>
-                    <p class="muted">يتلقى العميل مفتاحًا مشفّرًا موقّعًا زمنيًا ومرتبطًا بالجهاز.</p>
+                <div class="callout" style="margin-top:10px">
+                    <div>🔐</div>
+                    <div class="muted">تُخزَّن المفاتيح مُشفّرة ويُتحقق منها على الخادم والعميل مع آليات مضادّة للعبث.
+                    </div>
                 </div>
             </div>
 
-            <div class="card" style="margin-top:12px">
-                <h3 style="margin:0 0 8px">نقل الترخيص</h3>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>إنفاذ ذكي</h3>
                 <ul class="list">
-                    <li>طلب نقل من الجهاز القديم مع سبب النقل.</li>
-                    <li>إبطال المفتاح السابق وإصدار مفتاح جديد لـHWID الجديد.</li>
-                    <li>سجل تدقيق يوضح التواريخ والمستخدم المُصرّح.</li>
+                    <li><b>فترة سماح:</b> عمل دون اتصال لفترة قصيرة مع تذكيرات.</li>
+                    <li><b>إيقاف تدريجي:</b> تقليص وظائف غير حرجة قبل الإيقاف الكامل.</li>
+                    <li><b>تجديد سلس:</b> زر تجديد مباشر أو دفع تلقائي مع تفعيل فوري.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- سياسات الإنفاذ -->
-        <section class="fancy-section" data-aos="fade-up">
-            <h2>إنفاذ ذكي مع فترات سماح</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <span class="badge">Grace</span>
-                    <h3>سماح قصير</h3>
-                    <p class="muted">فترة سماح محدودة دون اتصال، مع تذكير داخل التطبيق ووسائل التواصل.</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Suspend</span>
-                    <h3>إيقاف تدريجي</h3>
-                    <p class="muted">تقليص وظائف غير حرجة قبل الإيقاف الكامل للحفاظ على البيانات.</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Renew</span>
-                    <h3>تجديد سلس</h3>
-                    <p class="muted">زر تجديد مباشر، أو دفع تلقائي مع تفعيل فوري وإشعار نجاح.</p>
-                </div>
+        <!-- خطوات التفعيل والنقل -->
+        <section id="steps" class="two" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3>خطوات التفعيل</h3>
+                <ol class="list">
+                    <li><b>جمع HWID:</b> إنشاء بصمة الجهاز وتوقيع الطلب محليًا.</li>
+                    <li><b>طلب آمن:</b> إرسال عبر قناة مشفّرة مع التحقق من النزاهة.</li>
+                    <li><b>إصدار المفتاح:</b> مفتاح مشفّر موقّع زمنيًا ومرتبط بالجهاز.</li>
+                </ol>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <h3>نقل الترخيص</h3>
+                <ul class="list">
+                    <li>طلب نقل من الجهاز القديم مع السبب.</li>
+                    <li>إبطال المفتاح السابق وإصدار مفتاح لـ HWID الجديد.</li>
+                    <li>تسجّل العملية في سجل التدقيق بالتواريخ والمستخدم المُصرّح.</li>
+                </ul>
             </div>
         </section>
 
         <!-- قائمة فحص الأمان -->
-        <section class="fancy-section" data-aos="fade-up">
-            <h2>قائمة فحص الأمان</h2>
+        <section style="margin-top:18px">
             <div class="grid-3">
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <h3>مفاتيح مُعمّاة</h3>
-                    <p class="muted">AES/GCM لتخزين المفتاح محليًا + توقيعات رقمية للتحقق.</p>
+                    <p class="muted">تخزين محلي آمن (AES/GCM) + توقيعات رقمية للتحقق.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="75">
                     <h3>مقاومة العبث</h3>
-                    <p class="muted">تحقق سلامة الملفات الثنائية ورفض التلاعب بالذاكرة.</p>
+                    <p class="muted">تحقق سلامة الملفات الثنائية ورصد التلاعب بالذاكرة.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="150">
                     <h3>حجب التكرار</h3>
                     <p class="muted">منع التشغيل المتزامن لنفس الترخيص على أكثر من جهاز.</p>
                 </div>
             </div>
             <div class="callout" style="margin-top:12px">
                 <div>🛡️</div>
-                <div class="muted">يتم إشعار المالك عند سلوك مشبوه (تفعيل مكرر، HWID غير متطابق، تجاوز صلاحية).</div>
+                <div class="muted">تنبيهات عند سلوك مشبوه (تفعيل مكرر، HWID غير متطابق، تجاوز صلاحية).</div>
             </div>
         </section>
 
@@ -226,24 +206,23 @@
         </section>
 
         <!-- FAQ -->
-        <section class="fancy-section" data-aos="fade-up" id="faq">
-            <h2>الأسئلة المتكررة عن التراخيص</h2>
-            <div class="faq">
-                <details open>
+        <section id="faq" style="margin-top:18px">
+            <div class="two faq">
+                <details data-aos="fade-up">
                     <summary>هل يعمل الترخيص دون إنترنت؟</summary>
-                    <p class="muted">نعم، ضمن <b>فترة سماح</b> محدودة. بعد انتهائها يتطلب تحققًا سريعًا.</p>
+                    <p class="muted">نعم، ضمن <b>فترة سماح</b> محدودة. بعد انتهائها يلزم تحقق سريع.</p>
                 </details>
-                <details>
+                <details data-aos="fade-up" data-aos-delay="50">
                     <summary>ماذا يحدث عند انتهاء الترخيص؟</summary>
                     <p class="muted">يتم <b>إيقاف العمل</b> مع عرض سبب الانتهاء وخيارات التجديد.</p>
                 </details>
-                <details>
+                <details data-aos="fade-up">
                     <summary>هل يمكن نقل الترخيص لجهاز جديد؟</summary>
                     <p class="muted">نعم عبر طلب نقل مُراقَب: إبطال المفتاح السابق وإصدار جديد.</p>
                 </details>
-                <details>
-                    <summary>هل يدعم إصدارًا تجريبيًا؟</summary>
-                    <p class="muted">يدعم تراخيص مؤقتة زمنياً أو بعدد مشتركين.</p>
+                <details data-aos="fade-up" data-aos-delay="50">
+                    <summary>هل يوجد إصدار تجريبي؟</summary>
+                    <p class="muted">يدعم تراخيص مؤقتة زمنياً أو بعدد مشتركين محدد.</p>
                 </details>
             </div>
         </section>
@@ -271,9 +250,9 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
-    <!-- FAQ Structured Data (SEO) -->
+    <!-- FAQ Structured Data -->
     <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -285,8 +264,8 @@
        "acceptedAnswer":{"@type":"Answer","text":"يُوقف البرنامج العمل ويعرض سبب الانتهاء مع خيار التجديد الفوري."}},
       {"@type":"Question","name":"هل يمكن نقل الترخيص؟",
        "acceptedAnswer":{"@type":"Answer","text":"يمكن نقل الترخيص عبر طلب نقل مُراقَب يتضمن إبطال المفتاح القديم."}},
-      {"@type":"Question","name":"هل يدعم إصداراً تجريبياً؟",
-       "acceptedAnswer":{"@type":"Answer","text":"يدعم تراخيص مؤقتة زمنياً أو بعدد مشتركين محدد."}}
+      {"@type":"Question","name":"هل يوجد إصدار تجريبي؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، تراخيص مؤقتة زمنياً أو بعدد مشتركين محدد."}}
     ]
   }
   </script>
