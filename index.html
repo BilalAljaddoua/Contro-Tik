@@ -2,33 +2,112 @@
 <html lang="ar" dir="rtl">
 
 <head>
+  <!-- Character set + responsive -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>ControTik | نظام احترافي لإدارة شبكات الإنترنت</title>
+  <!-- Primary SEO -->
+  <title>ControTik | نظام احترافي لإدارة شبكات الإنترنت (PPPoE/هوتسبوت/فوترة/تقارير)</title>
   <meta name="description"
-    content="ControTik — منصة SaaS لإدارة شبكات الإنترنت: هوتسبوت، PPPoE/برودباند، فوترة، تقارير، رسائل واتساب تلقائية، وصلاحيات.">
+    content="ControTik منصة SaaS لإدارة شبكات الإنترنت: PPPoE وHotspot، فوترة واشتراكات، تقارير Excel/PDF محمية، رسائل واتساب تلقائية، صلاحيات دقيقة، شركاء وأرباح، ونظام موظفين ورواتب." />
   <link rel="canonical" href="https://controtik.com/" />
-  <meta name="theme-color" content="#00cfd5" />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta name="theme-color" content="#00cfd5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0b161a" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="author" content="ControTik" />
+  <meta name="application-name" content="ControTik" />
+  <meta name="generator" content="ControTik Site" />
+
+  <!-- Keywords (اختياري) -->
+  <meta name="keywords"
+    content="ControTik, إدارة الشبكات, PPPoE, Hotspot, MikroTik, SaaS, فوترة, تقارير, رسائل واتساب, اشتراكات, رواتب الموظفين, صلاحيات" />
+
+  <!-- Internationalization -->
+  <link rel="alternate" href="https://controtik.com/" hreflang="ar" />
+  <link rel="alternate" href="https://controtik.com/en/" hreflang="en" />
+  <link rel="alternate" href="https://controtik.com/" hreflang="x-default" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ControTik | إدارة شبكات الإنترنت">
-  <meta property="og:description" content="لوحات تحكم عصرية وفوترة ذكية وتنبيهات حيّة.">
-  <meta property="og:url" content="https://controtik.com/">
-  <meta property="og:image" content="https://controtik.com/img/cover.jpg">
-  <meta property="og:image:alt" content="لوحة تحكم ControTik">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ControTik" />
+  <meta property="og:locale" content="ar" />
+  <meta property="og:title" content="ControTik | نظام احترافي لإدارة شبكات الإنترنت" />
+  <meta property="og:description"
+    content="لوحات تحكم عصرية، فوترة ذكية، تنبيهات حيّة ورسائل واتساب، تقارير جاهزة، وصلاحيات دقيقة لإدارة شبكتك بثقة." />
+  <meta property="og:url" content="https://controtik.com/" />
+  <meta property="og:image" content="https://controtik.com/img/og-1200x630.jpg" />
+  <meta property="og:image:alt" content="لوحة تحكم ControTik لإدارة الشبكات" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  <!-- Cairo Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ControTik | إدارة شبكات الإنترنت باحتراف" />
+  <meta name="twitter:description"
+    content="إدارة PPPoE/هوتسبوت، فوترة وتقارير، رسائل واتساب تلقائية، وصلاحيات دقيقة—في منصة واحدة." />
+  <meta name="twitter:image" content="https://controtik.com/img/og-1200x630.jpg" />
+  <meta name="twitter:site" content="@controtik" />
+
+  <!-- App icons / PWA (اختياري إن وُجد manifest) -->
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#00cfd5" />
+  <meta name="msapplication-TileColor" content="#00cfd5" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="preload" href="/img/og-1200x630.jpg" as="image"
+    imagesrcset="/img/og-1200x630.jpg 1200w, /img/og-800.jpg 800w" imagesizes="(max-width: 800px) 800px, 1200px" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" as="style" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Global Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
+  <!-- Structured Data: WebSite + Sitelinks Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ControTik",
+    "url": "https://controtik.com/",
+    "inLanguage": "ar",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://controtik.com/search?q={query}",
+      "query-input": "required name=query"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ControTik",
+    "url": "https://controtik.com/",
+    "logo": "https://controtik.com/img/logo-512.png",
+    "sameAs": [
+      "https://www.facebook.com/controtik",
+      "https://www.linkedin.com/company/controtik"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "availableLanguage": ["ar","en"],
+      "url": "https://controtik.com/#contact"
+    }]
+  }
+  </script>
 </head>
 
 <body>
