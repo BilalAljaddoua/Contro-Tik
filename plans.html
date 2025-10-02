@@ -7,7 +7,7 @@
 
     <title>ControTik | الباقات والأسعار</title>
     <meta name="description"
-        content="اختر باقة ControTik المناسبة: Mini للانطلاق السريع و Pro للتحكم الاحترافي — تقارير، رسائل، صلاحيات، وإدارة شاملة للشبكة. الفوترة سنوية، مع إمكانية الشراء الشهري." />
+        content="اختر باقة ControTik المناسبة: Mini للانطلاق السريع و Pro للتحكم الاحترافي — تقارير، رسائل، صلاحيات، إدارة شاملة للشبكة، والآن: نظام الموظفين والرواتب في Pro." />
     <link rel="canonical" href="https://controtik.com/pricing.html" />
     <meta name="theme-color" content="#00cfd5" />
     <meta name="robots" content="index,follow" />
@@ -17,17 +17,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles (الأساسية) -->
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- تحسينات بسيطة للشارة/التوفير -->
+    <!-- تحسينات بصرية خفيفة -->
     <style>
         :root {
             --ribbon-bg: linear-gradient(135deg, #f7feff, #ffffff);
             --pill-bg: #fff;
             --pill-dashed: #a6eff2;
             --pill-text: #03686b;
-            --accent: #00cfd5
+            --accent: #00cfd5;
+            --hr-chip-bg: #eefcf3;
+            --hr-chip-bd: #c8f0d7;
+            --hr-chip-tx: #0b7a2a
         }
 
         .plans-ribbon {
@@ -72,6 +75,12 @@
             border-radius: 999px;
             font-size: .9rem;
             font-weight: 700
+        }
+
+        .micro-label.hr {
+            background: var(--hr-chip-bg);
+            border-color: var(--hr-chip-bd);
+            color: var(--hr-chip-tx)
         }
 
         #billing-toggle .btn {
@@ -126,6 +135,18 @@
             font-weight: 800;
             margin-inline-start: 8px
         }
+
+        /* لمسة بصرية للعنصر الأكثر اختياراً */
+        .plan.most {
+            outline: 2px solid #d1fae5;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .05), inset 0 0 0 1px #ecfdf5
+        }
+
+        /* نقاط مُحسّنة للقوائم */
+        .plan ul.muted li::marker {
+            content: "• ";
+            color: var(--accent)
+        }
     </style>
 </head>
 
@@ -142,7 +163,7 @@
             <nav class="menu" id="menu">
                 <a href="index.html#features">الميزات</a>
                 <a href="index.html#faq">الأسئلة</a>
-                <a href="index.html#contact" class="cta">✨ اطلب النسخة</a>
+                <a href="#Ordernow" class="cta">✨ اطلب النسخة التجريبية</a>
             </nav>
             <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
@@ -166,8 +187,6 @@
                             أوفر.</small>
                     </div>
                 </div>
-                <!-- <a class="btn primary" href="https://wa.me/963982021127?text=مرحباً، أود معرفة أفضل باقة مناسبة لشبكتي."
-                    target="_blank" rel="noopener">💬 اسأل خبير الآن</a> -->
             </div>
         </section>
 
@@ -218,10 +237,9 @@
                 <article class="card plan most" style="position:relative;overflow:hidden" data-plan="pro"
                     data-monthly-base="10" data-monthly-shown="15" data-yearly-total="120">
                     <span class="tag">الأكثر اختياراً</span>
-                    <div style="position:absolute;top:16px;left:16px;">
-                        <span class="micro-label" style="background:#d9ffe2;border-color:#bdefc7;color:#0b7a2a">
-                            الأكثر قيمة سنويًا
-                        </span>
+                    <div style="position:absolute;top:16px;left:16px;display:flex;gap:8px;flex-wrap:wrap">
+                        <span class="micro-label" style="background:#d9ffe2;border-color:#bdefc7;color:#0b7a2a">الأكثر
+                            قيمة سنويًا</span>
                     </div>
                     <h3>Pro</h3>
 
@@ -237,6 +255,7 @@
 
                     <ul class="muted" style="line-height:1.9">
                         <li>✅ كل ميزات Mini</li>
+                        <li>👥 <b>نظام الموظفين والرواتب</b> (سحب/سُلَف/ترحيل + إشعارات واتساب)</li>
                         <li>🔑 الشركاء وتوزيع الأرباح</li>
                         <li>🧠 نظام النقاط والولاء</li>
                         <li>👤 مستخدمون وصلاحيات Bitwise</li>
@@ -251,7 +270,8 @@
 
                     <div class="callout" style="margin-top:12px">
                         <div>🏆</div>
-                        <div class="muted">تحكّم عميق، رؤية مالية أدق، وتنبيهات حيّة — خيار المحترفين.</div>
+                        <div class="muted">تحكّم عميق، نظام موظفين ورواتب متكامل، رؤية مالية أدق، وتنبيهات حيّة — خيار
+                            المحترفين.</div>
                     </div>
 
                     <a class="btn" style="margin-top:14px;justify-content:center;background:#111;color:#fff"
@@ -260,7 +280,6 @@
                 </article>
             </div>
         </section>
-
 
         <!-- مقارنة موسّعة -->
         <section class="fancy-section" style="padding-top:0">
@@ -327,8 +346,8 @@
                         </tr>
                         <tr>
                             <td>التقارير</td>
-                            <td>Excel أساسي</td>
-                            <td>Excel احترافي + WhatsApp</td>
+                            <td>—</td>
+                            <td>Excel احترافي + WhatsApp + PDF</td>
                         </tr>
                         <tr>
                             <td>الشركاء وتوزيع الأرباح</td>
@@ -339,6 +358,11 @@
                             <td>النقاط وبرامج الولاء</td>
                             <td>—</td>
                             <td>✔️</td>
+                        </tr>
+                        <tr>
+                            <td><b>نظام الموظفين والرواتب</b></td>
+                            <td>—</td>
+                            <td>✔️ يشمل السحب/السلف/الترحيل + إشعارات</td>
                         </tr>
                         <tr>
                             <td>الممتلكات والأبراج</td>
@@ -359,32 +383,28 @@
                 <div class="card highlight">
                     <h3>💡 لمن Mini؟</h3>
                     <p class="muted">
-                        إذا كنت <b>تدير شبكة ناشئة</b> أو تبحث عن دخول آمن وبتكلفة منخفضة
-                        — فهذه الخطة مثالية لك. <br><br>
-                        تمنحك <b>Mini</b> كل الأساسيات: إدارة باقات ومشتركين، رسائل تلقائية،
-                        ومصاريف منظمة تساعدك على الانطلاق بسرعة وبدون تعقيد. <br><br>
+                        إذا كنت <b>تدير شبكة ناشئة</b> أو تبحث عن دخول آمن وبتكلفة منخفضة — فهذه الخطة مثالية لك.
+                        <br><br>
+                        تمنحك <b>Mini</b> كل الأساسيات: إدارة باقات ومشتركين، رسائل تلقائية، ومصاريف منظمة تساعدك على
+                        الانطلاق بسرعة وبدون تعقيد.
                     </p>
                 </div>
 
                 <div class="card highlight">
                     <h3>👑 لمن Pro؟</h3>
                     <p class="muted">
-                        إذا كنت <b>مدير شبكة طموح</b> وتبحث عن تحكم كامل ورؤية أوضح
-                        — فهذه هي خطتك. <br><br>
-                        تمنحك <b>Pro</b> تقارير متقدمة جاهزة للمستثمرين،
-                        إدارة شركاء وأرباح بشفافية،
-                        وأتمتة رسائل ذكية تجعل شبكتك تعمل
-                        وكأن لديها فريق دعم خاص على مدار الساعة. <br><br>
-
+                        إذا كنت <b>مدير شبكة طموح</b> وتبحث عن تحكم كامل ورؤية أوضح — فهذه هي خطتك. <br><br>
+                        تمنحك <b>Pro</b> تقارير متقدمة، أتمتة رسائل، إدارة شركاء وأرباح،<br> <b>وحديثًا: نظام الموظفين
+                            والرواتب المتكامل</b> لإدارة السحب والسلف والترحيل مع إشعارات فورية.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>📌 خلاصة مالية</h3>
                     <p class="muted">
-                        أيًا كان اختيارك، <b>Mini</b> أو <b>Pro</b>، كلاهما يمنحك
-                        تفعيلًا فوريًا وتوفيرًا مؤكدًا قدره <b>60 $</b> سنويًا مقارنة بالدفع شهريًا
-                        — الفارق أن <b>Pro</b> يفتح لك أبواب التحكم المتقدم والاحترافية الكاملة.
+                        أيًا كان اختيارك، <b>Mini</b> أو <b>Pro</b>، كلاهما يمنحك تفعيلًا فوريًا وتوفيرًا مؤكدًا قدره
+                        <b>60 $</b> سنويًا مقارنة بالدفع شهريًا — الفارق أن <b>Pro</b> يفتح لك أبواب التحكم المتقدم بما
+                        فيها <b>HR/Payroll</b>.
                     </p>
                 </div>
             </div>
@@ -400,9 +420,8 @@
             </div>
         </section>
 
-
         <!-- CTA -->
-        <section class="fancy-section" style="padding-top:0">
+        <section class="fancy-section" style="padding-top:0" id="Ordernow">
             <div class="cta-band"
                 style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
                 <div>
@@ -413,7 +432,7 @@
                 <div class="actions" style="display:flex;gap:10px">
                     <a href="https://wa.me/963982021127?text=أرغب بتجربة ControTik قبل الشراء." class="btn primary"
                         target="_blank" rel="noopener">✨ تجربة مجانية</a>
-                    <a href="../index.html#features" class="btn ghost">استعراض الميزات</a>
+                    <a href="index.html#features" class="btn ghost">استعراض الميزات</a>
                 </div>
             </div>
         </section>
@@ -458,7 +477,6 @@
                     const annualized = monthlyShown * 12;                 // 156 / 180
                     const saving = annualized - yearlyTotal;
 
-                    // عناصر
                     const mainMini = card.querySelector('.js-price-main-mini');
                     const mainPro = card.querySelector('.js-price-main-pro');
                     const capMini = card.querySelector('.js-price-caption-mini');
@@ -472,10 +490,7 @@
                     const note = card.querySelector('.js-billing-note');
                     const saveA = card.querySelector('.js-saving-amount');
 
-
                     if (mode === 'yearly') {
-                        // نبرز المقارنة السنوية (المكافئ مشطوب + السنوي الحقيقي + التوفير)
-
                         if (strikeMini) { strikeMini.style.display = 'inline'; strikeMini.textContent = `156 $`; }
                         if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  96 $`; }
 
@@ -485,14 +500,12 @@
                         if (note) { note.innerHTML = `ادفع سنويًا ${yearlyTotal}$ — توفّر <b class="js-saving-amount">${saving}$</b>`; }
                         if (saveA) { saveA.textContent = `${saving}$`; }
 
-                        // السعر الشهري دائمًا
                         if (mainPro) mainPro.textContent = '10';
                         if (capPro) capPro.textContent = ' / شهريًا';
                         if (mainMini) mainMini.textContent = '8';
                         if (capMini) capMini.textContent = ' / شهريًا';
 
                     } else {
-                        // نعرض تلميحًا رقيقًا للسنوي بدون أرقام ضخمة
                         if (strikeMini) { strikeMini.style.display = 'none'; }
                         if (strikePro) { strikePro.style.display = 'none'; }
 
@@ -501,7 +514,6 @@
 
                         if (ypillMini) { ypillMini.style.display = 'inline-flex'; ypillMini.textContent = `سنوياً:  156 $`; }
                         if (ypillPro) { ypillPro.style.display = 'inline-flex'; ypillPro.textContent = `سنوياً: 180 $`; }
-
 
                         if (mainPro) mainPro.textContent = '15';
                         if (capPro) capPro.textContent = ' / شهريًا';
@@ -517,8 +529,7 @@
                 render(btn.dataset.billing);
             });
 
-            // الافتراضي: سنوي (للتشجيع)
-            render('yearly');
+            render('yearly'); // الافتراضي: سنوي (للتشجيع)
         })();
     </script>
 
@@ -542,7 +553,7 @@
     {
       "@type":"Product",
       "name":"ControTik Pro",
-      "description":"تحكم احترافي: كل مزايا Mini + شركاء وأرباح، نقاط، صلاحيات، تقارير احترافية، ممتلكات، أبراج، تخصيص.",
+      "description":"تحكم احترافي: كل مزايا Mini + شركاء وأرباح، نقاط، صلاحيات، تقارير احترافية، ممتلكات، أبراج، تخصيص، ويشمل نظام الموظفين والرواتب (سحب/سلف/ترحيل + إشعارات).",
       "brand":{"@type":"Brand","name":"ControTik"},
       "offers":[
         {"@type":"Offer","price":"120","priceCurrency":"USD","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"120","unitCode":"ANN"}},
@@ -552,7 +563,6 @@
   ]
 }
 </script>
-
 
     <!-- AOS (اختياري) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
