@@ -26,36 +26,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
+    <!-- Styles (مطابق للنمط المستخدم في الصفحات الأخرى) -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/tokens.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
 
-    <!-- Header (Burger CSS-only) -->
+    <!-- Header -->
     <header>
         <div class="container nav">
             <a class="brand" href="../index.html">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
-                    height="36" class="brand-logo" loading="lazy" decoding="async" />
+                    height="36" class="brand-logo" loading="lazy" decoding="async" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-
-            <!-- toggle -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
-            <label class="burger" for="nav-toggle" aria-label="فتح القائمة" aria-controls="menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </label>
-
             <nav class="menu" id="menu" aria-label="القائمة الرئيسية">
                 <a href="../index.html#features">الميزات</a>
-                <a href="../index.html#integrations">التكامل</a>
-                <a href="../index.html#pricing">الأسعار</a>
+                <a href="../plans.html">الأسعار</a>
+                <a href="../index.html#testimonials">ماذا قالوا؟</a>
                 <a href="../index.html#faq">الأسئلة</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
@@ -64,9 +57,9 @@
         <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
-            <span aria-hidden="true">›</span>
+            <span>›</span>
             <a href="../index.html#features">الميزات</a>
-            <span aria-hidden="true">›</span>
+            <span>›</span>
             <span aria-current="page">التقارير (Excel)</span>
         </nav>
 
@@ -75,7 +68,7 @@
             <div>
                 <h1>تصدير احترافي للتقارير بصيغة <span class="nowrap">Excel</span></h1>
                 <p>ملفات محمية ضد التعديل، موثّقة بالفلاتر والنطاق الزمني والعملة—جاهزة للطباعة والأرشفة والمشاركة.</p>
-                <div class="actions">
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
                     <a href="#scope" class="btn primary">ما الذي نُصدّره؟</a>
                 </div>
             </div>
@@ -104,7 +97,7 @@
         </section>
 
         <!-- Details -->
-        <section class="two section-gap">
+        <section class="two" style="margin-top:18px">
             <div class="card" data-aos="fade-up">
                 <h3>محتوى ملف Excel</h3>
                 <ul class="list">
@@ -112,7 +105,7 @@
                     <li>خانة لنتيجة الفلترة (مفلتر/غير مفلتر) ونطاق التاريخ المستخدم.</li>
                     <li>عرض العملة عند الاقتضاء، وتنسيق الأرقام والفواصل.</li>
                 </ul>
-                <div class="callout">
+                <div class="callout" style="margin-top:10px">
                     <div aria-hidden="true">🧠</div>
                     <div class="muted">تتذكر الأداة آخر فلاترك لتعيد استخدامها في التصدير التالي وتضمن الاتساق.</div>
                 </div>
@@ -129,9 +122,9 @@
         </section>
 
         <!-- Example table -->
-        <section class="section-gap">
-            <div class="card">
-                <h3 class="section-title">مثال بنية جدول التصدير</h3>
+        <section style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3 style="margin:0 0 8px">مثال بنية جدول التصدير</h3>
                 <div class="table-wrap">
                     <table class="table">
                         <thead>
@@ -176,21 +169,21 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="callout">
+                <div class="callout" style="margin-top:12px">
                     <div aria-hidden="true">🧾</div>
-                    <div class="muted">يمكن تنزيل الجداول كـ Excel محمي، مع تضمين صفحة <b>ملخص الفلاتر</b> وlog لعملية
+                    <div class="muted">يمكن تنزيل الجداول كـ Excel محمي، مع تضمين صفحة <b>ملخص الفلاتر</b> وسجل عملية
                         التصدير.</div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section id="faq" class="section-gap">
+        <section id="faq" style="margin-top:18px">
             <div class="two faq">
                 <details data-aos="fade-up">
                     <summary>هل يمكن تعديل الملف بعد تصديره؟</summary>
-                    <p class="muted">يُصدَّر الملف بوضع <b>Read-Only</b> للحفاظ على المصداقية. يمكن إنشاء نسخة منفصلة
-                        إذا رغبت بالتعديل.</p>
+                    <p class="muted">يُصدَّر الملف بوضع <b>Read-Only</b> للحفاظ على المصداقية. للتعديل يمكن فتح نسخة
+                        محمية بكلمة مرور خاصة.</p>
                 </details>
                 <details data-aos="fade-up" data-aos-delay="50">
                     <summary>هل يُذكر نطاق التاريخ والفلاتر داخل الملف؟</summary>
@@ -208,10 +201,10 @@
         </section>
 
         <!-- CTA -->
-        <section class="section-gap">
-            <div class="callout cta-bar">
-                <div class="cta-text">
-                    <div class="h5">تقارير موثوقة… قرارات أسرع</div>
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">تقارير موثوقة… قرارات أسرع</div>
                     <div class="muted">فعّل التصدير المحمي وشارك ملفات جاهزة للطباعة بكل ثقة.</div>
                 </div>
                 <a href="../index.html#contact" class="btn primary">✨ جرّب التصدير الآن</a>
@@ -221,10 +214,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footbar">
-        <div class="container footwrap">
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
-            <div class="footlinks">
+            <div style="display:flex;gap:12px">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#faq">الأسئلة</a>
@@ -232,20 +225,18 @@
         </div>
     </footer>
 
-    <!-- AOS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
-
-    <!-- اختياري: وصولية للـburger -->
+    <!-- Menu (mobile) -->
     <script>
-        const t = document.getElementById('nav-toggle');
-        const b = document.querySelector('label[for="nav-toggle"]');
-        const links = document.querySelectorAll('#menu a');
-        const sync = () => b.setAttribute('aria-expanded', t.checked ? 'true' : 'false');
-        t.addEventListener('change', sync);
-        links.forEach(a => a.addEventListener('click', () => { t.checked = false; sync(); }));
-        sync();
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
     </script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
     <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
@@ -254,7 +245,7 @@
     "@type":"FAQPage",
     "mainEntity":[
       {"@type":"Question","name":"هل يمكن تعديل الملف بعد تصديره؟",
-       "acceptedAnswer":{"@type":"Answer","text":"الملفات تُصدَّر بوضع Read-Only للحفاظ على المصداقية. يمكن نسخها إذا رغبت بالتعديل."}},
+       "acceptedAnswer":{"@type":"Answer","text":"الملفات تُصدَّر بوضع Read-Only للحفاظ على المصداقية. يمكن فتح نسخة محمية بكلمة مرور للتعديل عند الحاجة."}},
       {"@type":"Question","name":"هل يُذكر نطاق التاريخ والفلاتر داخل الملف؟",
        "acceptedAnswer":{"@type":"Answer","text":"نعم، يتم تضمين ملخص الفلاتر والنطاق الزمني أعلى الورقة الأولى."}},
       {"@type":"Question","name":"هل يدعم تعدد العملات؟",

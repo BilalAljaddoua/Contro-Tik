@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>ControTik | نظام الديون والدفعات</title>
     <meta name="description"
         content="تسجيل مرن للديون (كلي/جزئي)، سجل دفعات مفصل، تنبيهات تلقائية للمتأخرين، فلترة دقيقة، وتقارير Excel محمية—متكامل مع المبيعات والأرباح." />
@@ -26,62 +25,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
+    <!-- Styles (مطابق لنموذج الصفحات الأخرى) -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/tokens.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
         <div class="container nav">
-            <a class="brand" href="../index.html">
+            <a class="brand" href="../index.html" aria-label="العودة للرئيسية">
                 <img src="https://dummyimage.com/72x72/00cfd5/ffffff.png&text=CT" alt="ControTik Logo" width="36"
-                    height="36" class="brand-logo" />
+                    height="36" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-
-            <!-- تبديل القائمة بالـCSS -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
-            <label for="nav-toggle" class="burger" aria-label="فتح القائمة" aria-controls="menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </label>
-
-            <nav id="menu" class="menu" aria-label="القائمة الرئيسية">
+            <nav class="menu" id="menu" aria-label="القائمة الرئيسية">
                 <a href="../index.html#features">الميزات</a>
-                <a href="../index.html#integrations">التكامل</a>
-                <a href="../index.html#pricing">الأسعار</a>
-                <a href="../index.html#faq">الأسئلة</a>
+                <a href="../plans.html">الأسعار</a>
+                <a href="../index.html#testimonials">ماذا قالوا؟</a>
                 <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
-
     <main class="container">
+
         <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
-            <span aria-hidden="true">›</span>
+            <span>›</span>
             <a href="../index.html#features">الميزات</a>
-            <span aria-hidden="true">›</span>
-            <span aria-current="page">الديون والدفعات</span>
+            <span>›</span>
+            <span>الديون والدفعات</span>
         </nav>
 
-        <!-- Hero -->
+        <!-- Hero (كرت البداية مطابق للنمط) -->
         <section class="hero-slim" data-aos="fade-up">
             <div>
                 <h1>نظام الديون والدفعات</h1>
-                <p>تسجيل مرن للديون (كلي/جزئي)، سجل دفعات مفصل مع إشعار واتساب، فلترة دقيقة وتقارير محمية—كل ذلك في لوحة
-                    واحدة.</p>
-                <div class="actions">
-                    <a href="#features" class="btn primary">المزايا العملية</a>
+                <p>
+                    تسجيل دين كلي/جزئي، سجل دفعات مفصل مع إشعار واتساب،
+                    فلترة دقيقة وتقارير Excel محمية—متكامل مع المبيعات والأرباح.
+                </p>
+                <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+                    <a href="#how" class="btn primary">كيف يعمل؟</a>
+                    <a href="#templates" class="btn ghost">نماذج الرسائل</a>
                 </div>
             </div>
         </section>
 
-        <!-- Key Features -->
-        <section id="features" class="grid-3">
+        <!-- Highlights -->
+        <section class="grid-3">
             <div class="card" data-aos="fade-up">
                 <span class="badge">Flexible</span>
                 <h3>تسجيل دين كلي/جزئي</h3>
@@ -91,47 +87,80 @@
             <div class="card" data-aos="fade-up" data-aos-delay="75">
                 <span class="badge">Ledger</span>
                 <h3>سجل دفعات مفصل</h3>
-                <p class="muted">تاريخ، مبلغ، عملة، ملاحظات، وإشعار واتساب تلقائي لكل دفعة—كلها مرتبطة بالمشترك والدين.
-                </p>
+                <p class="muted">تاريخ، مبلغ، عملة، ملاحظات، وإشعار واتساب لكل دفعة—كلها مرتبطة بالمشترك والدين.</p>
             </div>
             <div class="card" data-aos="fade-up" data-aos-delay="150">
                 <span class="badge">Filter</span>
                 <h3>فلترة دقيقة</h3>
-                <p class="muted">ابحث بالاسم/العنوان، بالاستحقاق/أيام التأخير، بالعملة، وبحالة الدين
-                    (مدفوع/جزئي/متأخر...).</p>
+                <p class="muted">استحقاق/أيام التأخير، الحالة (مدفوع/جزئي/متأخر)، والعملة—بحث سريع بلا عناء.</p>
             </div>
         </section>
 
-        <!-- More Details -->
-        <section class="two section-gap">
+        <!-- How it works -->
+        <section id="how" class="two" style="margin-top:18px">
             <div class="card" data-aos="fade-up">
-                <h3>متابعة وتنبيهات</h3>
-                <ul class="list">
-                    <li>تذكيرات تلقائية يومية للمتأخرين حتى السداد.</li>
-                    <li>تحديث لحظي للحالة في لوحة الإدارة.</li>
-                    <li>استثناء تلقائي بعد الإغلاق أو السداد الكامل.</li>
-                </ul>
-                <div class="callout">
-                    <div aria-hidden="true">📲</div>
-                    <div class="muted">إشعار واتساب يتضمن تفاصيل الدفع فور التسجيل—يحصل العميل على إيصال فوري.</div>
+                <h3>كيف يعمل النظام؟</h3>
+                <ol class="list">
+                    <li><b>تسجيل الدين:</b> كلي أو جزئي مع تحديد تاريخ الاستحقاق والعملة.</li>
+                    <li><b>دفعات مرتبطة:</b> كل دفعة تخصم الرصيد وتُحفظ كسجل مستقل.</li>
+                    <li><b>المتابعة:</b> لوحة تعرض المتأخر والجزئي والجديد مع مؤشرات يومية.</li>
+                    <li><b>الإشعارات:</b> تأكيد دفع للعميل ومطالبات تلقائية للمتأخرين.</li>
+                    <li><b>التقارير:</b> تصدير Excel محمي يشمل الفلاتر وتاريخ التصدير.</li>
+                </ol>
+                <div class="callout" style="margin-top:10px">
+                    <div>🧠</div>
+                    <div class="muted">يُستثنى الدين تلقائيًا من المطالبة عند السداد الكامل أو الإغلاق.</div>
                 </div>
             </div>
 
             <div class="card" data-aos="fade-up" data-aos-delay="100">
-                <h3>تقارير وتكامل</h3>
+                <h3>سياسات وإعدادات</h3>
                 <ul class="list">
-                    <li>تصدير Excel محمي يشمل الفلاتر وتاريخ التصدير.</li>
-                    <li>تكامل مع <b>المبيعات</b> (بيع بالدين)، <b>الأرباح</b> (صافي الربح بعد الديون)، <b>النقاط</b>
-                        (حوافز الدفع المبكر).</li>
-                    <li>لوحات مؤشرات لإجمالي الديون، المتأخرة، والمدفوعة بحسب العملة والفترة.</li>
+                    <li>تحديد عملة لكل عملية (دين/دفعة).</li>
+                    <li>منع الإرسال المكرر <b>لنفس الدين في نفس اليوم</b>.</li>
+                    <li>إيقاف يدوي للمطالبات على مستوى الحساب أو الدين.</li>
                 </ul>
+                <div class="callout" style="margin-top:10px">
+                    <div>⚙️</div>
+                    <div class="muted">اضبط تكرار التذكير، نافذة التوقيت اليومية، وقنوات الإرسال (واتساب/بريد).</div>
+                </div>
             </div>
         </section>
 
-        <!-- Sample Table -->
-        <section class="section-gap">
+        <!-- Message Templates -->
+        <section id="templates" style="margin-top:18px">
+            <div class="card" data-aos="fade-up">
+                <h3 style="margin:0 0 8px">نماذج الرسائل</h3>
+                <p class="muted" style="margin:0 0 10px">يتغير النص تلقائيًا حسب حالة المشترك، العملة، وعدد أيام
+                    التأخير:</p>
+
+                <div class="two">
+                    <div class="card bg-white border r-12">
+                        <span class="badge">تأكيد دفع</span>
+                        <p class="muted">مرحبًا <b>{الاسم}</b> 👋 تم تسجيل دفعتك <b>{المبلغ} {العملة}</b> بتاريخ
+                            <b>{التاريخ}</b>. الرصيد المتبقي: <b>{الرصيد} {العملة}</b>. شكرًا لك.
+                        </p>
+                    </div>
+                    <div class="card bg-white border r-12">
+                        <span class="badge is-yellow">تنبيه متأخر</span>
+                        <p class="muted">عميلنا <b>{الاسم}</b>، يوجد عليك <b>{المبلغ} {العملة}</b> متأخر منذ
+                            <b>{أيام_التأخير}</b> يوم. <b>آخر مهلة</b>: <b>{تاريخ_المهلة}</b>. للدفع: {رابط/واتساب}.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="callout" style="margin-top:12px">
+                    <div>✍️</div>
+                    <div class="muted">الحقول الديناميكية: {الاسم}، {المبلغ}، {العملة}، {التاريخ}، {الرصيد}،
+                        {أيام_التأخير}، {تاريخ_المهلة}… إلخ.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logs Table -->
+        <section style="margin-top:18px">
             <div class="card">
-                <h3 class="section-title">مثال سجل الديون</h3>
+                <h3 style="margin:0 0 8px">سجل الديون (مثال)</h3>
                 <div class="table-wrap">
                     <table class="table">
                         <thead>
@@ -172,54 +201,45 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="callout">
-                    <div aria-hidden="true">🧾</div>
-                    <div class="muted">يمكن تصدير الجدول أعلاه لـ Excel محمي مع الحفاظ على الفلاتر المطبقة والهوامش
-                        الزمنية.</div>
-                </div>
             </div>
         </section>
 
         <!-- FAQ -->
-        <section id="faq" class="section-gap">
+        <section id="faq" style="margin-top:18px">
             <div class="two faq">
                 <details data-aos="fade-up">
                     <summary>هل يدعم تعدد العملات داخل نفس الشبكة؟</summary>
-                    <p class="muted">نعم—يمكن لكل عملية (دين/دفعة) اختيار عملتها، والتقارير تعرض المجاميع منفصلة لكل
-                        عملة.</p>
+                    <p class="muted">نعم—يمكن لكل عملية (دين/دفعة) اختيار عملتها، وتُعرض التقارير منفصلة لكل عملة.</p>
                 </details>
                 <details data-aos="fade-up" data-aos-delay="50">
-                    <summary>هل يمكن إرفاق ملاحظة أو مستند مع الدفعة؟</summary>
-                    <p class="muted">يدعم الحقول النصية للملاحظات، ويمكن تفعيل حفظ مرفقات بحسب إعداداتك.</p>
+                    <summary>هل يمكن إيقاف المطالبة عن مشترك معين؟</summary>
+                    <p class="muted">يوجد إيقاف يدوي على مستوى الحساب أو الدين، ويُستثنى تلقائيًا بعد السداد الكامل.</p>
                 </details>
                 <details data-aos="fade-up">
                     <summary>هل تُرسل رسالة تأكيد بعد الدفع؟</summary>
-                    <p class="muted">نعم، رسالة واتساب/بريد تحتوي تفاصيل الدفعة ورصيد الدين بعد التحديث.</p>
-                </details>
-                <details data-aos="fade-up" data-aos-delay="50">
-                    <summary>هل توجد صلاحيات للوصول إلى سجل الديون؟</summary>
-                    <p class="muted">يمكن تقييد الوصول حسب الأدوار (موظف/مدير/شريك) باستخدام نظام الصلاحيات.</p>
+                    <p class="muted">نعم، يُرسل إشعار واتساب/بريد يتضمن تفاصيل الدفعة ورصيد الدين بعد التحديث.</p>
                 </details>
             </div>
         </section>
 
         <!-- CTA -->
-        <section class="section-gap">
-            <div class="callout cta-bar">
-                <div class="cta-text">
-                    <div class="h5">تحصيل أسهل… رؤية أوضح</div>
+        <section style="margin:22px 0">
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">تحصيل أسهل… رؤية أوضح</div>
                     <div class="muted">فعّل نظام الديون والدفعات وراقب التدفق النقدي لحظة بلحظة.</div>
                 </div>
                 <a href="../index.html#contact" class="btn primary">✨ جرّبه الآن</a>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="footbar">
-        <div class="container footwrap">
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
-            <div class="footlinks">
+            <div style="display:flex;gap:12px">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#faq">الأسئلة</a>
@@ -227,8 +247,17 @@
         </div>
     </footer>
 
+    <!-- Menu (mobile) -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+
     <!-- AOS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
     <!-- Structured Data: FAQ -->
@@ -237,31 +266,15 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"هل يدعم تعدد العملات؟","acceptedAnswer":{"@type":"Answer","text":"يمكن تحديد العملة لكل عملية وعرض التقارير حسب العملة."}},
-      {"@type":"Question","name":"هل يمكن إرفاق ملاحظات أو مستندات؟","acceptedAnswer":{"@type":"Answer","text":"يدعم الحقول النصية للملاحظات، ويمكن تفعيل المرفقات بحسب الإعدادات."}},
-      {"@type":"Question","name":"هل تُرسل رسالة تأكيد بعد الدفع؟","acceptedAnswer":{"@type":"Answer","text":"نعم، رسالة تلقائية عبر واتساب/بريد تتضمن تفاصيل الدفعة."}},
-      {"@type":"Question","name":"هل توجد صلاحيات للوصول؟","acceptedAnswer":{"@type":"Answer","text":"نعم، باستخدام نظام الأدوار والصلاحيات."}}
+      {"@type":"Question","name":"هل يدعم تعدد العملات داخل نفس الشبكة؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يمكن اختيار عملة لكل عملية (دين/دفعة)، وتُعرض التقارير منفصلة لكل عملة."}},
+      {"@type":"Question","name":"هل يمكن إيقاف المطالبة عن مشترك معين؟",
+       "acceptedAnswer":{"@type":"Answer","text":"نعم، يوجد إيقاف يدوي على مستوى الحساب أو الدين، كما يُستثنى تلقائيًا بعد السداد الكامل."}},
+      {"@type":"Question","name":"هل تُرسل رسالة تأكيد بعد الدفع؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يتم إرسال إشعار تلقائي عبر واتساب/بريد يتضمن تفاصيل الدفعة ورصيد الدين المحدث."}},
+      {"@type":"Question","name":"هل يمكن التصدير إلى Excel محمي؟",
+       "acceptedAnswer":{"@type":"Answer","text":"يدعم النظام تصدير جداول الديون والدفعات إلى Excel محمي مع تضمين الفلاتر وتاريخ التصدير."}}
     ]
-  }
-  </script>
-
-    <!-- Structured Data: Software -->
-    <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":"ControTik - Debts & Payments",
-    "applicationCategory":"BusinessApplication",
-    "operatingSystem":"Windows",
-    "featureList":[
-      "تسجيل دين كلي/جزئي",
-      "سجل دفعات مفصل مع إشعارات",
-      "فلترة دقيقة حسب الاستحقاق والعملة",
-      "تذكيرات دين تلقائية",
-      "تقارير Excel محمية",
-      "تكامل مع المبيعات والأرباح"
-    ],
-    "url":"https://controtik.com/Detailes/debts.html"
   }
   </script>
 </body>

@@ -24,176 +24,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Base styles (اعتمد ملفاتك الموجودة) -->
+    <!-- Styles (مطابق لنموذج broadband-pppoe) -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/tokens.css" />
-
-    <!-- CSS إضافي خفيف (بدون JS) -->
-    <style>
-        /* رأس الصفحة */
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 0
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: inherit
-        }
-
-        .menu {
-            display: flex;
-            gap: 14px;
-            align-items: center
-        }
-
-        .burger {
-            display: none
-        }
-
-        /* قائمة الجوال بدون JS (حيلة checkbox) */
-        #nav-toggle {
-            display: none
-        }
-
-        @media (max-width: 900px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                gap: 12px;
-                padding: 12px;
-                border: 1px solid var(--line);
-                border-radius: 12px;
-                background: #fff
-            }
-
-            .burger {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 40px;
-                border: 1px solid var(--line);
-                border-radius: 12px;
-                cursor: pointer
-            }
-
-            #nav-toggle:checked~.menu {
-                display: flex
-            }
-        }
-
-        /* تحسينات عامة */
-        .hero-slim {
-            padding: 34px 0 8px
-        }
-
-        .crumbs {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            color: var(--muted);
-            font-size: .95rem;
-            padding-top: 16px
-        }
-
-        .table-wrap {
-            overflow: auto;
-            border: 1px solid var(--line);
-            border-radius: 12px
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 720px
-        }
-
-        .table th,
-        .table td {
-            padding: 10px 12px;
-            border-bottom: 1px solid var(--line);
-            text-align: right
-        }
-
-        /* ألوان شارات إضافية */
-        .badge.is-green {
-            background: #ecfdf5;
-            border-color: #d1fae5;
-            color: #065f46
-        }
-
-        .badge.is-yellow {
-            background: #fffbeb;
-            border-color: #fde68a;
-            color: #92400e
-        }
-
-        /* تذييل */
-        .footbar {
-            border-top: 1px solid var(--line);
-            padding: 24px 0;
-            margin-top: 24px;
-            color: var(--muted)
-        }
-
-        .footlinks {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap
-        }
-
-        @media (max-width:600px) {
-            .footwrap {
-                flex-direction: column;
-                gap: 10px
-            }
-        }
-
-        /* إصلاح CTA: منع تكسّر النص وتحويل التخطيط إلى flex */
-        .callout.cta-bar {
-            display: flex;
-            /* بدلاً من الشبكة الافتراضية في .callout */
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            padding: 16px;
-        }
-
-        .callout.cta-bar .cta-text {
-            flex: 1;
-            min-width: 280px;
-            /* يمنع انضغاط النص */
-            white-space: normal;
-            overflow-wrap: anywhere;
-        }
-
-        .callout.cta-bar .btn {
-            white-space: nowrap;
-            /* يحافظ على الزر بسطر واحد */
-            flex-shrink: 0;
-        }
-
-        @media (max-width:600px) {
-            .callout.cta-bar {
-                flex-direction: column;
-                align-items: stretch
-            }
-
-            .callout.cta-bar .btn {
-                align-self: flex-start
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Header (CSS-only nav) -->
+    <!-- Header -->
     <header>
         <div class="container nav">
             <a class="brand" href="../index.html">
@@ -201,17 +38,13 @@
                     height="36" style="border-radius:8px" />
                 <b>ControTik</b>
             </a>
-
-            <!-- زر الجوال -->
-            <label class="burger" for="nav-toggle" aria-label="فتح القائمة">☰</label>
-            <input id="nav-toggle" type="checkbox" aria-hidden="true" />
-
-            <nav class="menu" aria-label="القائمة الرئيسية">
+            <nav class="menu" id="menu">
                 <a href="../index.html#features">الميزات</a>
-                <a href="../index.html#integrations">التكامل</a>
-                <a href="../index.html#pricing">الأسعار</a>
-                <a href="../index.html#contact" class="btn primary" style="padding:8px 12px">✨ اطلب النسخة</a>
+                <a href="../plans.html">الأسعار</a>
+                <a href="../index.html#testimonials">ماذا قالوا؟</a>
+                <a href="../index.html#contact" class="cta">✨ اطلب النسخة</a>
             </nav>
+            <button class="burger" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
@@ -219,14 +52,14 @@
         <!-- Breadcrumbs -->
         <nav class="crumbs" aria-label="مسار الصفحة">
             <a href="../index.html">الرئيسية</a>
-            <span aria-hidden="true">›</span>
+            <span>›</span>
             <a href="../index.html#features">الميزات</a>
-            <span aria-hidden="true">›</span>
-            <span aria-current="page">العملات</span>
+            <span>›</span>
+            <span>العملات</span>
         </nav>
 
-        <!-- Hero -->
-        <section class="hero-slim">
+        <!-- Hero (كرت البداية) -->
+        <section class="hero-slim" data-aos="fade-up">
             <div>
                 <h1>مرونة التعامل مع العملات</h1>
                 <p>
@@ -242,17 +75,17 @@
 
         <!-- Highlights -->
         <section class="grid-3">
-            <div class="card">
+            <div class="card" data-aos="fade-up">
                 <span class="badge">Multi-Currency</span>
                 <h3>عملات افتراضية جاهزة</h3>
                 <p class="muted">SYP، TRY، USD بشكل افتراضي، مع إمكانية إضافة أي عملة جديدة (EUR، IQD… إلخ).</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="75">
                 <span class="badge">Per-Transaction</span>
                 <h3>عملة لكل عملية</h3>
                 <p class="muted">اشتراك، مصروف، دين، سحب أرباح… يمكنك تحديد العملة لكل عملية بدقة وبدون خلط.</p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="150">
                 <span class="badge">Reports</span>
                 <h3>تقارير مفصلة</h3>
                 <p class="muted">مبيعات، مصاريف، أرباح، ديون، وسحوبات شركاء — تقارير مستقلة لكل عملة مع تصدير Excel/PDF.
@@ -262,8 +95,8 @@
 
         <!-- Partners & Controls -->
         <section class="two" style="margin-top:18px">
-            <div class="card">
-                <span class="badge is-green">Partners</span>
+            <div class="card" data-aos="fade-up">
+                <span class="badge">Partners</span>
                 <h3>توزيع الأرباح للشركاء حسب العملة</h3>
                 <p class="muted">يحسب ControTik أرباح كل عملة على حدة ثم يوزّعها حسب نسب الشركاء الخاصة بتلك العملة،
                     لضمان عدالة وشفافية كاملة.</p>
@@ -274,8 +107,8 @@
                 </ul>
             </div>
 
-            <div class="card">
-                <span class="badge is-yellow">Controls</span>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <span class="badge">Controls</span>
                 <h3>تقييد السحوبات حسب رصيد العملة</h3>
                 <p class="muted">لا يمكن لأي شريك سحب أكثر من حصته المتوفرة في العملة المختارة. كل سحب مرتبط بالعملة
                     ورصيده المتاح.</p>
@@ -338,7 +171,7 @@
 
         <!-- How-to -->
         <section id="howto" class="two" style="margin-top:18px">
-            <div class="card">
+            <div class="card" data-aos="fade-up">
                 <h3>خطوات إضافة عملة جديدة</h3>
                 <ol class="list">
                     <li>من الإعدادات ⇢ <b>العملات</b> ⇢ اضغط <b>إضافة عملة</b>.</li>
@@ -353,7 +186,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <h3>تعديل العملة الافتراضية للفواتير</h3>
                 <ol class="list">
                     <li>الإعدادات ⇢ <b>الفوترة</b> ⇢ <b>العملة الافتراضية</b>.</li>
@@ -371,32 +204,27 @@
         <!-- FAQ -->
         <section id="faq" style="margin-top:18px">
             <div class="two faq">
-                <details>
+                <details data-aos="fade-up">
                     <summary>هل يلزم توحيد العملة بين كل العمليات؟</summary>
                     <p class="muted">لا، كل عملية تحمل عملتها الخاصة لتفادي التحويل اليدوي. التقارير تُعرض لكل عملة بشكل
                         مستقل.</p>
                 </details>
-                <details>
+                <details data-aos="fade-up" data-aos-delay="50">
                     <summary>كيف تُدار سحوبات الشركاء عند تعدد العملات؟</summary>
                     <p class="muted">يُحسب رصيد كل شريك داخل كل عملة على حدة، والسحب لا يتجاوز المتاح في تلك العملة.</p>
                 </details>
-                <details>
-                    <summary>هل يدعم النظام أسعار صرف تلقائية؟</summary>
-                    <p class="muted">يمكن تعريف سعر صرف مرجعي للتقارير المجمّعة إن رغبت، بينما تبقى السجلات الأصلية
-                        محفوظة بعملتها.</p>
-                </details>
-                <details>
-                    <summary>هل التصدير إلى Excel/PDF يدعم تعدد العملات؟</summary>
+                <details data-aos="fade-up">
+                    <summary>هل يدعم التصدير إلى Excel/PDF تعدد العملات؟</summary>
                     <p class="muted">نعم، يتم التصدير مع فصل العملة بوضوح، وخيارات تصفية حسب العملة والفترة والبرج.</p>
                 </details>
             </div>
         </section>
 
-        <!-- CTA (مصَحّح) -->
+        <!-- CTA -->
         <section style="margin:22px 0">
-            <div class="callout cta-bar">
-                <div class="cta-text">
-                    <div class="h5" style="font-weight:700;margin-bottom:6px">اضبط عملاتك كما تعمل على أرض الواقع</div>
+            <div class="callout" style="justify-content:space-between;gap:14px">
+                <div>
+                    <div style="font-weight:700;margin-bottom:6px">اضبط عملاتك كما تعمل على أرض الواقع</div>
                     <div class="muted">أضف العملات التي تحتاجها الآن وابدأ بإصدار الفواتير والتقارير بدقة لكل عملة.
                     </div>
                 </div>
@@ -406,10 +234,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footbar">
-        <div class="container footwrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <footer style="border-top:1px solid var(--line);padding:24px 0;margin-top:24px;color:var(--muted)">
+        <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
             <div>© 2025 ControTik</div>
-            <div class="footlinks">
+            <div style="display:flex;gap:12px">
                 <a href="../index.html#features">الميزات</a>
                 <a href="../index.html#pricing">الأسعار</a>
                 <a href="../index.html#faq">الأسئلة</a>
@@ -417,23 +245,18 @@
         </div>
     </footer>
 
-    <!-- Structured Data: WebPage + Breadcrumbs -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "مرونة التعامل مع العملات — ControTik",
-    "url": "https://controtik.com/Detailes/currencies.html",
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://controtik.com/"},
-        {"@type": "ListItem", "position": 2, "name": "الميزات", "item": "https://controtik.com/#features"},
-        {"@type": "ListItem", "position": 3, "name": "العملات", "item": "https://controtik.com/Detailes/currencies.html"}
-      ]
-    }
-  }
-  </script>
+    <!-- Menu (mobile) -->
+    <script>
+        function toggleMenu() {
+            const m = document.getElementById('menu');
+            const isOpen = getComputedStyle(m).display !== 'none';
+            m.style.display = isOpen ? 'none' : 'flex';
+        }
+    </script>
+
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => { if (window.AOS) AOS.init(); });</script>
 
     <!-- Structured Data: FAQ -->
     <script type="application/ld+json">
